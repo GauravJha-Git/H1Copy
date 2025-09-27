@@ -53,7 +53,7 @@
       target: 'esnext',
       outDir: 'build',
       sourcemap: false,
-      minify: 'terser',
+      minify: 'esbuild',
     },
     server: {
       port: 3000,
