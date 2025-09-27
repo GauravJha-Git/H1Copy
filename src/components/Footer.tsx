@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook, Instagram, ArrowUp, Sparkles, Star, Heart } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export function Footer() {
   const scrollToTop = () => {

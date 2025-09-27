@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Star, Quote, Sparkles, Heart, Award, Trophy, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function CompaniesAndReviews() {
   const [currentReview, setCurrentReview] = useState(0);

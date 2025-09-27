@@ -2,7 +2,7 @@ import { Button } from './ui/button';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { HeroBackgroundAnimation } from './HeroBackgroundAnimation';
 import { ArrowRight, TrendingUp, Sparkles, Zap, Target, Star } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {

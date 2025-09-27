@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { MethodologyBackground } from './MethodologyBackground';
 import { ArrowRight, Target, Search, TrendingUp, BarChart3, Users, Lightbulb, Rocket, CheckCircle, ArrowDown, ArrowLeft } from 'lucide-react';
 

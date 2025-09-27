@@ -1,6 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Award, Users, Target, Zap, Sparkles, Star, Crown } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export function About() {
   const containerVariants = {

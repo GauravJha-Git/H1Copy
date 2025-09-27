@@ -1,5 +1,5 @@
 import { CheckCircle, TrendingUp, Shield, Clock, Users, Lightbulb, Sparkles, Star, Zap } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export function WhyChooseUs() {
   const features = [

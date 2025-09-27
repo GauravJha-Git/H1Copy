@@ -4,7 +4,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Mail, Phone, MapPin, Send, Twitter, Linkedin, Facebook, Instagram, Sparkles, Star, Zap, Heart } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export function Contact() {
   const [formData, setFormData] = useState({
