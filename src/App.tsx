@@ -7,7 +7,6 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { CompaniesAndReviews } from './components/CompaniesAndReviews';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { BackgroundAnimation } from './components/BackgroundAnimation';
 import { Methodology } from './components/Methodology';
 
 type Page = 'home' | 'methodology';
@@ -23,7 +22,7 @@ export default function App() {
 
   if (currentPage === 'methodology') {
     return (
-      <div className="min-h-screen relative">
+      <div className="min-h-screen bg-white overflow-x-hidden">
         <Navigation 
           currentPage={currentPage}
           onNavigate={navigateToPage}
@@ -35,21 +34,18 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen relative">
-      <BackgroundAnimation />
-      <div className="relative z-10">
-        <Navigation 
-          currentPage={currentPage}
-          onNavigate={navigateToPage}
-        />
-        <Hero />
-        <About />
-        <Services />
-        <WhyChooseUs />
-        <CompaniesAndReviews />
-        <Contact />
-        <Footer />
-      </div>
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <Navigation 
+        currentPage={currentPage}
+        onNavigate={navigateToPage}
+      />
+      <Hero />
+      <About />
+      <Services />
+      <WhyChooseUs />
+      <CompaniesAndReviews />
+      <Contact />
+      <Footer />
     </div>
   );
 }
