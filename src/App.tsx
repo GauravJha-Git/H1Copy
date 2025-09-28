@@ -8,6 +8,7 @@ import { CompaniesAndReviews } from './components/CompaniesAndReviews';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Methodology } from './components/Methodology';
+import { Blog } from './components/Blog';
 
 function HomePage() {
   return (
@@ -26,9 +27,14 @@ function MethodologyPage() {
   return <Methodology />;
 }
 
+function BlogPage() {
+  return <Blog />;
+}
+
 export default function App() {
   const location = useLocation();
-  const currentPage = location.pathname === '/methodology' ? 'methodology' : 'home';
+  const currentPage = location.pathname === '/methodology' ? 'methodology' : 
+                     location.pathname === '/blog' ? 'blog' : 'home';
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -36,6 +42,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/methodology" element={<MethodologyPage />} />
+        <Route path="/blog" element={<BlogPage />} />
       </Routes>
       <Footer />
     </div>

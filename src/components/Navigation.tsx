@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-type Page = 'home' | 'methodology';
+type Page = 'home' | 'methodology' | 'blog';
 
 interface NavigationProps {
   currentPage?: Page;
@@ -42,7 +42,7 @@ export function Navigation({ currentPage = 'home' }: NavigationProps) {
     { name: 'Home', section: 'home', page: 'home' as Page },
     { name: 'Services', section: 'services', page: null },
     { name: 'Methodology', section: null, page: 'methodology' as Page },
-    { name: 'Blog', section: null, page: null },
+    { name: 'Blog', section: null, page: 'blog' as Page },
     { name: 'Contact', section: 'contact', page: null },
   ];
 
