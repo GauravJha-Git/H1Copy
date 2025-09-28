@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Target, Search, TrendingUp, BarChart3, Users, Lightbulb, Rocket, CheckCircle, ArrowDown, ArrowLeft } from 'lucide-react';
 
-interface MethodologyProps {
-  onNavigateHome: () => void;
-}
-
-export function Methodology({ onNavigateHome }: MethodologyProps) {
+export function Methodology() {
+  const navigate = useNavigate();
   const steps = [
     {
       number: "01",
@@ -60,7 +58,7 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
       {/* Fixed Back Button */}
       <div className="fixed top-20 left-4 z-50">
         <button
-          onClick={onNavigateHome}
+          onClick={() => navigate('/')}
           className="flex items-center gap-2 bg-white shadow-md rounded-xl px-4 py-3 border border-gray-200 transition-all duration-300 hover:shadow-lg"
         >
           <ArrowLeft className="w-4 h-4 text-gray-600" />
@@ -247,7 +245,7 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
             
             <button
               onClick={() => {
-                onNavigateHome();
+                navigate('/');
                 // Scroll to contact section after navigation
                 setTimeout(() => {
                   const contactSection = document.getElementById('contact');

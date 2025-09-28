@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -9,42 +9,34 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Methodology } from './components/Methodology';
 
-type Page = 'home' | 'methodology';
-
-export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
-
-  const navigateToPage = (page: Page) => {
-    setCurrentPage(page);
-    // Scroll to top when navigating
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  if (currentPage === 'methodology') {
-    return (
-      <div className="min-h-screen bg-white overflow-x-hidden">
-        <Navigation 
-          currentPage={currentPage}
-          onNavigate={navigateToPage}
-        />
-        <Methodology onNavigateHome={() => navigateToPage('home')} />
-        <Footer />
-      </div>
-    );
-  }
-
+function HomePage() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
-      <Navigation 
-        currentPage={currentPage}
-        onNavigate={navigateToPage}
-      />
+    <>
       <Hero />
       <About />
       <Services />
       <WhyChooseUs />
       <CompaniesAndReviews />
       <Contact />
+    </>
+  );
+}
+
+function MethodologyPage() {
+  return <Methodology />;
+}
+
+export default function App() {
+  const location = useLocation();
+  const currentPage = location.pathname === '/methodology' ? 'methodology' : 'home';
+
+  return (
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <Navigation currentPage={currentPage} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/methodology" element={<MethodologyPage />} />
+      </Routes>
       <Footer />
     </div>
   );

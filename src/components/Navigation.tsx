@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -6,11 +7,12 @@ type Page = 'home' | 'methodology';
 
 interface NavigationProps {
   currentPage?: Page;
-  onNavigate?: (page: Page) => void;
 }
 
-export function Navigation({ currentPage = 'home', onNavigate }: NavigationProps) {
+export function Navigation({ currentPage = 'home' }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -21,13 +23,13 @@ export function Navigation({ currentPage = 'home', onNavigate }: NavigationProps
   };
 
   const handleNavigation = (item: { name: string; section: string | null; page?: Page }) => {
-    if (item.page && onNavigate) {
-      onNavigate(item.page);
+    if (item.page) {
+      navigate(`/${item.page === 'home' ? '' : item.page}`);
       setIsMenuOpen(false);
     } else if (item.section) {
-      if (currentPage !== 'home' && onNavigate) {
+      if (location.pathname !== '/') {
         // If not on home page, navigate to home first then scroll
-        onNavigate('home');
+        navigate('/');
         setTimeout(() => scrollToSection(item.section!), 100);
       } else {
         scrollToSection(item.section);
@@ -49,15 +51,15 @@ export function Navigation({ currentPage = 'home', onNavigate }: NavigationProps
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div 
+          <Link 
+            to="/"
             className="flex items-center cursor-pointer group transition-transform duration-200 hover:scale-105"
-            onClick={() => onNavigate?.('home')}
           >
             <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center transition-colors duration-200 group-hover:bg-purple-700">
               <span className="text-white font-bold text-sm">H1</span>
             </div>
             <span className="ml-3 text-xl font-bold text-gray-900 transition-colors duration-200 group-hover:text-purple-600">H1Copy</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
