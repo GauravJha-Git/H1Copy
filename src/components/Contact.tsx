@@ -2,16 +2,14 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Mail, Phone, MapPin, Send, Twitter, Linkedin, Facebook, Instagram } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Send, Twitter, Linkedin } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: '',
     message: ''
   });
 
@@ -20,7 +18,7 @@ export function Contact() {
     // Handle form submission here
     console.log('Form submitted:', formData);
     // Reset form
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    setFormData({ name: '', email: '', phone: '', message: '' });
     alert('Thank you for your message! We\'ll get back to you soon.');
   };
 
@@ -31,12 +29,7 @@ export function Contact() {
     });
   };
 
-  const handleSelectChange = (value: string) => {
-    setFormData({
-      ...formData,
-      service: value
-    });
-  };
+
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
@@ -108,25 +101,7 @@ export function Contact() {
                 />
               </div>
               
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Service Interested In</label>
-                <Select onValueChange={handleSelectChange} value={formData.service}>
-                  <SelectTrigger className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl">
-                    <SelectValue placeholder="Select a service" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="seo-audit">SEO Audit</SelectItem>
-                    <SelectItem value="keyword-research">Keyword Research</SelectItem>
-                    <SelectItem value="content-optimization">Content Optimization</SelectItem>
-                    <SelectItem value="technical-seo">Technical SEO</SelectItem>
-                    <SelectItem value="link-building">Link Building</SelectItem>
-                    <SelectItem value="local-seo">Local SEO</SelectItem>
-                    <SelectItem value="full-service">Full-Service SEO</SelectItem>
-                    <SelectItem value="consultation">Consultation</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+
               
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
@@ -142,7 +117,7 @@ export function Contact() {
               
               <Button 
                 type="submit" 
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group cursor-pointer"
               >
                 <span className="flex items-center justify-center">
                   Send Message
@@ -163,34 +138,26 @@ export function Contact() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: Mail,
                     title: "Email",
                     content: ["hello@h1copy.com", "support@h1copy.com"]
                   },
                   {
-                    icon: Phone,
                     title: "Phone",
                     content: ["+1 (555) 123-4567", "Mon-Fri, 9AM-6PM EST"]
                   },
                   {
-                    icon: MapPin,
                     title: "Office",
                     content: ["123 SEO Street", "Digital City, DC 12345"]
                   }
                 ].map((item, index) => (
                   <div 
                     key={item.title}
-                    className="flex items-start space-x-4"
+                    className="space-y-2"
                   >
-                    <div className="bg-purple-100 p-3 rounded-xl">
-                      <item.icon className="h-6 w-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-gray-900">{item.title}</h4>
-                      {item.content.map((line, i) => (
-                        <p key={i} className="text-gray-600">{line}</p>
-                      ))}
-                    </div>
+                    <h4 className="text-lg font-bold text-gray-900">{item.title}</h4>
+                    {item.content.map((line, i) => (
+                      <p key={i} className="text-gray-600">{line}</p>
+                    ))}
                   </div>
                 ))}
               </div>
@@ -217,22 +184,12 @@ export function Contact() {
                     icon: Linkedin, 
                     color: "bg-blue-700",
                     label: "Connect on LinkedIn"
-                  },
-                  { 
-                    icon: Facebook, 
-                    color: "bg-blue-600",
-                    label: "Like us on Facebook"
-                  },
-                  { 
-                    icon: Instagram, 
-                    color: "bg-purple-600",
-                    label: "Follow us on Instagram"
                   }
                 ].map((social, index) => (
                   <a 
                     key={social.label}
                     href="#" 
-                    className={`${social.color} text-white p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg`}
+                    className={`${social.color} text-white p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer`}
                     aria-label={social.label}
                   >
                     <social.icon className="h-6 w-6" />

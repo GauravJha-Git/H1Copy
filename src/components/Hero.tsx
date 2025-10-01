@@ -1,6 +1,6 @@
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -11,7 +11,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative pt-16 overflow-hidden min-h-[80vh] overflow-x-hidden">
+    <section id="home" className="relative pt-16 overflow-hidden min-h-[80vh]">
       {/* Enhanced Grid Background with Radical Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50/60 via-purple-25/30 via-white to-purple-50/60">
         {/* Multi-Layer Grid System */}
@@ -66,25 +66,25 @@ export function Hero() {
         
         {/* Enhanced Radial Glow Effects - Lighter Colors */}
         <div 
-          className="absolute top-20 left-1/5 w-[500px] h-[500px] rounded-full blur-3xl animate-hero-glow-subtle max-w-[100vw]"
+          className="absolute top-20 left-1/5 w-[500px] h-[500px] rounded-full blur-3xl animate-hero-glow-subtle"
           style={{
             background: 'radial-gradient(circle, rgba(196, 151, 216, 0.25) 0%, rgba(196, 151, 216, 0.15) 40%, rgba(196, 151, 216, 0.08) 70%, transparent 100%)'
           }}
         />
         <div 
-          className="absolute top-32 right-1/4 w-[400px] h-[400px] rounded-full blur-3xl animate-hero-glow-subtle-2 max-w-[100vw]"
+          className="absolute top-32 right-1/4 w-[400px] h-[400px] rounded-full blur-3xl animate-hero-glow-subtle-2"
           style={{
             background: 'radial-gradient(circle, rgba(183, 129, 205, 0.22) 0%, rgba(196, 151, 216, 0.12) 50%, transparent 100%)'
           }}
         />
         <div 
-          className="absolute bottom-20 left-1/3 w-[350px] h-[350px] rounded-full blur-3xl animate-hero-float-subtle max-w-[100vw]"
+          className="absolute bottom-20 left-1/3 w-[350px] h-[350px] rounded-full blur-3xl animate-hero-float-subtle"
           style={{
             background: 'radial-gradient(circle, rgba(196, 151, 216, 0.28) 0%, rgba(196, 151, 216, 0.14) 60%, transparent 100%)'
           }}
         />
         <div 
-          className="absolute bottom-40 right-1/5 w-[300px] h-[300px] rounded-full blur-3xl animate-hero-float-subtle-3 max-w-[100vw]"
+          className="absolute bottom-40 right-1/5 w-[300px] h-[300px] rounded-full blur-3xl animate-hero-float-subtle-3"
           style={{
             background: 'radial-gradient(circle, rgba(183, 129, 205, 0.2) 0%, rgba(196, 151, 216, 0.1) 70%, transparent 100%)'
           }}
@@ -92,7 +92,7 @@ export function Hero() {
         
         {/* Central Mega Glow - Lighter */}
         <div 
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] rounded-full blur-3xl animate-hero-float-subtle-2 max-w-[100vw]"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] rounded-full blur-3xl animate-hero-float-subtle-2"
           style={{
             background: 'radial-gradient(ellipse, rgba(196, 151, 216, 0.18) 0%, rgba(196, 151, 216, 0.12) 30%, rgba(196, 151, 216, 0.06) 60%, transparent 100%)'
           }}

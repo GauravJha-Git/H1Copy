@@ -1,5 +1,5 @@
-import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook, Instagram, ArrowUp } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Twitter, Linkedin, ArrowUp } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function Footer() {
   const scrollToTop = () => {
@@ -26,7 +26,7 @@ export function Footer() {
           <div className="space-y-6">
             <div>
               <div className="text-3xl font-bold mb-4 text-white">
-                H1Copy
+                h1copy
               </div>
               <p className="text-gray-300 leading-relaxed">
                 Transforming businesses through data-driven SEO strategies and compelling content 
@@ -45,22 +45,12 @@ export function Footer() {
                   icon: Linkedin, 
                   color: "bg-blue-700",
                   label: "Connect on LinkedIn"
-                },
-                { 
-                  icon: Facebook, 
-                  color: "bg-blue-600",
-                  label: "Like us on Facebook"
-                },
-                { 
-                  icon: Instagram, 
-                  color: "bg-purple-600",
-                  label: "Follow us on Instagram"
                 }
               ].map((social, index) => (
                 <a 
                   key={social.label}
                   href="#" 
-                  className={`${social.color} p-2 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg`}
+                  className={`${social.color} p-2 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer`}
                   aria-label={social.label}
                 >
                   <social.icon className="h-5 w-5" />
@@ -86,7 +76,7 @@ export function Footer() {
                 <li key={service}>
                   <a 
                     href="#" 
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300"
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
                   >
                     {service}
                   </a>
@@ -112,7 +102,7 @@ export function Footer() {
                 <li key={link.name}>
                   <button 
                     onClick={link.action || undefined}
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-left"
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-left cursor-pointer"
                   >
                     {link.name}
                   </button>
@@ -167,12 +157,12 @@ export function Footer() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 H1Copy. All rights reserved. | Privacy Policy | Terms of Service
+            © 2024 h1copy. All rights reserved. | Privacy Policy | Terms of Service
           </div>
           
           <button 
             onClick={scrollToTop}
-            className="bg-purple-600 hover:bg-purple-700 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg group"
+            className="bg-purple-600 hover:bg-purple-700 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg group cursor-pointer"
             aria-label="Back to top"
           >
             <ArrowUp className="h-5 w-5 transition-transform duration-200 group-hover:-translate-y-1" />

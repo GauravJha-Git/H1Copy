@@ -1,5 +1,5 @@
 import { CheckCircle, TrendingUp, Shield, Clock, Users, Lightbulb } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export function WhyChooseUs() {
   const features = [
@@ -53,7 +53,7 @@ export function WhyChooseUs() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Why Choose H1Copy?
+            Why Choose h1copy?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We combine technical expertise, creative content strategies, and data-driven insights 

@@ -1,5 +1,5 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 export function About() {
   return (
@@ -14,7 +14,7 @@ export function About() {
           {/* Left Content */}
           <div>
             <div className="inline-flex items-center gap-2 bg-purple-50 px-6 py-3 rounded-full text-sm font-bold text-purple-600 mb-8 border border-purple-200">
-              About H1Copy
+              About h1copy
             </div>
             
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
@@ -23,7 +23,7 @@ export function About() {
             
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
-                At H1Copy, we don't just write content or optimize websites – we architect digital experiences that transform businesses. Our team of seasoned SEO specialists and content strategists has helped hundreds of companies achieve remarkable growth through data-driven strategies.
+                At h1copy, we don't just write content or optimize websites – we architect digital experiences that transform businesses. Our team of seasoned SEO specialists and content strategists has helped hundreds of companies achieve remarkable growth through data-driven strategies.
               </p>
               <p>
                 From startups to enterprise corporations, we've consistently delivered results that exceed expectations. Our approach combines cutting-edge SEO techniques with compelling storytelling to create content that not only ranks but converts.

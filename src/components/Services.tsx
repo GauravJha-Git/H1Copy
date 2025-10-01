@@ -1,51 +1,52 @@
 import { Search, FileText, Settings, MapPin, Link, BarChart3 } from 'lucide-react';
 import { Button } from './ui/button';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
-export function Services() {
+interface ServicesProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function Services({ onNavigate }: ServicesProps) {
   const services = [
     {
       icon: Search,
       title: "SEO Optimization",
       description: "Comprehensive keyword research, on-page optimization, and technical SEO to improve your search rankings.",
-      features: ["Keyword Research", "On-Page SEO", "Technical Audits", "Competitor Analysis"]
+      features: ["Keyword Research", "On-Page SEO", "Technical Audits", "Competitor Analysis"],
+      page: "services/seo-optimization"
     },
     {
       icon: FileText,
       title: "Content Marketing",
       description: "Strategic content creation that engages your audience and drives organic traffic to your website.",
-      features: ["Content Strategy", "Blog Writing", "SEO Copywriting", "Content Optimization"]
+      features: ["Content Strategy", "Blog Writing", "SEO Copywriting", "Content Optimization"],
+      page: "services/content-marketing"
     },
     {
       icon: Settings,
       title: "Technical SEO",
       description: "Fix technical issues that prevent search engines from crawling and indexing your website effectively.",
-      features: ["Site Speed Optimization", "Mobile Optimization", "Schema Markup", "Crawl Error Fixes"]
+      features: ["Site Speed Optimization", "Mobile Optimization", "Schema Markup", "Crawl Error Fixes"],
+      page: "services/technical-seo"
     },
     {
       icon: MapPin,
       title: "Local SEO",
       description: "Dominate local search results and attract customers in your geographic area.",
-      features: ["Google My Business", "Local Citations", "Review Management", "Local Keywords"]
-    },
-    {
-      icon: Link,
-      title: "Link Building",
-      description: "Earn high-quality backlinks from authoritative websites to boost your domain authority.",
-      features: ["Guest Posting", "Resource Page Links", "Broken Link Building", "PR Outreach"]
-    },
-    {
-      icon: BarChart3,
-      title: "SEO Analytics",
-      description: "Track, measure, and optimize your SEO performance with detailed reporting and insights.",
-      features: ["Performance Tracking", "ROI Analysis", "Custom Reports", "Conversion Optimization"]
+      features: ["Google My Business", "Local Citations", "Review Management", "Local Keywords"],
+      page: "services/local-seo"
     }
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleLearnMore = (servicePage: Page) => {
+    if (onNavigate) {
+      onNavigate(servicePage);
+    } else {
+      // Fallback to scrolling to contact if no navigation is provided
+      const element = document.getElementById('contact');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -70,7 +71,7 @@ export function Services() {
 
         {/* Services Grid */}
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -109,7 +110,7 @@ export function Services() {
                 <Button 
                   variant="outline" 
                   className="w-full border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 transition-all duration-300 hover:scale-105"
-                  onClick={scrollToContact}
+                  onClick={() => handleLearnMore(service.page)}
                 >
                   Learn More
                 </Button>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 export function CompaniesAndReviews() {
   const [currentReview, setCurrentReview] = useState(0);
@@ -21,7 +21,7 @@ export function CompaniesAndReviews() {
       name: "Sarah Johnson",
       company: "TechCorp",
       role: "Marketing Director",
-      content: "H1Copy transformed our online presence completely. Our organic traffic increased significantly and we're now ranking well for our main keywords.",
+      content: "h1copy transformed our online presence completely. Our organic traffic increased significantly and we're now ranking well for our main keywords.",
       rating: 5,
       avatar: "👩‍💼"
     },
@@ -37,7 +37,7 @@ export function CompaniesAndReviews() {
       name: "Emily Rodriguez",
       company: "Digital Solutions",
       role: "VP of Marketing",
-      content: "Working with H1Copy was a game-changer. Their data-driven approach and transparent reporting helped us understand exactly how our SEO investment was paying off.",
+      content: "Working with h1copy was a game-changer. Their data-driven approach and transparent reporting helped us understand exactly how our SEO investment was paying off.",
       rating: 5,
       avatar: "👩‍🚀"
     },
@@ -45,7 +45,7 @@ export function CompaniesAndReviews() {
       name: "David Park",
       company: "InnovateCo",
       role: "Founder",
-      content: "Professional, knowledgeable, and results-driven. H1Copy helped us dominate our niche with strategic content and technical SEO improvements.",
+      content: "Professional, knowledgeable, and results-driven. h1copy helped us dominate our niche with strategic content and technical SEO improvements.",
       rating: 5,
       avatar: "👨‍🎯"
     },
@@ -53,7 +53,7 @@ export function CompaniesAndReviews() {
       name: "Lisa Thompson",
       company: "ScaleUp",
       role: "Growth Manager",
-      content: "The ROI from our SEO investment with H1Copy has been incredible. We've seen consistent growth month over month and our leads have increased significantly.",
+      content: "The ROI from our SEO investment with h1copy has been incredible. We've seen consistent growth month over month and our leads have increased significantly.",
       rating: 5,
       avatar: "👩‍💻"
     }
@@ -149,11 +149,7 @@ export function CompaniesAndReviews() {
                   {reviews[currentReview].avatar}
                 </div>
                 
-                <div className="flex justify-center mb-6">
-                  {[...Array(reviews[currentReview].rating)].map((_, i) => (
-                    <Star key={i} className="h-8 w-8 text-yellow-300 fill-current mx-1" />
-                  ))}
-                </div>
+
                 
                 <blockquote className="text-2xl italic mb-8 leading-relaxed font-medium">
                   "{reviews[currentReview].content}"
@@ -172,7 +168,7 @@ export function CompaniesAndReviews() {
         <div className="flex justify-center items-center space-x-8 mb-8">
           <button
             onClick={prevReview}
-            className="bg-purple-600 hover:bg-purple-700 text-white rounded-full p-4 transition-all duration-300"
+            className="bg-purple-600 hover:bg-purple-700 text-white rounded-full p-4 transition-all duration-300 cursor-pointer"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -185,7 +181,7 @@ export function CompaniesAndReviews() {
           
           <button
             onClick={nextReview}
-            className="bg-purple-600 hover:bg-purple-700 text-white rounded-full p-4 transition-all duration-300"
+            className="bg-purple-600 hover:bg-purple-700 text-white rounded-full p-4 transition-all duration-300 cursor-pointer"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
@@ -197,7 +193,7 @@ export function CompaniesAndReviews() {
             <button
               key={index}
               onClick={() => setCurrentReview(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
+              className={`w-4 h-4 rounded-full transition-all duration-300 cursor-pointer ${
                 index === currentReview 
                   ? 'bg-purple-600 scale-125' 
                   : 'bg-gray-300 hover:bg-gray-400'
@@ -206,38 +202,7 @@ export function CompaniesAndReviews() {
           ))}
         </div>
 
-        {/* All Reviews Grid */}
-        <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-        >
-          {reviews.map((review, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-2xl p-6 border border-gray-200"
-            >
-              <div className="flex items-center mb-4">
-                <span className="text-3xl mr-3">{review.avatar}</span>
-                <div>
-                  <div className="text-gray-900 font-semibold">{review.name}</div>
-                  <div className="text-sm text-gray-600">{review.company}</div>
-                </div>
-              </div>
-              
-              <div className="flex mb-4">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-current mr-1" />
-                ))}
-              </div>
-              
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {review.content}
-              </p>
-            </div>
-          ))}
-        </motion.div>
+
       </div>
     </section>
   );
