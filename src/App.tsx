@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
@@ -38,6 +38,17 @@ function HomePage() {
       <Footer />
     </div>
   );
+}
+
+// Component to handle scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
 
 // Layout wrapper for pages with navigation and footer
@@ -151,6 +162,7 @@ function WriterNetworkPage() {
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/methodology" element={<MethodologyPage />} />

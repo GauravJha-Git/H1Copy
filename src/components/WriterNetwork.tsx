@@ -1,9 +1,9 @@
+import React, { useState } from 'react';
 import { ArrowLeft, PenTool, DollarSign, Clock, Users, Star, CheckCircle, Globe, Zap } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { useState } from 'react';
 
 interface WriterNetworkProps {
   onNavigateHome: () => void;
@@ -19,23 +19,35 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Writer application submitted:', formData);
-    alert('Thank you for your application! We\'ll review it and get back to you within 2-3 business days.');
-    setFormData({ name: '', email: '', experience: '', portfolio: '', specialization: '', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      console.log('Writer application submitted:', formData);
+      
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      alert('Thank you for your application! We will review it and get back to you within 2-3 business days.');
+      setFormData({ name: '', email: '', experience: '', portfolio: '', specialization: '', message: '' });
+    } catch (error) {
+      console.error('Application submission error:', error);
+      alert('Sorry, there was an error submitting your application. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
-
 
   const benefits = [
     {
@@ -90,14 +102,14 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
     {
       name: 'Marcus Thompson',
       role: 'SEO Content Specialist',
-      content: 'I\'ve been part of the writer network for 2 years now. The flexibility and quality of projects is unmatched.',
+      content: 'I have been part of the writer network for 2 years now. The flexibility and quality of projects is unmatched.',
       avatar: '👨‍✍️',
       rating: 5,
     },
     {
       name: 'Sarah Chen',
       role: 'Technical Writer',
-      content: 'h1copy values quality writing and provides excellent feedback. It\'s helped me grow as a professional writer.',
+      content: 'h1copy values quality writing and provides excellent feedback. It has helped me grow as a professional writer.',
       avatar: '👩‍🔬',
       rating: 5,
     },
@@ -297,7 +309,8 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                     onChange={handleInputChange}
                     placeholder="Your full name"
                     required
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                    disabled={isSubmitting}
+                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -309,7 +322,8 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                     onChange={handleInputChange}
                     placeholder="your@email.com"
                     required
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                    disabled={isSubmitting}
+                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -322,7 +336,8 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                     value={formData.experience}
                     onChange={handleInputChange}
                     required
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl p-3 bg-white"
+                    disabled={isSubmitting}
+                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl p-3 bg-white disabled:opacity-50"
                   >
                     <option value="">Select experience</option>
                     <option value="2-3">2-3 years</option>
@@ -339,7 +354,8 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                     value={formData.portfolio}
                     onChange={handleInputChange}
                     placeholder="https://yourportfolio.com"
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                    disabled={isSubmitting}
+                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -351,7 +367,8 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                   value={formData.specialization}
                   onChange={handleInputChange}
                   required
-                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl p-3 bg-white"
+                  disabled={isSubmitting}
+                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl p-3 bg-white disabled:opacity-50"
                 >
                   <option value="">Select your specialization</option>
                   <option value="SEO Content">SEO Content Writing</option>
@@ -372,22 +389,22 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                   onChange={handleInputChange}
                   placeholder="Tell us about your writing experience, favorite topics, and why you'd like to join our network..."
                   rows={5}
-                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                  disabled={isSubmitting}
+                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Submit Application
+                {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
               </Button>
             </form>
           </motion.div>
         </div>
       </section>
-
-
 
       {/* CTA Section */}
       <section className="py-20 bg-purple-600">

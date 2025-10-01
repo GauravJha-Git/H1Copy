@@ -13,23 +13,37 @@ export function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    alert('Thank you for your message! We\'ll get back to you soon.');
+    setIsSubmitting(true);
+    
+    try {
+      // Handle form submission here
+      console.log('Form submitted:', formData);
+      
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Reset form
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      alert('Thank you for your message! We will get back to you soon.');
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Sorry, there was an error sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
-
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
@@ -72,7 +86,8 @@ export function Contact() {
                     onChange={handleInputChange}
                     placeholder="Your full name"
                     required
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                    disabled={isSubmitting}
+                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -84,7 +99,8 @@ export function Contact() {
                     onChange={handleInputChange}
                     placeholder="your@email.com"
                     required
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                    disabled={isSubmitting}
+                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -97,11 +113,10 @@ export function Contact() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="+1 (555) 123-4567"
-                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                  disabled={isSubmitting}
+                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                 />
               </div>
-              
-
               
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
@@ -111,17 +126,19 @@ export function Contact() {
                   onChange={handleInputChange}
                   placeholder="Tell us about your SEO goals and challenges..."
                   rows={5}
-                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl"
+                  disabled={isSubmitting}
+                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
                 />
               </div>
               
               <Button 
                 type="submit" 
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <span className="flex items-center justify-center">
-                  Send Message
-                  <Send className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  <Send className={`ml-3 h-5 w-5 transition-transform duration-200 ${isSubmitting ? '' : 'group-hover:translate-x-1'}`} />
                 </span>
               </Button>
             </form>

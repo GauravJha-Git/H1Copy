@@ -1868,6 +1868,10 @@
     object-fit: cover;
   }
 
+  .object-center {
+    object-position: center;
+  }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -2775,6 +2779,15 @@
 
   .disabled\:opacity-50:disabled {
     opacity: .5;
+  }
+
+  @media (hover: hover) {
+    .disabled\:hover\:scale-100:disabled:hover {
+      --tw-scale-x: 100%;
+      --tw-scale-y: 100%;
+      --tw-scale-z: 100%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
   }
 
   .has-\[\>svg\]\:px-2\.5:has( > svg) {
