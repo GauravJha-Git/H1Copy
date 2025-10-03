@@ -21,9 +21,7 @@ export function Navigation() {
 
   // Hover handlers for Services dropdown
   const handleServicesMouseEnter = () => {
-    if (servicesTimeoutRef.current) {
-      clearTimeout(servicesTimeoutRef.current);
-    }
+    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
     setIsServicesDropdownOpen(true);
   };
 
@@ -35,9 +33,7 @@ export function Navigation() {
 
   // Hover handlers for Company dropdown
   const handleCompanyMouseEnter = () => {
-    if (companyTimeoutRef.current) {
-      clearTimeout(companyTimeoutRef.current);
-    }
+    if (companyTimeoutRef.current) clearTimeout(companyTimeoutRef.current);
     setIsCompanyDropdownOpen(true);
   };
 
@@ -50,16 +46,20 @@ export function Navigation() {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && 
-          buttonRef.current && 
-          !dropdownRef.current.contains(event.target as Node) &&
-          !buttonRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        buttonRef.current &&
+        !dropdownRef.current.contains(event.target as Node) &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
         setIsServicesDropdownOpen(false);
       }
-      if (companyDropdownRef.current && 
-          companyButtonRef.current && 
-          !companyDropdownRef.current.contains(event.target as Node) &&
-          !companyButtonRef.current.contains(event.target as Node)) {
+      if (
+        companyDropdownRef.current &&
+        companyButtonRef.current &&
+        !companyDropdownRef.current.contains(event.target as Node) &&
+        !companyButtonRef.current.contains(event.target as Node)
+      ) {
         setIsCompanyDropdownOpen(false);
       }
     };
@@ -67,12 +67,8 @@ export function Navigation() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      if (servicesTimeoutRef.current) {
-        clearTimeout(servicesTimeoutRef.current);
-      }
-      if (companyTimeoutRef.current) {
-        clearTimeout(companyTimeoutRef.current);
-      }
+      if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+      if (companyTimeoutRef.current) clearTimeout(companyTimeoutRef.current);
     };
   }, []);
 
@@ -114,12 +110,12 @@ export function Navigation() {
     { name: 'SEO Optimization', path: '/services/seo-optimization' },
     { name: 'Content Marketing', path: '/services/content-marketing' },
     { name: 'Technical SEO', path: '/services/technical-seo' },
-    { name: 'Local SEO', path: '/services/local-seo' }
+    { name: 'Local SEO', path: '/services/local-seo' },
   ];
 
   const companyPages = [
     { name: 'About Company', path: '/company/about' },
-    { name: 'Freelancers Network', path: '/company/writer-network' }
+    { name: 'Freelancers Network', path: '/company/writer-network' },
   ];
 
   return (
@@ -128,8 +124,8 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer"
             >
               <ImageWithFallback
@@ -144,12 +140,13 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
+              {/* Home */}
               {location.pathname === '/' ? (
                 <button
                   onClick={() => scrollToSection('home')}
                   className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                    activeSection === 'home' 
-                      ? 'text-purple-600' 
+                    activeSection === 'home'
+                      ? 'text-purple-600'
                       : 'text-gray-600 hover:text-purple-600'
                   }`}
                 >
@@ -164,9 +161,9 @@ export function Navigation() {
                 </Link>
               )}
 
-              {/* Services Dropdown */}
-              <div 
-                className="relative" 
+              {/* Services */}
+              <div
+                className="relative"
                 ref={dropdownRef}
                 onMouseEnter={handleServicesMouseEnter}
                 onMouseLeave={handleServicesMouseLeave}
@@ -175,17 +172,19 @@ export function Navigation() {
                   ref={buttonRef}
                   className={`px-3 py-2 text-sm font-medium transition-colors flex items-center gap-1 cursor-pointer ${
                     isServiceActive() || isServicesDropdownOpen
-                      ? 'text-purple-600' 
+                      ? 'text-purple-600'
                       : 'text-gray-600 hover:text-purple-600'
                   }`}
                 >
                   Services
-                  <ChevronDown className={`w-4 h-4 transition-all duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-all duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`}
+                  />
                 </button>
-                <div 
+                <div
                   className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50 transition-all duration-200 origin-top ${
-                    isServicesDropdownOpen 
-                      ? 'opacity-100 scale-100 translate-y-0' 
+                    isServicesDropdownOpen
+                      ? 'opacity-100 scale-100 translate-y-0'
                       : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                   }`}
                 >
@@ -202,59 +201,33 @@ export function Navigation() {
                 </div>
               </div>
 
-              <Link
-                to="/blog"
-                className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                  isActive('/blog') 
-                    ? 'text-purple-600' 
-                    : 'text-gray-600 hover:text-purple-600'
-                }`}
-              >
-                Blog
-              </Link>
-
-              {location.pathname === '/' ? (
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                    activeSection === 'contact' 
-                      ? 'text-purple-600' 
-                      : 'text-gray-600 hover:text-purple-600'
-                  }`}
-                >
-                  Contact
-                </button>
-              ) : (
-                <Link
-                  to="/"
-                  onClick={() => {
-                    setTimeout(() => {
-                      const contactElement = document.getElementById('contact');
-                      if (contactElement) {
-                        contactElement.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }, 100);
-                  }}
-                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
-                >
-                  Contact
-                </Link>
-              )}
-
+              {/* Methodology */}
               <Link
                 to="/methodology"
                 className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                  isActive('/methodology') 
-                    ? 'text-purple-600' 
+                  isActive('/methodology')
+                    ? 'text-purple-600'
                     : 'text-gray-600 hover:text-purple-600'
                 }`}
               >
                 Methodology
               </Link>
 
-              {/* Company Dropdown */}
-              <div 
-                className="relative" 
+              {/* Blog */}
+              <Link
+                to="/blog"
+                className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
+                  isActive('/blog')
+                    ? 'text-purple-600'
+                    : 'text-gray-600 hover:text-purple-600'
+                }`}
+              >
+                Blog
+              </Link>
+
+              {/* Company */}
+              <div
+                className="relative"
                 ref={companyDropdownRef}
                 onMouseEnter={handleCompanyMouseEnter}
                 onMouseLeave={handleCompanyMouseLeave}
@@ -263,17 +236,19 @@ export function Navigation() {
                   ref={companyButtonRef}
                   className={`px-3 py-2 text-sm font-medium transition-colors flex items-center gap-1 cursor-pointer ${
                     isCompanyActive() || isCompanyDropdownOpen
-                      ? 'text-purple-600' 
+                      ? 'text-purple-600'
                       : 'text-gray-600 hover:text-purple-600'
                   }`}
                 >
                   Company
-                  <ChevronDown className={`w-4 h-4 transition-all duration-200 ${isCompanyDropdownOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-all duration-200 ${isCompanyDropdownOpen ? 'rotate-180' : ''}`}
+                  />
                 </button>
-                <div 
+                <div
                   className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50 transition-all duration-200 origin-top ${
-                    isCompanyDropdownOpen 
-                      ? 'opacity-100 scale-100 translate-y-0' 
+                    isCompanyDropdownOpen
+                      ? 'opacity-100 scale-100 translate-y-0'
                       : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                   }`}
                 >
@@ -289,6 +264,33 @@ export function Navigation() {
                   ))}
                 </div>
               </div>
+
+              {/* Contact */}
+              {location.pathname === '/' ? (
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
+                    activeSection === 'contact'
+                      ? 'text-purple-600'
+                      : 'text-gray-600 hover:text-purple-600'
+                  }`}
+                >
+                  Contact
+                </button>
+              ) : (
+                <Link
+                  to="/"
+                  onClick={() => {
+                    setTimeout(() => {
+                      const contactElement = document.getElementById('contact');
+                      if (contactElement) contactElement.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                  }}
+                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
+                >
+                  Contact
+                </Link>
+              )}
             </div>
           </div>
 
@@ -309,6 +311,7 @@ export function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+              {/* Home */}
               {location.pathname === '/' ? (
                 <button
                   onClick={() => scrollToSection('home')}
@@ -326,7 +329,7 @@ export function Navigation() {
                 </Link>
               )}
 
-              {/* Mobile Services */}
+              {/* Services */}
               <div>
                 <button
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
@@ -354,39 +357,7 @@ export function Navigation() {
                 )}
               </div>
 
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-
-              {location.pathname === '/' ? (
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors w-full text-left cursor-pointer"
-                >
-                  Contact
-                </button>
-              ) : (
-                <Link
-                  to="/"
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    setTimeout(() => {
-                      const contactElement = document.getElementById('contact');
-                      if (contactElement) {
-                        contactElement.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }, 100);
-                  }}
-                >
-                  Contact
-                </Link>
-              )}
-
+              {/* Methodology */}
               <Link
                 to="/methodology"
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
@@ -395,7 +366,16 @@ export function Navigation() {
                 Methodology
               </Link>
 
-              {/* Mobile Company */}
+              {/* Blog */}
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+
+              {/* Company */}
               <div>
                 <button
                   onClick={() => setIsMobileCompanyOpen(!isMobileCompanyOpen)}
@@ -422,6 +402,30 @@ export function Navigation() {
                   </div>
                 )}
               </div>
+
+              {/* Contact */}
+              {location.pathname === '/' ? (
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors w-full text-left cursor-pointer"
+                >
+                  Contact
+                </button>
+              ) : (
+                <Link
+                  to="/"
+                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    setTimeout(() => {
+                      const contactElement = document.getElementById('contact');
+                      if (contactElement) contactElement.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                  }}
+                >
+                  Contact
+                </Link>
+              )}
             </div>
           </div>
         )}
