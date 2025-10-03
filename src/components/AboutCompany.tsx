@@ -349,43 +349,25 @@ export function AboutCompany({
               </div>
             </div>
 
-            <div>
-              <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg">
-                <div className="text-center mb-8">
-                  <div className="relative mx-auto mb-6" style={{ width: 'clamp(128px, 20vw, 160px)', height: 'clamp(128px, 20vw, 160px)' }}>
-                    <div className="w-full h-full overflow-hidden rounded-full border-4 border-purple-200 flex-shrink-0">
-                      <ImageWithFallback
-                        src="https://images.unsplash.com/photo-1723537742563-15c3d351dbf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc21hbiUyMGhlYWRzaG90JTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU5MzI2MzIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                        alt="Masroor Ahmad - Founder & Lead Strategist"
-                        className="w-full h-full object-cover object-center"
-                      />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Masroor Ahmad
-                  </h3>
-                  <p className="text-purple-600 font-semibold mb-4">
+            <div className="text-center">
+              <div className="mb-8">
+                <ImageWithFallback
+                  src="https://images.unsplash.com/photo-1723537742563-15c3d351dbf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc21hbiUyMGhlYWRzaG90JTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU5MzI2MzIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Masroor Ahmad - Founder & Lead Strategist"
+                  className="w-64 h-80 object-cover object-center rounded-2xl mx-auto shadow-2xl"
+                />
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-gray-900 tracking-tight">
+                  Masroor Ahmad
+                </h3>
+                <div className="space-y-2">
+                  <div className="w-12 h-0.5 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto"></div>
+                  <p className="text-lg font-medium text-gray-700 tracking-wide">
                     Founder & Lead Strategist
                   </p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 text-center">
-                  <div className="bg-purple-50 rounded-xl p-4">
-                    <div className="text-lg font-bold text-purple-600 mb-1">
-                      Extensive
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      Experience
-                    </div>
-                  </div>
-                  <div className="bg-purple-50 rounded-xl p-4">
-                    <div className="text-lg font-bold text-purple-600 mb-1">
-                      Proven
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      Track Record
-                    </div>
-                  </div>
+                  <div className="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-purple-300 mx-auto"></div>
                 </div>
               </div>
             </div>

@@ -9,7 +9,6 @@ export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     message: ''
   });
 
@@ -27,11 +26,11 @@ export function Contact() {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Reset form
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      alert('Thank you for your message! We will get back to you soon.');
+      setFormData({ name: '', email: '', message: '' });
+      alert('Thank You for Your Message! We Will Get Back to You Soon.');
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('Sorry, there was an error sending your message. Please try again.');
+      alert('Sorry, There Was an Error Sending Your Message. Please Try Again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -106,19 +105,6 @@ export function Contact() {
               </div>
               
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Phone (Optional)</label>
-                <Input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  placeholder="+1 (555) 123-4567"
-                  disabled={isSubmitting}
-                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
-                />
-              </div>
-              
-              <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
                 <Textarea
                   name="message"
@@ -144,47 +130,26 @@ export function Contact() {
             </form>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-8">
-            {/* Contact Details */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Get in Touch
-              </h3>
-              
-              <div className="space-y-6">
-                {[
-                  {
-                    title: "Email",
-                    content: ["hello@h1copy.com", "support@h1copy.com"]
-                  },
-                  {
-                    title: "Phone",
-                    content: ["+1 (555) 123-4567", "Mon-Fri, 9AM-6PM EST"]
-                  },
-                  {
-                    title: "Office",
-                    content: ["123 SEO Street", "Digital City, DC 12345"]
-                  }
-                ].map((item, index) => (
-                  <div 
-                    key={item.title}
-                    className="space-y-2"
-                  >
-                    <h4 className="text-lg font-bold text-gray-900">{item.title}</h4>
-                    {item.content.map((line, i) => (
-                      <p key={i} className="text-gray-600">{line}</p>
-                    ))}
-                  </div>
-                ))}
+          {/* Contact Information & Social Media Combined */}
+          <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              Get in Touch & Follow Us
+            </h3>
+            
+            {/* Email Contact */}
+            <div className="space-y-6 mb-8">
+              <div className="space-y-2">
+                <h4 className="text-lg font-bold text-gray-900">Email</h4>
+                <p className="text-gray-600">hello@h1copy.com</p>
+                <p className="text-gray-600">support@h1copy.com</p>
               </div>
             </div>
 
-            {/* Social Media */}
-            <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Follow Us
-              </h3>
+            {/* Social Media Section */}
+            <div className="border-t border-gray-200 pt-8">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">
+                Follow us for SEO tips & updates
+              </h4>
               
               <p className="text-gray-600 mb-6">
                 Stay updated with the latest SEO trends and insights

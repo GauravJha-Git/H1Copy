@@ -557,9 +557,6 @@ export function LocalSeo({ onNavigateHome }: LocalSeoProps) {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">
-              Get answers to common questions about our local SEO service
-            </p>
           </motion.div>
 
           <div className="space-y-4">
@@ -573,7 +570,7 @@ export function LocalSeo({ onNavigateHome }: LocalSeoProps) {
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
                 >
                   <span className="font-semibold text-gray-900">{faq.question}</span>
                   {openFaq === index ? (

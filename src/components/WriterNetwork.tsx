@@ -1,54 +1,13 @@
-import React, { useState } from 'react';
-import { ArrowLeft, PenTool, DollarSign, Clock, Users, Star, CheckCircle, Globe, Zap } from 'lucide-react';
+import React from 'react';
+import { ArrowLeft, PenTool, DollarSign, Clock, Users, Star, CheckCircle, Globe, Zap, ExternalLink } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
 
 interface WriterNetworkProps {
   onNavigateHome: () => void;
 }
 
 export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    experience: '',
-    portfolio: '',
-    specialization: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      console.log('Writer application submitted:', formData);
-      
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      alert('Thank you for your application! We will review it and get back to you within 2-3 business days.');
-      setFormData({ name: '', email: '', experience: '', portfolio: '', specialization: '', message: '' });
-    } catch (error) {
-      console.error('Application submission error:', error);
-      alert('Sorry, there was an error submitting your application. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
   const benefits = [
     {
       icon: DollarSign,
@@ -102,7 +61,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
     {
       name: 'Marcus Thompson',
       role: 'SEO Content Specialist',
-      content: 'I have been part of the writer network for 2 years now. The flexibility and quality of projects is unmatched.',
+      content: 'I have been part of the freelancer network for 2 years now. The flexibility and quality of projects is unmatched.',
       avatar: '👨‍✍️',
       rating: 5,
     },
@@ -114,6 +73,13 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
       rating: 5,
     },
   ];
+
+  // Placeholder for Google Form URL - to be updated later
+  const handleApplyClick = () => {
+    // TODO: Replace with actual Google Form URL
+    // window.open('GOOGLE_FORM_URL_HERE', '_blank');
+    alert('Google Form link will be added here soon!');
+  };
 
   return (
     <div className="min-h-screen bg-white pt-16">
@@ -142,15 +108,19 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
               <PenTool className="h-16 w-16 text-purple-600" />
             </div>
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Join the h1copy Writer Network
+              Join the h1copy freelancers network
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Are you a talented freelance writer? Join our exclusive network of content creators and work on 
               exciting SEO and content marketing projects for leading brands.
             </p>
-            <div className="inline-flex items-center gap-2 bg-green-100 px-6 py-3 rounded-full text-sm font-semibold text-green-600 border border-green-200">
-              ✨ Now Accepting Applications
-            </div>
+            <Button
+              onClick={handleApplyClick}
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer inline-flex items-center gap-3"
+            >
+              Apply Now
+              <ExternalLink className="h-5 w-5" />
+            </Button>
           </motion.div>
         </div>
       </section>
@@ -165,7 +135,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Why Join Our Network?
+              Why join our network?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We believe in supporting our writers with competitive compensation, flexible work, and growth opportunities.
@@ -202,7 +172,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What We're Looking For
+              What we're looking for
             </h2>
             <p className="text-xl text-gray-600">
               We're seeking experienced writers who are passionate about creating high-quality content.
@@ -238,7 +208,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             transition={{ duration: 0.8, delay: 1.0 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What Our Writers Say
+              What our freelancers say
             </h2>
             <p className="text-xl text-gray-600">
               Hear from successful writers in our network.
@@ -275,7 +245,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
         </div>
       </section>
 
-      {/* Application Form */}
+      {/* Application Button Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -285,123 +255,36 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             transition={{ duration: 0.8, delay: 1.4 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Apply to Join Our Network
+              Apply to join our network
             </h2>
-            <p className="text-xl text-gray-600">
-              Ready to start your journey with h1copy? Fill out the application below.
+            <p className="text-xl text-gray-600 mb-12">
+              Ready to start your journey with h1copy? Click below to fill out our application form.
             </p>
-          </motion.div>
 
-          <motion.div
-            className="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.6 }}
-          >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
-                  <Input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your full name"
-                    required
-                    disabled={isSubmitting}
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                  <Input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="your@email.com"
-                    required
-                    disabled={isSubmitting}
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Years of Experience *</label>
-                  <select
-                    name="experience"
-                    value={formData.experience}
-                    onChange={handleInputChange}
-                    required
-                    disabled={isSubmitting}
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl p-3 bg-white disabled:opacity-50"
-                  >
-                    <option value="">Select experience</option>
-                    <option value="2-3">2-3 years</option>
-                    <option value="4-6">4-6 years</option>
-                    <option value="7-10">7-10 years</option>
-                    <option value="10+">10+ years</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Portfolio URL</label>
-                  <Input
-                    type="url"
-                    name="portfolio"
-                    value={formData.portfolio}
-                    onChange={handleInputChange}
-                    placeholder="https://yourportfolio.com"
-                    disabled={isSubmitting}
-                    className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Specialization *</label>
-                <select
-                  name="specialization"
-                  value={formData.specialization}
-                  onChange={handleInputChange}
-                  required
-                  disabled={isSubmitting}
-                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl p-3 bg-white disabled:opacity-50"
+            <motion.div
+              className="bg-white rounded-3xl p-12 border border-gray-200 shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.6 }}
+            >
+              <div className="text-center">
+                <PenTool className="h-16 w-16 text-purple-600 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Start your application
+                </h3>
+                <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                  Fill out our comprehensive application form to join our network of talented freelance writers.
+                </p>
+                
+                <Button
+                  onClick={handleApplyClick}
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer inline-flex items-center gap-3"
                 >
-                  <option value="">Select your specialization</option>
-                  <option value="SEO Content">SEO Content Writing</option>
-                  <option value="Technical Writing">Technical Writing</option>
-                  <option value="Blog Writing">Blog Writing</option>
-                  <option value="Marketing Copy">Marketing Copy</option>
-                  <option value="Social Media">Social Media Content</option>
-                  <option value="Email Marketing">Email Marketing</option>
-                  <option value="Other">Other</option>
-                </select>
+                  Apply Now
+                  <ExternalLink className="h-5 w-5" />
+                </Button>
               </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Tell Us About Yourself</label>
-                <Textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Tell us about your writing experience, favorite topics, and why you'd like to join our network..."
-                  rows={5}
-                  disabled={isSubmitting}
-                  className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-              >
-                {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
-              </Button>
-            </form>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -416,16 +299,17 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             transition={{ duration: 0.8, delay: 2.2 }}
           >
             <h2 className="text-4xl font-bold mb-6">
-              Ready to Get Started?
+              Ready to get started?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-purple-100">
               Join our network of talented freelance writers and start working on exciting projects with leading brands.
             </p>
             <Button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg cursor-pointer"
+              onClick={handleApplyClick}
+              className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg cursor-pointer inline-flex items-center gap-2"
             >
               Apply Now
+              <ExternalLink className="h-5 w-5" />
             </Button>
           </motion.div>
         </div>

@@ -70,7 +70,7 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
       <div className="fixed top-20 left-4 z-50">
         <button
           onClick={onNavigateHome}
-          className="flex items-center gap-2 bg-white shadow-md rounded-xl px-4 py-3 border border-gray-200 transition-all duration-300 hover:shadow-lg"
+          className="flex items-center gap-2 bg-white shadow-md rounded-xl px-4 py-3 border border-gray-200 transition-all duration-300 hover:shadow-lg cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4 text-gray-600" />
           <span className="text-sm font-semibold text-gray-700">
@@ -540,7 +540,7 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
                   }
                 }, 100);
               }}
-              className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 inline-flex items-center gap-2 hover:scale-105 hover:shadow-lg group"
+              className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 inline-flex items-center gap-2 hover:scale-105 hover:shadow-lg group cursor-pointer"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
