@@ -16,6 +16,8 @@ import { TechnicalSeo } from './components/services/TechnicalSeo';
 import { LocalSeo } from './components/services/LocalSeo';
 import { AboutCompany } from './components/AboutCompany';
 import { WriterNetwork } from './components/WriterNetwork';
+import Privacy from './components/Privacy';
+import TermsPage from './components/TermsAndCondition';
 
 // Home Page Component
 function HomePage() {
@@ -165,6 +167,8 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<TermsPage />} />
         <Route path="/methodology" element={<MethodologyPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/services/seo-optimization" element={<SeoOptimizationPage />} />

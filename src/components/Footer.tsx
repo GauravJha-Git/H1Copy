@@ -1,5 +1,7 @@
+import React from 'react';
 import { Mail, Phone, MapPin, Twitter, Linkedin, ArrowUp } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   const scrollToTop = () => {
@@ -36,11 +38,7 @@ export function Footer() {
             
             <div className="flex space-x-4">
               {[
-                { 
-                  icon: Twitter, 
-                  color: "bg-blue-500",
-                  label: "Follow us on Twitter"
-                },
+                
                 { 
                   icon: Linkedin, 
                   color: "bg-blue-700",
@@ -122,7 +120,9 @@ export function Footer() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 h1copy. All rights reserved. | Privacy Policy | Terms of Service
+            © 2024 h1copy. All rights reserved. |
+            <Link to="/privacy" className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors">Privacy Policy</Link> |
+            <Link to="/terms" className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors">Terms & Condition</Link>
           </div>
           
           <button 

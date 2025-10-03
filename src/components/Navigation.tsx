@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { ArrowRight, Menu, X, ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function Navigation() {
@@ -11,6 +11,7 @@ export function Navigation() {
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
   const [isMobileCompanyOpen, setIsMobileCompanyOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+
   const dropdownRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const companyDropdownRef = useRef<HTMLDivElement>(null);
@@ -265,17 +266,14 @@ export function Navigation() {
                 </div>
               </div>
 
-              {/* Contact */}
+              {/* Work with us button */}
               {location.pathname === '/' ? (
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                    activeSection === 'contact'
-                      ? 'text-purple-600'
-                      : 'text-gray-600 hover:text-purple-600'
-                  }`}
+                  className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
-                  Contact
+                  Work with us
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </button>
               ) : (
                 <Link
@@ -286,9 +284,10 @@ export function Navigation() {
                       if (contactElement) contactElement.scrollIntoView({ behavior: 'smooth' });
                     }, 100);
                   }}
-                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
+                  className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
-                  Contact
+                  Work with us
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
               )}
             </div>
@@ -403,18 +402,18 @@ export function Navigation() {
                 )}
               </div>
 
-              {/* Contact */}
+              {/* Work with us button */}
               {location.pathname === '/' ? (
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors w-full text-left cursor-pointer"
+                  className="mt-4 w-full inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-medium px-3 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
                   Contact
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </button>
               ) : (
                 <Link
                   to="/"
-                  className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
                   onClick={() => {
                     setIsMenuOpen(false);
                     setTimeout(() => {
@@ -422,8 +421,10 @@ export function Navigation() {
                       if (contactElement) contactElement.scrollIntoView({ behavior: 'smooth' });
                     }, 100);
                   }}
+                  className="mt-4 w-full inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-medium px-3 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
                   Contact
+                  {/* <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" /> */}
                 </Link>
               )}
             </div>

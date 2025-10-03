@@ -110,7 +110,7 @@ export function Contact() {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Tell us about your SEO goals and challenges..."
+                  // placeholder="Tell us about your SEO goals and challenges..."
                   rows={5}
                   disabled={isSubmitting}
                   className="w-full border-2 border-purple-200 focus:border-purple-500 rounded-xl disabled:opacity-50"
@@ -133,7 +133,7 @@ export function Contact() {
           {/* Contact Information & Social Media Combined */}
           <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Get in Touch & Follow Us
+              Get in Touch
             </h3>
             
             {/* Email Contact */}
@@ -148,20 +148,14 @@ export function Contact() {
             {/* Social Media Section */}
             <div className="border-t border-gray-200 pt-8">
               <h4 className="text-lg font-bold text-gray-900 mb-4">
-                Follow us for SEO tips & updates
+                Follow us for smarter content marketing
               </h4>
               
-              <p className="text-gray-600 mb-6">
-                Stay updated with the latest SEO trends and insights
-              </p>
+            
               
               <div className="flex space-x-4">
                 {[
-                  { 
-                    icon: Twitter, 
-                    color: "bg-blue-500",
-                    label: "Follow us on Twitter"
-                  },
+                  
                   { 
                     icon: Linkedin, 
                     color: "bg-blue-700",

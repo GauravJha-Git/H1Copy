@@ -550,7 +550,7 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
       </section>
 
       {/* Footer */}
-      <Footer />
+     
     </div>
   );
 }

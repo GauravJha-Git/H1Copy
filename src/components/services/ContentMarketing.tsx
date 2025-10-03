@@ -1,4 +1,5 @@
 import { Button } from '../ui/button';
+import {FloatingCompany} from '../ui/FloatingCompanies';
 import { motion } from 'motion/react';
 import { ArrowRight, FileText, Users, Target, TrendingUp, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
@@ -173,8 +174,13 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
         </div>
       </section>
 
+            
+      
+
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
+
+      
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
