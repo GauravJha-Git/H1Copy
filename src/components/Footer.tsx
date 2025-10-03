@@ -17,7 +17,7 @@ export function Footer() {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -111,42 +111,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-6 text-white">
-              Contact Info
-            </h3>
-            <div className="space-y-4">
-              {[
-                {
-                  icon: Mail,
-                  title: "hello@h1copy.com",
-                  subtitle: "General inquiries"
-                },
-                {
-                  icon: Phone,
-                  title: "+1 (555) 123-4567",
-                  subtitle: "Mon-Fri, 9AM-6PM EST"
-                },
-                {
-                  icon: MapPin,
-                  title: "123 SEO Street",
-                  subtitle: "Digital City, DC 12345"
-                }
-              ].map((contact, index) => (
-                <div 
-                  key={contact.title}
-                  className="flex items-start space-x-3"
-                >
-                  <contact.icon className="h-5 w-5 text-purple-400 mt-0.5" />
-                  <div>
-                    <p className="text-gray-300">{contact.title}</p>
-                    <p className="text-gray-400 text-sm">{contact.subtitle}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          
         </motion.div>
 
         {/* Bottom Bar */}

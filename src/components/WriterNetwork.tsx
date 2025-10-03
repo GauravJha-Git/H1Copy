@@ -70,8 +70,8 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
   // Placeholder for Google Form URL - to be updated later
   const handleApplyClick = () => {
     // TODO: Replace with actual Google Form URL
-    // window.open('GOOGLE_FORM_URL_HERE', '_blank');
-    alert('Google Form link will be added here soon!');
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSdT_G5ow_tyV7E1eQW6WVtQdKlgru6ycyS8xU61Nra0zZfntA/viewform?usp=sharing&ouid=107041587092142532421', '_blank');
+    // alert('Google Form link will be added here soon!');
   };
 
   return (

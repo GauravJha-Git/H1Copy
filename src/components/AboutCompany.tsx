@@ -365,7 +365,7 @@ export function AboutCompany({
                 <div className="space-y-2">
                   <div className="w-12 h-0.5 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto"></div>
                   <p className="text-lg font-medium text-gray-700 tracking-wide">
-                    Founder & Lead Strategist
+                    Founder 
                   </p>
                   <div className="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-purple-300 mx-auto"></div>
                 </div>
@@ -481,11 +481,12 @@ export function AboutCompany({
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight mb-6 mt-1">
-              Where is h1copy located?
+            <h2  className="text-3xl md:text-4xl font-black text-slate-800 tracking-tight mb-6 mt-1 text-center mx-auto">
+                Where is h1copy located?
             </h2>
 
-            <div className="max-w-3xl">
+
+            <div className="max-w-3xl  items-center justify-center mx-auto text-center">
               <p className="text-2xl font-bold text-gray-800 mb-4">
                 Fully remote. Globally connected.
               </p>
@@ -499,7 +500,7 @@ export function AboutCompany({
           </motion.div>
 
           {/* Countries and Map - Side by Side */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className=" items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -527,17 +528,7 @@ export function AboutCompany({
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <div className="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg text-center">
-                <div className="text-6xl mb-4">🌍</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Remote-First Approach
-                </h3>
-                <p className="text-gray-600">
-                  Working across time zones to serve clients
-                  when they need us most, bringing diverse
-                  perspectives to every project.
-                </p>
-              </div>
+              
             </motion.div>
           </div>
         </div>
