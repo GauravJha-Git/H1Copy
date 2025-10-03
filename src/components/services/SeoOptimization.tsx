@@ -151,13 +151,7 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
                   Get Started Today
                   <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </Button>
-                <Button 
-                  onClick={scrollToTestimonials}
-                  variant="outline"
-                  className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
-                  View Success Stories
-                </Button>
+               
               </div>
             </motion.div>
 
