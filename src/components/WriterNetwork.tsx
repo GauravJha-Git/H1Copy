@@ -34,11 +34,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
       title: 'Diverse Projects',
       description: 'Work on content for various industries and expand your expertise.',
     },
-    {
-      icon: Star,
-      title: 'Recognition',
-      description: 'Get recognized for excellent work and build your reputation in the industry.',
-    },
+    
   ];
 
   const requirements = [
@@ -56,21 +52,18 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
       role: 'Content Writer',
       content: 'Working with h1copy has been amazing. The projects are interesting, the pay is fair, and the team is incredibly supportive.',
       avatar: '👩‍💻',
-      rating: 5,
     },
     {
       name: 'Marcus Thompson',
       role: 'SEO Content Specialist',
       content: 'I have been part of the freelancer network for 2 years now. The flexibility and quality of projects is unmatched.',
       avatar: '👨‍✍️',
-      rating: 5,
     },
     {
       name: 'Sarah Chen',
       role: 'Technical Writer',
       content: 'h1copy values quality writing and provides excellent feedback. It has helped me grow as a professional writer.',
       avatar: '👩‍🔬',
-      rating: 5,
     },
   ];
 
@@ -227,12 +220,8 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                 className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300"
               >
                 <div className="text-center mb-6">
-                  <div className="text-4xl mb-4">{testimonial.avatar}</div>
-                  <div className="flex justify-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
+                  <div className="text-4xl mb-2">{testimonial.avatar}</div>
+                  
                 </div>
                 <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
                 <div className="text-center">

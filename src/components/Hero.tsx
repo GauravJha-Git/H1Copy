@@ -162,7 +162,7 @@ export function Hero() {
                 onClick={() => scrollToSection('contact')}
                 className="bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
               >
-                Let's Talk
+                Work with us
                 <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
               </Button>
             </div>
