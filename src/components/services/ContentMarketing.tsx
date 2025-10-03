@@ -1,5 +1,5 @@
 import { Button } from '../ui/button';
-import {FloatingCompany} from '../ui/FloatingCompanies';
+import {FloatingLogosSectiony} from '../ui/FloatingCompanies';
 import { motion } from 'motion/react';
 import { ArrowRight, FileText, Users, Target, TrendingUp, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
@@ -137,11 +137,13 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Content Marketing
+                Blog writing services 
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Engage your audience with strategic content that drives traffic, builds authority, and converts readers into customers. 
-                Our content marketing strategies deliver measurable results.
+                B2B Blog writing that drives traffic,leads & conversions- <br />
+                B2B SaaS blog pieces shouldn’t be generic fluff that just has to be done for the sake of it. It’s one of the most powerful parts of the content marketing story that should expand your brand awareness, position you as a thought leader, and bring in qualified leads that convert. 
+                But writing high-quality SaaS blogs week after week — that takes course and serious work. You need strategic, product-led, bottom-of-funnel (BoFu) content that balances SEO with storytelling to make it work. That’s where we come in.
+
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -179,6 +181,7 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
+
 
       
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

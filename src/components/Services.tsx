@@ -10,30 +10,30 @@ export function Services({ onNavigate }: ServicesProps) {
   const services = [
     {
       icon: Search,
-      title: "SEO Optimization",
-      description: "Comprehensive keyword research, on-page optimization, and technical SEO to improve your search rankings.",
-      features: ["Keyword Research", "On-Page SEO", "Technical Audits", "Competitor Analysis"],
+      title: "Blogs",
+      description: "We specialize in B2B SaaS blogs that are product-led, long-form, and built to rank. From top-of-funnel visibility to bottom-of-funnel conversions, our blogs deliver traffic, leads, and thought leadership that compound over time.",
+      features: ["Long-form product-led blogs","BOFU conversion piece","Thought leadership content","SEO-driven traffic blogs",],
       page: "services/seo-optimization"
     },
     {
       icon: FileText,
-      title: "Content Marketing",
-      description: "Strategic content creation that engages your audience and drives organic traffic to your website.",
-      features: ["Content Strategy", "Blog Writing", "SEO Copywriting", "Content Optimization"],
+      title: "LinkedIn Ghostwriting",
+      description: "We help executives and founders become voices worth following. Our ghostwriting turns your expertise into engaging narratives that build authority, grow followers, and spark conversations that matter.",
+      features: ["Executive LinkedIn posts", "Personal brand storytelling", "Audience growth strategy", "Engagement-focused content"],
       page: "services/content-marketing"
     },
     {
       icon: Settings,
-      title: "Technical SEO",
-      description: "Fix technical issues that prevent search engines from crawling and indexing your website effectively.",
-      features: ["Site Speed Optimization", "Mobile Optimization", "Schema Markup", "Crawl Error Fixes"],
+      title: "eBooks",
+      description: "Deep-dive guides that do more than educate — they generate leads. We create eBooks that combine research, design, and storytelling to position your brand as the go-to authority.",
+      features: ["Lead generation eBooks", "Industry deep dives", "Educational resources", "Visual-rich guides"],
       page: "services/technical-seo"
     },
     {
       icon: MapPin,
-      title: "Local SEO",
-      description: "Dominate local search results and attract customers in your geographic area.",
-      features: ["Google My Business", "Local Citations", "Review Management", "Local Keywords"],
+      title: "White papers",
+      description: "Serious problems require serious insights. Our white papers combine research, strategy, and clarity to give your audience actionable value while reinforcing your brand’s authority.",
+      features: ["Research-backed white papers", "Industry reports", "Data-driven analysis", "Solution-driven content"],
       page: "services/local-seo"
     }
   ];
@@ -61,11 +61,10 @@ export function Services({ onNavigate }: ServicesProps) {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Our SEO Services
+            Services we offer
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive SEO solutions tailored to your business needs. From technical optimization 
-            to content strategy, we cover every aspect of search engine optimization.
+            We partner with your team to craft high-performing content that builds trust, drives demand, and positions your brand as a leader.
           </p>
         </motion.div>
 
@@ -128,34 +127,32 @@ export function Services({ onNavigate }: ServicesProps) {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Proven Process
+              Our predictable content workflow
             </h3>
-            <p className="text-xl text-gray-600">
-              We follow a systematic approach to deliver consistent SEO results
-            </p>
+            
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
                 number: "1",
-                title: "Audit & Analysis",
-                description: "Comprehensive website audit and competitor analysis"
+                title: "Onboard",
+                description: "We kick things off with clarity. From brand guidelines and style docs to ICPs and buyer personas, we gather everything upfront. Every question gets answered on day one, so we write with confidence from the start."
               },
               {
                 number: "2",
-                title: "Strategy Development",
-                description: "Custom SEO strategy based on your goals and market"
+                title: "Research",
+                description: "Generic content won’t cut it. We dig deep — SERP analysis, webinars, SME interviews, internal team insights — to ensure every piece is data-backed, unique, and tuned to your audience’s needs and pain points."
               },
               {
                 number: "3",
-                title: "Implementation",
-                description: "Execute optimization techniques and content strategies"
+                title: "Brief & Build",
+                description: "Whether you provide the brief or we create one, we map content to your strategy, funnel stage, and goals. Outlines, CTAs, internal links — every detail is aligned so you know exactly how each piece moves the needle."
               },
               {
                 number: "4",
-                title: "Monitor & Optimize",
-                description: "Continuous monitoring and optimization for better results"
+                title: "Deliver & Scale",
+                description: "From first draft to final polish, we deliver on time and on brand. With repeatable systems, transparent packages, and proven workflows, scaling high-quality content becomes effortless."
               }
             ].map((step, index) => (
               <div key={step.number} className="text-center group">

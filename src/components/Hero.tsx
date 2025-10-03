@@ -148,12 +148,12 @@ export function Hero() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-6xl text-gray-900 leading-tight font-black">
-              We help companies dominate search results
+              Product-led content for B2B SaaS that’s loved by humans, LLMs, and search engines
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Transform your online presence with data-driven SEO strategies and content that converts. 
-              Get more traffic, leads, and revenue with our proven methodologies.
+              We help you drive traffic, build brand recognition, and generate leads with expert-driven content for sustainable, compounding growth.
+
             </p>
 
             {/* CTA Button */}

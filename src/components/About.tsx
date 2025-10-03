@@ -18,16 +18,15 @@ export function About() {
             </div>
             
             <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-              We're Digital Growth Architects
+              Content that sells without selling
             </h2>
             
             <div className="space-y-6 text-gray-600 leading-relaxed">
               <p>
-                At h1copy, we don't just write content or optimize websites – we architect digital experiences that transform businesses. Our team of seasoned SEO specialists and content strategists has helped hundreds of companies achieve remarkable growth through data-driven strategies.
-              
-                From startups to enterprise corporations, we've consistently delivered results that exceed expectations. Our approach combines cutting-edge SEO techniques with compelling storytelling to create content that not only ranks but converts.
-              
-                What sets us apart is our commitment to understanding your unique business challenges and crafting solutions that drive real, measurable impact on your bottom line.
+                Most agencies will tell you they “understand SaaS,” but then ship you basic content that doesn’t solve any problem. At h1copy, we specialize in product-led content that doesn’t just explain your product but gets people to try, trust, and buy.
+                We know the magic happens when content drives action. That’s why we go beyond surface-level guides to create content that converts: product walkthroughs, competitor breakdowns, real use cases, customer stories, and screenshots that show, not just tell the value.
+                Every piece we create from TOFU to BOFU is rooted in your product and your ICP’s jobs-to-be-done. We zoom in on the exact features your buyers care about, weave in social proof, and structure CTAs that feel natural, not pushy. The result? Your content finally starts turning readers into signups and signups into paying users.
+
               </p>
             </div>
           </div>
