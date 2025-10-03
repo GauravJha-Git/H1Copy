@@ -109,7 +109,7 @@ export function Navigation() {
 
   const services = [
     { name: 'SEO Optimization', path: '/services/seo-optimization' },
-    { name: 'Content Marketing', path: '/services/content-marketing' },
+    { name: 'Blogs', path: '/services/content-marketing' },
     { name: 'Technical SEO', path: '/services/technical-seo' },
     { name: 'Local SEO', path: '/services/local-seo' },
   ];

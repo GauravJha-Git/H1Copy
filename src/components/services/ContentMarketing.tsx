@@ -30,56 +30,94 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
   const features = [
     {
       icon: FileText,
-      title: "Content Strategy Development",
-      description: "Comprehensive content planning aligned with your business goals and target audience needs."
+      title: "Specialize in SaaS & B2B blogging ",
+      description: "product-led and conversion-focused."
     },
     {
       icon: Users,
-      title: "Audience Research & Personas",
-      description: "Deep audience analysis to create content that resonates with your ideal customers."
+      title: "Do the heavy lifting",
+      description: "research, briefs, SME interviews, data, and examples."
     },
     {
       icon: Target,
-      title: "SEO-Optimized Content",
-      description: "Content creation that ranks well in search engines while providing value to readers."
+      title: "Write long-form that performs",
+      description: "our 2,500–7,000 word blogs get traffic + backlinks"
     },
     {
       icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Detailed tracking and analysis of content performance to optimize future strategies."
+      title: "Excel at BoFu content",
+      description: "ying your product features to customer pain points, outcomes, and conversions."
+    },
+    {
+      icon: TrendingUp,
+      title: "Guarantee growth",
+      description: "our blogs fuel awareness, traffic, leads, and thought leadership."
     }
   ];
 
   const benefits = [
-    "Increase website traffic by 200-400%",
-    "Build brand authority and thought leadership",
-    "Generate high-quality leads through content",
-    "Improve customer engagement and retention",
-    "Create a library of evergreen content assets",
-    "Monthly content performance reports"
+    "High-intent traffic — keyword-targeted, intent-driven content.",
+    "Thought leadership — content that makes your executives worth following.",
+    "BoFu conversions — product-led content that ties features to customer outcomes.",
+    "Consistent output — a steady publishing cadence without straining your internal team.",
+    "Better ROI — measurable lifts in traffic, leads, and revenue.",
   ];
 
   const faqs = [
     {
-      question: "What types of content do you create?",
-      answer: "We create a wide variety of content including blog posts, articles, whitepapers, case studies, social media content, email newsletters, and web copy. All content is tailored to your brand voice and audience."
+      question: "Are there other ways to get discounts?",
+      answer: "Absolutely. If you refer a paying client to us, you’ll receive a 5% discount on your own content package for the next 6 months."
     },
     {
-      question: "How often will you publish new content?",
-      answer: "Content frequency depends on your package and goals. Typically, we recommend 2-4 blog posts per month, plus additional content pieces based on your marketing calendar and strategy."
+      question: "Do you only write for SaaS?",
+      answer: "Yes. SaaS and B2B tech are our specialties. We believe deep expertise beats “generalist” writing."
     },
     {
-      question: "Do you research topics for content creation?",
-      answer: "Absolutely! We conduct thorough keyword research, competitor analysis, and audience research to identify the most valuable topics that will drive traffic and engagement for your business."
+      question: "How do you optimize blogs for LLMs (like ChatGPT)?",
+      answer: "We apply E-E-A-T (Experience, Expertise, Authority, Trust), showcase real-world insights, use clear question-based headings, and add Schema Markup so that AI models can easily extract and cite your content."
     },
     {
-      question: "Can you write content for technical industries?",
-      answer: "Yes! Our team includes writers with expertise across various industries. We take time to understand your industry, products, and technical concepts to create accurate and valuable content."
+      question: "How do you make sure content is unique?",
+      answer: "We go beyond SERPs. We conduct SME interviews, study all internal documents, incorporate fresh perspectives, identify content gaps, and create content that is loved by bots and humans."
     },
     {
-      question: "How do you measure content marketing success?",
-      answer: "We track metrics like organic traffic growth, engagement rates, time on page, social shares, lead generation, and conversion rates. Monthly reports show how content contributes to your business goals."
-    }
+      question: "What if I need revisions?",
+      answer: "Every package includes several rounds of revisions to make sure the final draft hits the mark."
+    },
+    {
+      question: "Can you handle SEO?",
+      answer: "Yes. We optimize every post for search intent, keywords, internal linking, and metadata. However, we don’t currently offer full-flagged SEO services — but stay tuned."
+    },
+    {
+      question: "Do you charge by the hour?",
+      answer: "No, we don’t work on hourly rates. Instead, we provide a fixed price for each B2B blog post project. This way, you’ll always know what to expect."
+    },
+    {
+      question: "Do you write anything besides blog posts?",
+      answer: "Yes. Along with blog posts, we also create ebooks, white papers, website copy, ghostwriting services, and more. Please reach out to know more."
+    },
+    {
+      question: "How do you onboard me?",
+      answer: " Our onboarding process is simple and designed to set us up for success. We’ll start by asking a few key questions about your target audience, goals, and current content strategy. If you already have resources like buyer personas, style guides, or product documentation, we’ll review those too.From there, we’ll create a brand guideline document just for you and make sure we’re aligned before we begin writing. This way, every piece of content we create is accurate, consistent, and tailored to your business."
+    },
+    {
+      question: "How does payment work?",
+      answer: "We require payment for the first month upfront before starting any work. After that, we invoice you at the end of each month for all completed blog posts.\n\nWe accept payments via:\n- Wire transfer\n- Wise (formerly TransferWise)\n- PayPal\n- UPI (for India-based clients)\n- Stripe (for credit/debit card payments)\n- Bank drafts or checks (where applicable)\n\nIf you prefer another method, let us know, and we’ll do our best to accommodate."
+    },
+
+    {
+      question: " I don’t want to be on a retainer. Is that okay?",
+      answer: "That’s totally fine. Just share your content requirements here, and we’ll send you a quote based on exactly what you need — whether it’s 2 blog posts this month or 10 next month. Simple and flexible."
+    },
+    {
+      question: "Can I speak with someone to learn more or ask questions?",
+      answer: "Absolutely! Just schedule a discovery call with our team, and we’ll walk you through our services and answer any questions you have."
+    },
+    {
+      question: "Can you share some samples/ previous work?",
+      answer: "Absolutely. Feel free to reach out for samples."
+    },
+
   ];
 
   return (
@@ -192,14 +230,14 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What's Included in Our Content Marketing Service
+              Why work with us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive content marketing covers strategy, creation, and optimization for maximum impact
+              We don’t just write blogs. We:
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-8 mb-16">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
@@ -232,7 +270,7 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Results You Can Expect
+              What you’ll gain from our blogs
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -265,69 +303,21 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
 
           {/* Testimonials Scrolling Animation */}
           <div className="overflow-hidden">
-            <div className="flex animate-scroll-left space-x-6 whitespace-nowrap">
+            <div className="flex  space-x-6 whitespace-nowrap mx-auto justify-center"> {/*animate-scroll-left*/}
               {[
                 {
-                  name: "Rachel Martinez",
-                  company: "CreativeFlow Agency",
-                  text: "h1copy revolutionized our content strategy. Their approach to content marketing is both strategic and creative. The blog content they created for us consistently ranks on the first page."
+                  name: "Marketing Lead",
+                  company: "SaaS Company",
+                  text: "Working with Masroor has been a game-changer. His product-led blogs don’t just rank—they actually drive signups."
                 },
                 {
-                  name: "Alex Kim",
-                  company: "TechInnovate",
-                  text: "The content marketing team understands our industry inside and out. Every piece of content they create is perfectly optimized for SEO while still being engaging for our audience."
+                  name: "VP Growth",
+                  company: "B2B SaaS",
+                  text: "Finally, a writer who understands both SaaS and SEO. Minimal handholding, maximum results."
                 },
-                {
-                  name: "Jennifer Walsh",
-                  company: "GrowthHacker Pro",
-                  text: "Their content optimization process is incredible. They took our existing content and transformed it into high-performing assets. The SEO copywriting skills are top-notch."
-                },
-                {
-                  name: "Mark Stevens",
-                  company: "Digital Pioneers",
-                  text: "The content strategy they developed for us was comprehensive and data-driven. From blog writing to content optimization, everything was designed to attract our ideal customers."
-                },
-                {
-                  name: "Anna Kowalski",
-                  company: "ScaleMedia",
-                  text: "Working with h1copy's content team has been transformative. Their blog writing is exceptional - every post is well-researched, engaging, and optimized for search."
-                },
-                {
-                  name: "Robert Chang",
-                  company: "InnovateNow",
-                  text: "The SEO copywriting expertise is unmatched. They know exactly how to balance search optimization with compelling copy that actually converts."
-                }
+                
               ].concat([
-                {
-                  name: "Rachel Martinez",
-                  company: "CreativeFlow Agency",
-                  text: "h1copy revolutionized our content strategy. Their approach to content marketing is both strategic and creative. The blog content they created for us consistently ranks on the first page."
-                },
-                {
-                  name: "Alex Kim",
-                  company: "TechInnovate",
-                  text: "The content marketing team understands our industry inside and out. Every piece of content they create is perfectly optimized for SEO while still being engaging for our audience."
-                },
-                {
-                  name: "Jennifer Walsh",
-                  company: "GrowthHacker Pro",
-                  text: "Their content optimization process is incredible. They took our existing content and transformed it into high-performing assets. The SEO copywriting skills are top-notch."
-                },
-                {
-                  name: "Mark Stevens",
-                  company: "Digital Pioneers",
-                  text: "The content strategy they developed for us was comprehensive and data-driven. From blog writing to content optimization, everything was designed to attract our ideal customers."
-                },
-                {
-                  name: "Anna Kowalski",
-                  company: "ScaleMedia",
-                  text: "Working with h1copy's content team has been transformative. Their blog writing is exceptional - every post is well-researched, engaging, and optimized for search."
-                },
-                {
-                  name: "Robert Chang",
-                  company: "InnovateNow",
-                  text: "The SEO copywriting expertise is unmatched. They know exactly how to balance search optimization with compelling copy that actually converts."
-                }
+                
               ]).map((testimonial, index) => (
                 <div
                   key={index}
@@ -382,31 +372,39 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Essentials</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$799</div>
-                <p className="text-gray-600">Great for startups</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Growth package</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$5,000 / month</div>
+                
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">4 blog posts per month</span>
+                  <span className="text-gray-700">SERP & LLM intent analysis</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Content strategy development</span>
+                  <span className="text-gray-700">Screenshots</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">SEO optimization for all content</span>
+                  <span className="text-gray-700">Title tag + meta description</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Social media promotion</span>
+                  <span className="text-gray-700">senior SaaS writer hired</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Monthly performance report</span>
+                  <span className="text-gray-700">Slack & email communication</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">2 rounds of revisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">💰 PSA: this plan is 65–75% cheaper than US agencies</span>
                 </li>
               </ul>
               
@@ -431,36 +429,40 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Growth</h3>
-                <div className="text-4xl font-bold text-white mb-4">$1,499</div>
-                <p className="text-purple-100">Perfect for scaling businesses</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Scale package <br /> (most popular)</h3>
+                <div className="text-4xl font-bold text-white mb-4">$8,500 / month</div>
+                <p className="text-white">⭐ Recommended for SaaS companies scaling traffic + conversions</p>
               </div>
               
               <ul className="space-y-4 mb-8">
+                
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Everything in Essentials plan</span>
+                  <span className="text-purple-100">SERP & LLM intent analysis</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">Title tag + meta description</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">8 blog posts per month</span>
+                  <span className="text-purple-100">senior SaaS writer hired</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">2 rounds of revisions</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">2 premium content pieces</span>
+                  <span className="text-purple-100">Subject matter expert quotes (if requested)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Email newsletter content</span>
+                  <span className="text-purple-100">💰 PSA: this plan is 75% cheaper than US agencies</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Content calendar planning</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Bi-weekly strategy calls</span>
-                </li>
+                
               </ul>
               
               <Button 
@@ -479,36 +481,41 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Scale</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$2,999</div>
-                <p className="text-gray-600">For enterprise-level needs</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Dominate package</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$13,000 / month</div>
+                <p className="text-gray-600">💡 Perfect for SaaS brands investing in thought leadership & category dominance</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Everything in Growth plan</span>
+                  <span className="text-gray-700">Authority content (pillar pages, playbooks, guides)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">12 blog posts per month</span>
+                  <span className="text-gray-700">Title tag + meta description</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">4 premium content pieces</span>
+                  <span className="text-gray-700">Product-led strategy built into every article</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Video script writing</span>
+                  <span className="text-gray-700">SERP & LLM intent analysis</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dedicated content manager</span>
+                  <span className="text-gray-700">senior SaaS writer hired</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Weekly strategy sessions</span>
+                  <span className="text-gray-700">2 rounds of revisions</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Subject matter expert quotes</span>
+                </li>
+                
               </ul>
               
               <Button 
@@ -532,16 +539,16 @@ export function ContentMarketing({ onNavigateHome }: ContentMarketingProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Content Strategy?
+              Ready to supercharge your blog strategy?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let's create compelling content that drives engagement, builds authority, and converts visitors into customers.
+              Stop publishing generic, forgettable content. Start building authority, traffic, and revenue with blogs that convert.
             </p>
             <Button 
               onClick={scrollToContact}
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              Start Your Content Journey
+              Let’s make it happen
               <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </motion.div>
