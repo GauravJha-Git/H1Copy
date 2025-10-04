@@ -31,33 +31,38 @@ export function Ebook({ onNavigateHome }: EbookProps) {
   const features = [
     {
       icon: Search,
-      title: "Keyword Research & Analysis",
-      description: "Comprehensive keyword research to identify high-value opportunities and optimize for search intent."
+      title: "Specialize in SaaS & B2B ebooks",
+      description: "focusing on educational content that nurtures leads and builds trust."
     },
     {
       icon: TrendingUp,
-      title: "On-Page Optimization",
-      description: "Technical and content optimization to improve page relevance and search engine rankings."
+      title: "Do the heavy lifting",
+      description: "from topic ideation and outlining to research and expert interviews, we handle the entire process."
     },
     {
       icon: Target,
-      title: "Competitor Analysis",
-      description: "Deep analysis of competitor strategies to identify gaps and opportunities in your market."
+      title: "Create high-value assets",
+      description: "we deliver a polished, ready-to-publish ebook that provides immediate value to your target audience."
     },
     {
       icon: BarChart3,
-      title: "Performance Tracking",
-      description: "Regular monitoring and reporting of keyword rankings, traffic growth, and conversion metrics."
+      title: "Excel at funnel strategy",
+      description: "our ebooks are designed to move prospects from awareness to consideration, seamlessly guiding them toward your solution."
+    },
+    {
+      icon: BarChart3,
+      title: "Guarantee authority",
+      description: "we turn your unique insights into a credible, well-researched guide that positions you as a thought leader."
     }
   ];
 
   const benefits = [
-    "Increase organic traffic by 150-300%",
-    "Improve search engine rankings for target keywords",
-    "Higher conversion rates from qualified traffic",
-    "Better user experience and site performance",
-    "Long-term sustainable growth",
-    "Detailed monthly performance reports"
+    "High-quality leads: Ebooks are a proven way to capture contact information from serious prospects.",
+    "Brand authority: A comprehensive guide cements your brand as a trusted expert and reliable resource in your industry.",
+    "Nurtured prospects: \n A great ebook provides the context and education your audience needs to understand their problem and consider your solution.",
+    "Sales enablement: Give your sales team a powerful resource they can share with prospects to build credibility and move deals forward.",
+    "Exceptional ROI: Convert website visitors into valuable leads and use a single asset to fuel multiple marketing campaigns.",
+
   ];
 
   const faqs = [
@@ -146,11 +151,10 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                SEO Optimization
+                eBook writing services
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Boost your search engine rankings with our comprehensive SEO optimization strategies. 
-                Drive more organic traffic, increase visibility, and dominate your competition in search results.
+                Ebooks are a powerful way to turn your expertise into a valuable, shareable asset. Done right, a well-crafted B2B ebook can capture high-quality leads, nurture prospects through the funnel, and establish your brand as a go-to resource in your industry. <br /><br /> But the challenge of writing an engaging, in-depth ebook that actually converts can be daunting. You need a perfect blend of actionable insights, compelling storytelling, and professional design to make a lasting impact. That’s where we come in.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -196,14 +200,14 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What's Included in Our SEO Service
+              Why work with us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive SEO optimization covers every aspect needed to improve your search rankings
+              We don’t just write ebooks. We create strategic lead magnets that drive results. We:
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
@@ -236,7 +240,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Results You Can Expect
+              What you’ll gain from our eBooks
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -370,11 +374,9 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Choose Your SEO Package
+              eBook packages
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the perfect SEO optimization package for your business needs and budget
-            </p>
+            
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -386,31 +388,43 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$499</div>
-                <p className="text-gray-600">Perfect for small businesses</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Knowledge Kickstart</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$900</div>
+                <p className="text-gray-600">Perfect for concise eBooks to generate leads or educate your audience.</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Keyword research & analysis</span>
+                  <span className="text-gray-700">strategy session to align on goals</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">On-page optimization for up to 10 pages</span>
+                  <span className="text-gray-700">Up to 3,000 words (approx. 8–10 pages)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Technical SEO audit</span>
+                  <span className="text-gray-700">Dedicated senior SaaS write</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Monthly progress report</span>
+                  <span className="text-gray-700">Research on your topic and industry trends</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Basic competitor analysis</span>
+                  <span className="text-gray-700">Structured outline to organize content</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Up to 2 expert interviews for credibility</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">2 rounds of revisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Weekly email progress updates</span>
                 </li>
               </ul>
               
@@ -435,35 +449,43 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Professional</h3>
-                <div className="text-4xl font-bold text-white mb-4">$999</div>
-                <p className="text-purple-100">Best for growing businesses</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Thought Leader</h3>
+                <div className="text-4xl font-bold text-white mb-4">$2,800</div>
+                <p className="text-purple-100">For authoritative, long-form eBooks that showcase thought leadership.</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Everything in Starter plan</span>
+                  <span className="text-purple-100">30-min strategy session</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">On-page optimization for up to 25 pages</span>
+                  <span className="text-purple-100">Up to 10,000 words (approx. 25–30 pages)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Advanced competitor analysis</span>
+                  <span className="text-purple-100">Dedicated senior SaaS writer</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Content optimization recommendations</span>
+                  <span className="text-purple-100">Research on your topic and industry trends</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Local SEO optimization</span>
+                  <span className="text-purple-100">Structured outline to organize content</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Bi-weekly progress reports</span>
+                  <span className="text-purple-100">Up to 2 expert interviews for credibility</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">2 rounds of revisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">Weekly email progress updates</span>
                 </li>
               </ul>
               
@@ -483,35 +505,35 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$1,999</div>
-                <p className="text-gray-600">For large-scale operations</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Custom Package</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">Pricing depends on scope</div>
+                <p className="text-gray-600">For specialized projects</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Everything in Professional plan</span>
+                  <span className="text-gray-700">Complex topics</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Unlimited page optimization</span>
+                  <span className="text-gray-700">Proprietary data integration</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced technical SEO</span>
+                  <span className="text-gray-700">Advanced product tie-ins</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Custom SEO strategy</span>
+                  <span className="text-gray-700">All deliverables tailored to your needs</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dedicated account manager</span>
+                  <span className="text-gray-700">💡 Perfect for brands with unique, complex project requirements</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Weekly performance calls</span>
+                  <span className="text-gray-700">Contact Us for a Quote</span>
                 </li>
               </ul>
               
@@ -536,16 +558,16 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Boost Your Search Rankings?
+               Turn your expertise into a lead-generating asset
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let's work together to improve your SEO and drive more organic traffic to your website.
+              Our B2B ebooks turn complex ideas into readable, actionable guides that capture and nurture leads
             </p>
             <Button 
               onClick={scrollToContact}
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              Start Your SEO Journey
+              Start your ebook
               <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </motion.div>
