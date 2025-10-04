@@ -1,15 +1,17 @@
+import React from 'react';
 import { Button } from '../ui/button';
 import { motion } from 'motion/react';
-import { ArrowRight, Settings, Zap, Smartphone, Code, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
+import { ArrowRight, MapPin, Star, Users, Building, CheckCircle, Plus, Minus, ArrowLeft, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 import { Card } from '../ui/card';
+import FloatingLogosSection from '../ui/FloatingCompanies';
 
-interface TechnicalSeoProps {
+interface LinkGhostProps {
   onNavigateHome: () => void;
 }
 
-export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
+export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const scrollToContact = () => {
@@ -28,56 +30,56 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
 
   const features = [
     {
-      icon: Zap,
-      title: "Site Speed Optimization",
-      description: "Comprehensive performance optimization to improve loading times and Core Web Vitals."
+      icon: MapPin,
+      title: "Google My Business Optimization",
+      description: "Complete optimization of your Google Business Profile to maximize local search visibility."
     },
     {
-      icon: Smartphone,
-      title: "Mobile Optimization",
-      description: "Ensure your website performs perfectly on all devices with responsive design fixes."
+      icon: Building,
+      title: "Local Citation Building",
+      description: "Build consistent business listings across local directories and platforms to improve local authority."
     },
     {
-      icon: Code,
-      title: "Schema Markup Implementation",
-      description: "Structured data implementation to help search engines understand your content better."
+      icon: Star,
+      title: "Review Management",
+      description: "Strategic review acquisition and management to build trust and improve local search rankings."
     },
     {
-      icon: Settings,
-      title: "Technical Audits & Fixes",
-      description: "Identify and resolve crawl errors, broken links, and other technical issues affecting SEO."
+      icon: Users,
+      title: "Local Keyword Optimization",
+      description: "Target location-specific keywords to capture customers searching in your area."
     }
   ];
 
   const benefits = [
-    "Improve site speed by 40-70%",
-    "Fix critical technical SEO issues",
-    "Better search engine crawling and indexing",
-    "Enhanced mobile user experience",
-    "Improved Core Web Vitals scores",
-    "Comprehensive technical SEO audit report"
+    "Increase local search visibility by 250-400%",
+    "Appear in Google's local map pack",
+    "Drive more foot traffic to your business",
+    "Improve online review ratings and quantity",
+    "Dominate local search results in your area",
+    "Monthly local SEO performance reports"
   ];
 
   const faqs = [
     {
-      question: "What is Technical SEO and why is it important?",
-      answer: "Technical SEO involves optimizing the technical aspects of your website to help search engines crawl, index, and understand your content. It's the foundation that enables your content and other SEO efforts to be successful."
+      question: "What is Local SEO and who needs it?",
+      answer: "Local SEO is the practice of optimizing your online presence to attract more business from relevant local searches. Any business that serves customers in a specific geographic area needs local SEO - restaurants, retail stores, service providers, healthcare practices, etc."
     },
     {
-      question: "How do you improve website loading speed?",
-      answer: "We optimize images, minify CSS/JavaScript, enable compression, leverage browser caching, optimize server response times, and implement CDN solutions. Each site gets a customized approach based on its specific issues."
+      question: "How do you optimize Google My Business?",
+      answer: "We complete and optimize your profile with accurate business information, high-quality photos, service descriptions, regular posts, and respond to customer reviews. We also optimize for local keywords and ensure consistency across all platforms."
     },
     {
-      question: "What are Core Web Vitals and how do you improve them?",
-      answer: "Core Web Vitals are Google's metrics for measuring user experience: loading performance, interactivity, and visual stability. We optimize these through code improvements, image optimization, and server configuration."
+      question: "What are local citations and why are they important?",
+      answer: "Local citations are mentions of your business name, address, and phone number (NAP) on other websites. They help establish trust with search engines and improve your local search rankings. We build citations on relevant local directories and platforms."
     },
     {
-      question: "Do you fix mobile responsiveness issues?",
-      answer: "Yes! We ensure your website is fully responsive and provides an excellent user experience across all devices. This includes fixing layout issues, improving touch interactions, and optimizing for mobile performance."
+      question: "How do you help with online reviews?",
+      answer: "We implement review generation strategies, help you respond professionally to all reviews, and provide systems to encourage satisfied customers to leave positive reviews. We also help address negative reviews appropriately."
     },
     {
-      question: "How long does a technical SEO audit take?",
-      answer: "A comprehensive technical SEO audit typically takes 1-2 weeks depending on the size and complexity of your website. Implementation of fixes can take an additional 2-4 weeks based on the issues identified."
+      question: "How long does it take to see local SEO results?",
+      answer: "Local SEO can show results faster than traditional SEO. You may see improvements in local search visibility within 2-8 weeks, with significant results typically appearing within 3-6 months of consistent optimization."
     }
   ];
 
@@ -114,13 +116,13 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
           
           {/* Radial Glow Effects */}
           <div 
-            className="absolute bottom-20 left-1/5 w-[300px] h-[300px] rounded-full blur-3xl animate-hero-glow-subtle"
+            className="absolute top-20 left-1/4 w-[300px] h-[300px] rounded-full blur-3xl animate-hero-glow-subtle"
             style={{
               background: 'radial-gradient(circle, rgba(196, 151, 216, 0.2) 0%, rgba(196, 151, 216, 0.1) 40%, transparent 70%)'
             }}
           />
           <div 
-            className="absolute top-32 right-1/4 w-[250px] h-[250px] rounded-full blur-3xl animate-hero-glow-subtle-2"
+            className="absolute bottom-32 right-1/5 w-[250px] h-[250px] rounded-full blur-3xl animate-hero-glow-subtle-2"
             style={{
               background: 'radial-gradient(circle, rgba(183, 129, 205, 0.18) 0%, rgba(196, 151, 216, 0.08) 50%, transparent 100%)'
             }}
@@ -136,11 +138,11 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Technical SEO
+                Local SEO
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Fix the technical foundation of your website to ensure search engines can properly crawl, index, and rank your content. 
-                Improve site speed, mobile performance, and Core Web Vitals.
+                Dominate local search results and attract more customers in your area. 
+                Optimize your Google My Business, build local citations, and become the go-to business in your location.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -163,8 +165,8 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1668903678359-e810dd966016?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljYWwlMjBTRU8lMjB3ZWJzaXRlJTIwb3B0aW1pemF0aW9ufGVufDF8fHx8MTc1OTM0NDA3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Technical SEO Website Optimization"
+                  src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2NhbCUyMFNFTyUyMGJ1c2luZXNzJTIwbG9jYXRpb258ZW58MXx8fHwxNzU5MzQ0MTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Local SEO Business Location"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
               </div>
@@ -172,6 +174,9 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
           </div>
         </div>
       </section>
+
+      {/* Floating Companies Section */}
+      <FloatingLogosSection />
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
@@ -183,10 +188,10 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What's Included in Our Technical SEO Service
+              What's Included in Our Local SEO Service
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive technical SEO fixes the foundation issues that prevent search engines from properly ranking your site
+              Our comprehensive local SEO helps your business dominate local search results and attract nearby customers
             </p>
           </motion.div>
 
@@ -247,10 +252,10 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our Technical SEO Clients Say
+              What Our Local SEO Clients Say
             </h2>
             <p className="text-lg text-gray-600">
-              Real feedback from businesses we've helped with technical SEO
+              Real feedback from local businesses we've helped dominate their markets
             </p>
           </motion.div>
 
@@ -259,74 +264,74 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
             <div className="flex animate-scroll-left space-x-6 whitespace-nowrap">
               {[
                 {
-                  name: "Thomas Anderson",
-                  company: "E-commerce Elite",
-                  text: "h1copy's technical SEO audit uncovered critical issues that were killing our search performance. Their site speed optimization reduced our load time dramatically."
+                  name: "Maria Gonzalez",
+                  company: "Downtown Dental",
+                  text: "h1copy transformed our local presence completely. Our Google My Business optimization brought us from page 3 to the top 3 local results."
                 },
                 {
-                  name: "Sofia Patel",
-                  company: "DataDriven Corp",
-                  text: "The technical SEO team's expertise is exceptional. They implemented schema markup across our entire site and fixed crawl errors we didn't even know existed."
+                  name: "Jake Williams",
+                  company: "Williams Law Firm",
+                  text: "The local SEO expertise is outstanding. They optimized our Google My Business profile, built quality local citations, and developed a review management system."
                 },
                 {
-                  name: "Carlos Rodriguez",
-                  company: "TechSolutions Pro",
-                  text: "Their mobile optimization work was game-changing. They transformed our site from mobile-unfriendly to lightning-fast on all devices."
+                  name: "Sarah Chen",
+                  company: "Chen's Restaurant",
+                  text: "Their local keyword strategy was brilliant. They identified exactly what our local customers were searching for and optimized our content accordingly."
                 },
                 {
-                  name: "Emma Thompson",
-                  company: "DigitalFirst",
-                  text: "The technical audit was incredibly thorough. They identified and resolved site speed issues, implemented proper schema markup, and optimized our entire technical infrastructure."
+                  name: "David Johnson",
+                  company: "Johnson Plumbing Services",
+                  text: "The local citation building was incredibly thorough. They got us listed on every relevant local directory and fixed inconsistent NAP information across the web."
                 },
                 {
-                  name: "Ryan O'Connor",
-                  company: "InnovateTech",
-                  text: "Working with their technical SEO specialists was enlightening. They didn't just fix problems - they taught us best practices for ongoing technical optimization."
+                  name: "Lisa Patterson",
+                  company: "Patterson Real Estate",
+                  text: "Their review management system is fantastic. They helped us implement a process that consistently generates positive reviews while properly handling negative feedback."
                 },
                 {
-                  name: "Maya Singh",
-                  company: "CloudScale",
-                  text: "The schema markup implementation was perfect. They structured our data in ways that significantly improved our search appearance."
+                  name: "Michael Torres",
+                  company: "Torres Auto Repair",
+                  text: "The Google My Business optimization was a game-changer. They optimized every aspect of our profile and implemented local keywords that actually bring in customers."
                 }
               ].concat([
                 {
-                  name: "Thomas Anderson",
-                  company: "E-commerce Elite",
-                  text: "h1copy's technical SEO audit uncovered critical issues that were killing our search performance. Their site speed optimization reduced our load time dramatically."
+                  name: "Maria Gonzalez",
+                  company: "Downtown Dental",
+                  text: "h1copy transformed our local presence completely. Our Google My Business optimization brought us from page 3 to the top 3 local results."
                 },
                 {
-                  name: "Sofia Patel",
-                  company: "DataDriven Corp",
-                  text: "The technical SEO team's expertise is exceptional. They implemented schema markup across our entire site and fixed crawl errors we didn't even know existed."
+                  name: "Jake Williams",
+                  company: "Williams Law Firm",
+                  text: "The local SEO expertise is outstanding. They optimized our Google My Business profile, built quality local citations, and developed a review management system."
                 },
                 {
-                  name: "Carlos Rodriguez",
-                  company: "TechSolutions Pro",
-                  text: "Their mobile optimization work was game-changing. They transformed our site from mobile-unfriendly to lightning-fast on all devices."
+                  name: "Sarah Chen",
+                  company: "Chen's Restaurant",
+                  text: "Their local keyword strategy was brilliant. They identified exactly what our local customers were searching for and optimized our content accordingly."
                 },
                 {
-                  name: "Emma Thompson",
-                  company: "DigitalFirst",
-                  text: "The technical audit was incredibly thorough. They identified and resolved site speed issues, implemented proper schema markup, and optimized our entire technical infrastructure."
+                  name: "David Johnson",
+                  company: "Johnson Plumbing Services",
+                  text: "The local citation building was incredibly thorough. They got us listed on every relevant local directory and fixed inconsistent NAP information across the web."
                 },
                 {
-                  name: "Ryan O'Connor",
-                  company: "InnovateTech",
-                  text: "Working with their technical SEO specialists was enlightening. They didn't just fix problems - they taught us best practices for ongoing technical optimization."
+                  name: "Lisa Patterson",
+                  company: "Patterson Real Estate",
+                  text: "Their review management system is fantastic. They helped us implement a process that consistently generates positive reviews while properly handling negative feedback."
                 },
                 {
-                  name: "Maya Singh",
-                  company: "CloudScale",
-                  text: "The schema markup implementation was perfect. They structured our data in ways that significantly improved our search appearance."
+                  name: "Michael Torres",
+                  company: "Torres Auto Repair",
+                  text: "The Google My Business optimization was a game-changer. They optimized every aspect of our profile and implemented local keywords that actually bring in customers."
                 }
               ]).map((testimonial, index) => (
                 <div
                   key={index}
                   className="flex-shrink-0 w-80"
                 >
-                  <div className="bg-white rounded-2xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300 hover:border-green-300 h-full">
+                  <div className="bg-white rounded-2xl p-6 border border-orange-200 hover:shadow-lg transition-all duration-300 hover:border-orange-300 h-full">
                     <div className="flex items-start">
-                      <Quote className="h-6 w-6 text-green-300 mr-3 flex-shrink-0 mt-1" />
+                      <Quote className="h-6 w-6 text-orange-300 mr-3 flex-shrink-0 mt-1" />
                       
                       <div className="whitespace-normal">
                         <p className="text-gray-700 mb-4 italic leading-relaxed text-sm">
@@ -335,7 +340,7 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
                         
                         <div className="text-right">
                           <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
-                          <div className="text-green-600 text-xs">{testimonial.company}</div>
+                          <div className="text-orange-600 text-xs">{testimonial.company}</div>
                         </div>
                       </div>
                     </div>
@@ -357,15 +362,15 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Choose Your Technical SEO Package
+              Choose Your Local SEO Package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the right technical SEO solution to optimize your website's performance and search visibility
+              Select the ideal local SEO solution to dominate search results in your area
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Basic Audit Package */}
+            {/* Local Starter Package */}
             <motion.div
               className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -373,31 +378,31 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Basic Audit</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$699</div>
-                <p className="text-gray-600">Essential technical review</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Local Starter</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$599</div>
+                <p className="text-gray-600">Perfect for single locations</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Comprehensive site crawl analysis</span>
+                  <span className="text-gray-700">Google Business Profile optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Core Web Vitals assessment</span>
+                  <span className="text-gray-700">Local keyword research</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Basic indexing issues report</span>
+                  <span className="text-gray-700">NAP consistency audit</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Mobile-friendliness check</span>
+                  <span className="text-gray-700">Basic citation building</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Priority fixes list</span>
+                  <span className="text-gray-700">Monthly ranking report</span>
                 </li>
               </ul>
               
@@ -410,7 +415,7 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
               </Button>
             </motion.div>
 
-            {/* Complete Optimization Package */}
+            {/* Local Pro Package */}
             <motion.div
               className="bg-purple-600 rounded-3xl p-8 border-2 border-purple-600 relative overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
@@ -422,35 +427,35 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Complete</h3>
-                <div className="text-4xl font-bold text-white mb-4">$1,399</div>
-                <p className="text-purple-100">Full technical optimization</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Local Pro</h3>
+                <div className="text-4xl font-bold text-white mb-4">$1,199</div>
+                <p className="text-purple-100">Ideal for growing businesses</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Everything in Basic Audit</span>
+                  <span className="text-purple-100">Everything in Local Starter</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Site speed optimization</span>
+                  <span className="text-purple-100">Advanced citation building</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Schema markup implementation</span>
+                  <span className="text-purple-100">Review management setup</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">XML sitemap optimization</span>
+                  <span className="text-purple-100">Local content optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Internal linking structure fix</span>
+                  <span className="text-purple-100">Competitor analysis</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Monthly monitoring</span>
+                  <span className="text-purple-100">Bi-weekly progress reports</span>
                 </li>
               </ul>
               
@@ -462,7 +467,7 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
               </Button>
             </motion.div>
 
-            {/* Advanced Package */}
+            {/* Local Enterprise Package */}
             <motion.div
               className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -470,35 +475,35 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Advanced</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$2,499</div>
-                <p className="text-gray-600">Enterprise-grade solutions</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Local Enterprise</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$2,199</div>
+                <p className="text-gray-600">For multi-location businesses</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Everything in Complete package</span>
+                  <span className="text-gray-700">Everything in Local Pro</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced server optimization</span>
+                  <span className="text-gray-700">Multi-location optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">CDN setup and configuration</span>
+                  <span className="text-gray-700">Advanced schema markup</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced security optimization</span>
+                  <span className="text-gray-700">Local link building campaign</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Custom technical solutions</span>
+                  <span className="text-gray-700">Dedicated account manager</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dedicated technical specialist</span>
+                  <span className="text-gray-700">Weekly strategy calls</span>
                 </li>
               </ul>
               
@@ -523,16 +528,16 @@ export function TechnicalSeo({ onNavigateHome }: TechnicalSeoProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Fix Your Website's Technical Issues?
+              Ready to Dominate Local Search?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let's optimize your website's technical foundation to improve search engine performance and user experience.
+              Let's optimize your local presence and help customers in your area find and choose your business.
             </p>
             <Button 
               onClick={scrollToContact}
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              Start Technical Optimization
+              Start Local Optimization
               <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </motion.div>

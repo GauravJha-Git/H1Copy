@@ -64,10 +64,10 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                "SEO Optimization",
-                "Content Marketing", 
-                "Technical SEO",
-                "Local SEO",
+                "eBooks",
+                "Blogs", 
+                "White Papers",
+                "Link Ghost",
                 "Link Building",
                 "SEO Audits"
               ].map((service, index) => (

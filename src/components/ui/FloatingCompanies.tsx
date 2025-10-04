@@ -15,7 +15,7 @@ const FloatingLogosSection: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-8 py-16">
+    <div className="bg-white py-16">
       <style>{`
         @keyframes scroll {
           0% { transform: translateX(0); }
@@ -26,9 +26,9 @@ const FloatingLogosSection: React.FC = () => {
         }
       `}</style>
 
-      <div className="max-w-7xl w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Trusted by Industry Leaders
           </h2>
           <p className="text-lg text-gray-500">
@@ -43,7 +43,7 @@ const FloatingLogosSection: React.FC = () => {
                 <img
                   src={logo.url}
                   alt={logo.name}
-                  className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
                 />
               </div>
             ))}

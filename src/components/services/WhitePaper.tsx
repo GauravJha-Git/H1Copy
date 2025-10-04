@@ -1,15 +1,17 @@
+import React from 'react';
 import { Button } from '../ui/button';
 import { motion } from 'motion/react';
-import { ArrowRight, Search, TrendingUp, Target, BarChart3, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
+import { ArrowRight, Settings, Zap, Smartphone, Code, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 import { Card } from '../ui/card';
+import FloatingLogosSection from '../ui/FloatingCompanies';
 
-interface SeoOptimizationProps {
+interface WhitePaperProps {
   onNavigateHome: () => void;
 }
 
-export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
+export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const scrollToContact = () => {
@@ -28,56 +30,56 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
 
   const features = [
     {
-      icon: Search,
-      title: "Keyword Research & Analysis",
-      description: "Comprehensive keyword research to identify high-value opportunities and optimize for search intent."
+      icon: Zap,
+      title: "Site Speed Optimization",
+      description: "Comprehensive performance optimization to improve loading times and Core Web Vitals."
     },
     {
-      icon: TrendingUp,
-      title: "On-Page Optimization",
-      description: "Technical and content optimization to improve page relevance and search engine rankings."
+      icon: Smartphone,
+      title: "Mobile Optimization",
+      description: "Ensure your website performs perfectly on all devices with responsive design fixes."
     },
     {
-      icon: Target,
-      title: "Competitor Analysis",
-      description: "Deep analysis of competitor strategies to identify gaps and opportunities in your market."
+      icon: Code,
+      title: "Schema Markup Implementation",
+      description: "Structured data implementation to help search engines understand your content better."
     },
     {
-      icon: BarChart3,
-      title: "Performance Tracking",
-      description: "Regular monitoring and reporting of keyword rankings, traffic growth, and conversion metrics."
+      icon: Settings,
+      title: "Technical Audits & Fixes",
+      description: "Identify and resolve crawl errors, broken links, and other technical issues affecting SEO."
     }
   ];
 
   const benefits = [
-    "Increase organic traffic by 150-300%",
-    "Improve search engine rankings for target keywords",
-    "Higher conversion rates from qualified traffic",
-    "Better user experience and site performance",
-    "Long-term sustainable growth",
-    "Detailed monthly performance reports"
+    "Improve site speed by 40-70%",
+    "Fix critical technical SEO issues",
+    "Better search engine crawling and indexing",
+    "Enhanced mobile user experience",
+    "Improved Core Web Vitals scores",
+    "Comprehensive technical SEO audit report"
   ];
 
   const faqs = [
     {
-      question: "How long does it take to see SEO results?",
-      answer: "SEO is a long-term strategy. While some improvements can be seen within 2-3 months, significant results typically appear after 4-6 months of consistent optimization efforts."
+      question: "What is Technical SEO and why is it important?",
+      answer: "Technical SEO involves optimizing the technical aspects of your website to help search engines crawl, index, and understand your content. It's the foundation that enables your content and other SEO efforts to be successful."
     },
     {
-      question: "What's included in your SEO optimization service?",
-      answer: "Our comprehensive SEO service includes keyword research, on-page optimization, technical SEO audits, content optimization, competitor analysis, and monthly reporting."
+      question: "How do you improve website loading speed?",
+      answer: "We optimize images, minify CSS/JavaScript, enable compression, leverage browser caching, optimize server response times, and implement CDN solutions. Each site gets a customized approach based on its specific issues."
     },
     {
-      question: "Do you guarantee first page rankings?",
-      answer: "While we can't guarantee specific rankings due to Google's algorithm changes, we focus on sustainable strategies that consistently improve your search visibility and organic traffic."
+      question: "What are Core Web Vitals and how do you improve them?",
+      answer: "Core Web Vitals are Google's metrics for measuring user experience: loading performance, interactivity, and visual stability. We optimize these through code improvements, image optimization, and server configuration."
     },
     {
-      question: "How do you measure SEO success?",
-      answer: "We track multiple metrics including organic traffic growth, keyword rankings, conversion rates, bounce rate improvements, and overall ROI from organic search."
+      question: "Do you fix mobile responsiveness issues?",
+      answer: "Yes! We ensure your website is fully responsive and provides an excellent user experience across all devices. This includes fixing layout issues, improving touch interactions, and optimizing for mobile performance."
     },
     {
-      question: "Can you work with my existing website?",
-      answer: "Yes! We can optimize any website regardless of the platform (WordPress, Shopify, custom builds, etc.). We'll conduct a thorough audit and implement improvements accordingly."
+      question: "How long does a technical SEO audit take?",
+      answer: "A comprehensive technical SEO audit typically takes 1-2 weeks depending on the size and complexity of your website. Implementation of fixes can take an additional 2-4 weeks based on the issues identified."
     }
   ];
 
@@ -114,7 +116,7 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
           
           {/* Radial Glow Effects */}
           <div 
-            className="absolute top-20 left-1/5 w-[300px] h-[300px] rounded-full blur-3xl animate-hero-glow-subtle"
+            className="absolute bottom-20 left-1/5 w-[300px] h-[300px] rounded-full blur-3xl animate-hero-glow-subtle"
             style={{
               background: 'radial-gradient(circle, rgba(196, 151, 216, 0.2) 0%, rgba(196, 151, 216, 0.1) 40%, transparent 70%)'
             }}
@@ -136,11 +138,11 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                SEO Optimization
+                Technical SEO
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Boost your search engine rankings with our comprehensive SEO optimization strategies. 
-                Drive more organic traffic, increase visibility, and dominate your competition in search results.
+                Fix the technical foundation of your website to ensure search engines can properly crawl, index, and rank your content. 
+                Improve site speed, mobile performance, and Core Web Vitals.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -151,7 +153,7 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
                   Get Started Today
                   <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </Button>
-               
+                
               </div>
             </motion.div>
 
@@ -163,8 +165,8 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1686061592689-312bbfb5c055?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTRU8lMjBvcHRpbWl6YXRpb24lMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU5MzQzOTgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="SEO Analytics Dashboard"
+                  src="https://images.unsplash.com/photo-1668903678359-e810dd966016?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljYWwlMjBTRU8lMjB3ZWJzaXRlJTIwb3B0aW1pemF0aW9ufGVufDF8fHx8MTc1OTM0NDA3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Technical SEO Website Optimization"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
               </div>
@@ -172,6 +174,9 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
           </div>
         </div>
       </section>
+
+      {/* Floating Companies Section */}
+      <FloatingLogosSection />
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
@@ -183,10 +188,10 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What's Included in Our SEO Service
+              What's Included in Our Technical SEO Service
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive SEO optimization covers every aspect needed to improve your search rankings
+              Our comprehensive technical SEO fixes the foundation issues that prevent search engines from properly ranking your site
             </p>
           </motion.div>
 
@@ -247,10 +252,10 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our SEO Clients Say
+              What Our Technical SEO Clients Say
             </h2>
             <p className="text-lg text-gray-600">
-              Real feedback from businesses we've helped with SEO optimization
+              Real feedback from businesses we've helped with technical SEO
             </p>
           </motion.div>
 
@@ -259,74 +264,74 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
             <div className="flex animate-scroll-left space-x-6 whitespace-nowrap">
               {[
                 {
-                  name: "Sarah Johnson",
-                  company: "TechStart Solutions",
-                  text: "h1copy's SEO optimization transformed our online presence. We went from page 3 to top 3 rankings for our main keywords within months. Their keyword research was incredibly thorough."
+                  name: "Thomas Anderson",
+                  company: "E-commerce Elite",
+                  text: "h1copy's technical SEO audit uncovered critical issues that were killing our search performance. Their site speed optimization reduced our load time dramatically."
                 },
                 {
-                  name: "Michael Chen", 
-                  company: "GrowthLab",
-                  text: "The team's expertise in on-page optimization is unmatched. They didn't just improve our rankings - they improved our entire site structure and user experience."
+                  name: "Sofia Patel",
+                  company: "DataDriven Corp",
+                  text: "The technical SEO team's expertise is exceptional. They implemented schema markup across our entire site and fixed crawl errors we didn't even know existed."
                 },
                 {
-                  name: "Emily Rodriguez",
-                  company: "Digital Dynamics", 
-                  text: "What impressed me most was their systematic approach to SEO. Every recommendation was backed by data and their technical audits uncovered critical issues."
+                  name: "Carlos Rodriguez",
+                  company: "TechSolutions Pro",
+                  text: "Their mobile optimization work was game-changing. They transformed our site from mobile-unfriendly to lightning-fast on all devices."
                 },
                 {
-                  name: "David Thompson",
-                  company: "InnovateCorp",
-                  text: "h1copy's SEO team delivered exceptional results. Their comprehensive approach covered everything from technical SEO to content optimization."
+                  name: "Emma Thompson",
+                  company: "DigitalFirst",
+                  text: "The technical audit was incredibly thorough. They identified and resolved site speed issues, implemented proper schema markup, and optimized our entire technical infrastructure."
                 },
                 {
-                  name: "Lisa Park",
-                  company: "ScaleUp Ventures",
-                  text: "The technical SEO audit was a game-changer. They identified and fixed crawling issues, improved our site speed, and optimized our schema markup."
+                  name: "Ryan O'Connor",
+                  company: "InnovateTech",
+                  text: "Working with their technical SEO specialists was enlightening. They didn't just fix problems - they taught us best practices for ongoing technical optimization."
                 },
                 {
-                  name: "James Wilson",
-                  company: "NextGen Digital",
-                  text: "Their on-page optimization expertise is outstanding. They transformed our content strategy and optimized every element for both users and search engines."
+                  name: "Maya Singh",
+                  company: "CloudScale",
+                  text: "The schema markup implementation was perfect. They structured our data in ways that significantly improved our search appearance."
                 }
               ].concat([
                 {
-                  name: "Sarah Johnson",
-                  company: "TechStart Solutions",
-                  text: "h1copy's SEO optimization transformed our online presence. We went from page 3 to top 3 rankings for our main keywords within months. Their keyword research was incredibly thorough."
+                  name: "Thomas Anderson",
+                  company: "E-commerce Elite",
+                  text: "h1copy's technical SEO audit uncovered critical issues that were killing our search performance. Their site speed optimization reduced our load time dramatically."
                 },
                 {
-                  name: "Michael Chen", 
-                  company: "GrowthLab",
-                  text: "The team's expertise in on-page optimization is unmatched. They didn't just improve our rankings - they improved our entire site structure and user experience."
+                  name: "Sofia Patel",
+                  company: "DataDriven Corp",
+                  text: "The technical SEO team's expertise is exceptional. They implemented schema markup across our entire site and fixed crawl errors we didn't even know existed."
                 },
                 {
-                  name: "Emily Rodriguez",
-                  company: "Digital Dynamics", 
-                  text: "What impressed me most was their systematic approach to SEO. Every recommendation was backed by data and their technical audits uncovered critical issues."
+                  name: "Carlos Rodriguez",
+                  company: "TechSolutions Pro",
+                  text: "Their mobile optimization work was game-changing. They transformed our site from mobile-unfriendly to lightning-fast on all devices."
                 },
                 {
-                  name: "David Thompson",
-                  company: "InnovateCorp",
-                  text: "h1copy's SEO team delivered exceptional results. Their comprehensive approach covered everything from technical SEO to content optimization."
+                  name: "Emma Thompson",
+                  company: "DigitalFirst",
+                  text: "The technical audit was incredibly thorough. They identified and resolved site speed issues, implemented proper schema markup, and optimized our entire technical infrastructure."
                 },
                 {
-                  name: "Lisa Park",
-                  company: "ScaleUp Ventures",
-                  text: "The technical SEO audit was a game-changer. They identified and fixed crawling issues, improved our site speed, and optimized our schema markup."
+                  name: "Ryan O'Connor",
+                  company: "InnovateTech",
+                  text: "Working with their technical SEO specialists was enlightening. They didn't just fix problems - they taught us best practices for ongoing technical optimization."
                 },
                 {
-                  name: "James Wilson",
-                  company: "NextGen Digital",
-                  text: "Their on-page optimization expertise is outstanding. They transformed our content strategy and optimized every element for both users and search engines."
+                  name: "Maya Singh",
+                  company: "CloudScale",
+                  text: "The schema markup implementation was perfect. They structured our data in ways that significantly improved our search appearance."
                 }
               ]).map((testimonial, index) => (
                 <div
                   key={index}
                   className="flex-shrink-0 w-80"
                 >
-                  <div className="bg-white rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300 h-full">
+                  <div className="bg-white rounded-2xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300 hover:border-green-300 h-full">
                     <div className="flex items-start">
-                      <Quote className="h-6 w-6 text-purple-300 mr-3 flex-shrink-0 mt-1" />
+                      <Quote className="h-6 w-6 text-green-300 mr-3 flex-shrink-0 mt-1" />
                       
                       <div className="whitespace-normal">
                         <p className="text-gray-700 mb-4 italic leading-relaxed text-sm">
@@ -335,7 +340,7 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
                         
                         <div className="text-right">
                           <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
-                          <div className="text-purple-600 text-xs">{testimonial.company}</div>
+                          <div className="text-green-600 text-xs">{testimonial.company}</div>
                         </div>
                       </div>
                     </div>
@@ -357,15 +362,15 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Choose Your SEO Package
+              Choose Your Technical SEO Package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the perfect SEO optimization package for your business needs and budget
+              Select the right technical SEO solution to optimize your website's performance and search visibility
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Starter Package */}
+            {/* Basic Audit Package */}
             <motion.div
               className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -373,31 +378,31 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$499</div>
-                <p className="text-gray-600">Perfect for small businesses</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Basic Audit</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$699</div>
+                <p className="text-gray-600">Essential technical review</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Keyword research & analysis</span>
+                  <span className="text-gray-700">Comprehensive site crawl analysis</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">On-page optimization for up to 10 pages</span>
+                  <span className="text-gray-700">Core Web Vitals assessment</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Technical SEO audit</span>
+                  <span className="text-gray-700">Basic indexing issues report</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Monthly progress report</span>
+                  <span className="text-gray-700">Mobile-friendliness check</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Basic competitor analysis</span>
+                  <span className="text-gray-700">Priority fixes list</span>
                 </li>
               </ul>
               
@@ -410,7 +415,7 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
               </Button>
             </motion.div>
 
-            {/* Professional Package */}
+            {/* Complete Optimization Package */}
             <motion.div
               className="bg-purple-600 rounded-3xl p-8 border-2 border-purple-600 relative overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
@@ -422,35 +427,35 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Professional</h3>
-                <div className="text-4xl font-bold text-white mb-4">$999</div>
-                <p className="text-purple-100">Best for growing businesses</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Complete</h3>
+                <div className="text-4xl font-bold text-white mb-4">$1,399</div>
+                <p className="text-purple-100">Full technical optimization</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Everything in Starter plan</span>
+                  <span className="text-purple-100">Everything in Basic Audit</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">On-page optimization for up to 25 pages</span>
+                  <span className="text-purple-100">Site speed optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Advanced competitor analysis</span>
+                  <span className="text-purple-100">Schema markup implementation</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Content optimization recommendations</span>
+                  <span className="text-purple-100">XML sitemap optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Local SEO optimization</span>
+                  <span className="text-purple-100">Internal linking structure fix</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Bi-weekly progress reports</span>
+                  <span className="text-purple-100">Monthly monitoring</span>
                 </li>
               </ul>
               
@@ -462,7 +467,7 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
               </Button>
             </motion.div>
 
-            {/* Enterprise Package */}
+            {/* Advanced Package */}
             <motion.div
               className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -470,35 +475,35 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$1,999</div>
-                <p className="text-gray-600">For large-scale operations</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Advanced</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$2,499</div>
+                <p className="text-gray-600">Enterprise-grade solutions</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Everything in Professional plan</span>
+                  <span className="text-gray-700">Everything in Complete package</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Unlimited page optimization</span>
+                  <span className="text-gray-700">Advanced server optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced technical SEO</span>
+                  <span className="text-gray-700">CDN setup and configuration</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Custom SEO strategy</span>
+                  <span className="text-gray-700">Advanced security optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dedicated account manager</span>
+                  <span className="text-gray-700">Custom technical solutions</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Weekly performance calls</span>
+                  <span className="text-gray-700">Dedicated technical specialist</span>
                 </li>
               </ul>
               
@@ -523,16 +528,16 @@ export function SeoOptimization({ onNavigateHome }: SeoOptimizationProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Boost Your Search Rankings?
+              Ready to Fix Your Website's Technical Issues?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let's work together to improve your SEO and drive more organic traffic to your website.
+              Let's optimize your website's technical foundation to improve search engine performance and user experience.
             </p>
             <Button 
               onClick={scrollToContact}
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              Start Your SEO Journey
+              Start Technical Optimization
               <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </motion.div>

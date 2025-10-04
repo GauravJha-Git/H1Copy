@@ -10,10 +10,10 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Methodology } from './components/Methodology';
 import { Blog } from './components/Blog';
-import { SeoOptimization } from './components/services/SeoOptimization';
-import { ContentMarketing } from './components/services/ContentMarketing';
-import { TechnicalSeo } from './components/services/TechnicalSeo';
-import { LocalSeo } from './components/services/LocalSeo';
+import { Ebook } from './components/services/Ebook';
+import { Blogs } from './components/services/Blogs';
+import { WhitePaper } from './components/services/WhitePaper';
+import { LinkGhost } from './components/services/LinkGhost';
 import { AboutCompany } from './components/AboutCompany';
 import { WriterNetwork } from './components/WriterNetwork';
 import Privacy from './components/Privacy';
@@ -91,38 +91,38 @@ function BlogPage() {
   return <Blog onNavigateHome={() => navigate('/')} />;
 }
 
-function SeoOptimizationPage() {
+function EbookPage() {
   const navigate = useNavigate();
   return (
     <ServicePageLayout>
-      <SeoOptimization onNavigateHome={() => navigate('/')} />
+      <Ebook onNavigateHome={() => navigate('/')} />
     </ServicePageLayout>
   );
 }
 
-function ContentMarketingPage() {
+function BlogsPage() {
   const navigate = useNavigate();
   return (
     <ServicePageLayout>
-      <ContentMarketing onNavigateHome={() => navigate('/')} />
+      <Blogs onNavigateHome={() => navigate('/')} />
     </ServicePageLayout>
   );
 }
 
-function TechnicalSeoPage() {
+function WhitePaperPage() {
   const navigate = useNavigate();
   return (
     <ServicePageLayout>
-      <TechnicalSeo onNavigateHome={() => navigate('/')} />
+      <WhitePaper onNavigateHome={() => navigate('/')} />
     </ServicePageLayout>
   );
 }
 
-function LocalSeoPage() {
+function LinkGhostPage() {
   const navigate = useNavigate();
   return (
     <ServicePageLayout>
-      <LocalSeo onNavigateHome={() => navigate('/')} />
+      <LinkGhost onNavigateHome={() => navigate('/')} />
     </ServicePageLayout>
   );
 }
@@ -171,10 +171,10 @@ export default function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/methodology" element={<MethodologyPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/services/seo-optimization" element={<SeoOptimizationPage />} />
-        <Route path="/services/content-marketing" element={<ContentMarketingPage />} />
-        <Route path="/services/technical-seo" element={<TechnicalSeoPage />} />
-        <Route path="/services/local-seo" element={<LocalSeoPage />} />
+        <Route path="/services/seo-optimization" element={<EbookPage />} />
+        <Route path="/services/content-marketing" element={<BlogsPage />} />
+        <Route path="/services/technical-seo" element={<WhitePaperPage />} />
+        <Route path="/services/local-seo" element={<LinkGhostPage />} />
         <Route path="/company/about" element={<AboutCompanyPage />} />
         <Route path="/company/writer-network" element={<WriterNetworkPage />} />
         {/* Handle preview_page.html and other unmatched paths */}
