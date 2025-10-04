@@ -8,36 +8,36 @@ export function CompaniesAndReviews() {
 
   const companies = [
     { 
-      name: "TechFlow", 
-      logo: "https://images.unsplash.com/photo-1640342538716-286e4e27e104?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwbG9nbyUyMHN5bWJvbCUyMGNsZWFufGVufDF8fHx8MTc1OTQ4MDg2OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "GleekFlare", 
+      logo: "https://geekflare.com/wp-content/themes/gf/src/CustomOrganization/Organization/Assets/Logo.png"
     },
     { 
-      name: "GrowthLab", 
-      logo: "https://images.unsplash.com/photo-1674978037981-fef8cbf2b3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwYnJhbmQlMjBsb2dvfGVufDF8fHx8MTc1OTQ4MDg3Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "FlowAce", 
+      logo: "https://flowace.ai/wp-content/themes/Flowacetheme/assets/images/logo.svg"
     },
     { 
-      name: "Digital Solutions", 
-      logo: "https://images.unsplash.com/photo-1520865649274-dfc80824ab25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwc3RhcnR1cCUyMGxvZ28lMjBkZXNpZ258ZW58MXx8fHwxNzU5NDA2ODE1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "FreshWorks", 
+      logo: "https://dam.freshworks.com/m/1d230ee78c07681a/original/headerLogoLight.webp"
     },
     { 
-      name: "InnovateCo", 
-      logo: "https://images.unsplash.com/photo-1758629277674-d9f1fa726795?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxvZ28lMjBzeW1ib2x8ZW58MXx8fHwxNzU5NDgwODc4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "TeamSlide", 
+      logo: "https://www.teamsli.de/wp-content/uploads/2020/09/Logo-60.png"
     },
     { 
-      name: "ScaleTech", 
-      logo: "https://images.unsplash.com/photo-1758641682181-1a817db17df0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBpZGVudGl0eXxlbnwxfHx8fDE3NTk0ODA4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "Zeda", 
+      logo: "https://cdn.prod.website-files.com/643e791fbfa5086aedae6e0f/643e79c6df0e5476b5c56b36_Logo.svg"
     },
     { 
-      name: "CloudFlow", 
-      logo: "https://images.unsplash.com/photo-1660071155921-7204712d7d1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBsb2dvJTIwaWNvbnxlbnwxfHx8fDE3NTk0ODA4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "Finessedirect", 
+      logo: "https://finessedirect.com/wp-content/uploads/2023/08/finesse-logo.webp"
     },
     { 
-      name: "DataPlex", 
-      logo: "https://images.unsplash.com/photo-1623738244303-a645cef7aafa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMGxvZ28lMjBkZXNpZ258ZW58MXx8fHwxNzU5NDgwODg4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "tetranoodle", 
+      logo: "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/9FDfp4LPb51L9VV8Ikn8/media/6687c49ea3b05e75a0a15077.svg"
     },
     { 
-      name: "WebCore", 
-      logo: "https://images.unsplash.com/photo-1696041756040-c910a971f222?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHhkaWdpdGFsJTIwYWdlbmN5JTIwYnJhbmRpbmd8ZW58MXx8fHwxNzU5NDM3MDE1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "Triserv", 
+      logo: "https://triserv360.com/wp-content/uploads/2023/04/logo.png"
     },
   ];
 
