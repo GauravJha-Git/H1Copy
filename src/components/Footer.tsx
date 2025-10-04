@@ -1,24 +1,24 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Twitter, Linkedin, ArrowUp } from 'lucide-react';
-import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Linkedin, ArrowUp } from "lucide-react";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,27 +27,27 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <div className="text-3xl font-bold mb-4 text-white">
-                h1copy
-              </div>
+              <div className="text-3xl font-bold mb-4 text-white">h1copy</div>
               <p className="text-gray-300 leading-relaxed">
-                Transforming businesses through data-driven SEO strategies and compelling content 
-                that drives real results.
+                Transforming businesses through data-driven SEO strategies and
+                compelling content that drives real results.
               </p>
             </div>
-            
+
             <div className="flex space-x-4">
               {[
-                
-                { 
-                  icon: Linkedin, 
+                {
+                  icon: Linkedin,
                   color: "bg-blue-700",
-                  label: "Connect on LinkedIn"
-                }
-              ].map((social, index) => (
-                <a 
+                  label: "Connect on LinkedIn",
+                  link: "https://www.linkedin.com",
+                },
+              ].map((social) => (
+                <a
                   key={social.label}
-                  href="#" 
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`${social.color} p-2 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer`}
                   aria-label={social.label}
                 >
@@ -59,61 +59,51 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-white">
-              Services
-            </h3>
+            <h3 className="text-xl font-bold mb-6 text-white">Services</h3>
             <ul className="space-y-3">
               {[
-                "eBooks",
-                "Blogs", 
-                "White Papers",
-                "Link Ghost",
-                "Link Building",
-                "SEO Audits"
-              ].map((service, index) => (
-                <li key={service}>
-                  <a 
-                    href="#" 
+                { name: "eBooks", path: "/services/seo-optimization" },
+                { name: "Blogs", path: "/services/content-marketing" },
+                { name: "White Papers", path: "/services/technical-seo" },
+                { name: "LinkedIn ghostwriting", path: "/services/local-seo" },
+              ].map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
                     className="text-gray-300 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
                   >
-                    {service}
-                  </a>
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Company & Resources */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-white">
-              Quick Links
-            </h3>
+            <h3 className="text-xl font-bold mb-6 text-white">Company & Resources</h3>
             <ul className="space-y-3">
               {[
-                { name: "Home", action: () => scrollToSection('home') },
-                { name: "About Us", action: () => scrollToSection('about') },
-                { name: "Services", action: null },
-                { name: "Blog", action: null },
-                { name: "Case Studies", action: null },
-                { name: "Contact", action: () => scrollToSection('contact') }
-              ].map((link, index) => (
+                { name: "Methodology", path: "/methodology" },
+                { name: "About Company", path: "/company/about" },
+                { name: "Writer Network", path: "/company/writer-network" },
+                { name: "Blog", path: "/blog" },
+              ].map((link) => (
                 <li key={link.name}>
-                  <button 
-                    onClick={link.action || undefined}
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-left cursor-pointer"
+                  <Link
+                    to={link.path}
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 cursor-pointer"
                   >
                     {link.name}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          
         </motion.div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -121,11 +111,22 @@ export function Footer() {
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
             © 2024 h1copy. All rights reserved. |
-            <Link to="/privacy" className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors">Privacy Policy</Link> |
-            <Link to="/terms" className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors">Terms & Condition</Link>
+            <Link
+              to="/privacy"
+              className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors"
+            >
+              Privacy Policy
+            </Link>{" "}
+            |
+            <Link
+              to="/terms"
+              className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors"
+            >
+              Terms & Condition
+            </Link>
           </div>
-          
-          <button 
+
+          <button
             onClick={scrollToTop}
             className="bg-purple-600 hover:bg-purple-700 p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg group cursor-pointer"
             aria-label="Back to top"
