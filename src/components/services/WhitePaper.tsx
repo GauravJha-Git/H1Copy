@@ -31,56 +31,77 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
   const features = [
     {
       icon: Zap,
-      title: "Site Speed Optimization",
-      description: "Comprehensive performance optimization to improve loading times and Core Web Vitals."
+      title: "Specialize in B2B & SaaS white papers",
+      description: "focusing on thought leadership and lead generation."
     },
     {
       icon: Smartphone,
-      title: "Mobile Optimization",
-      description: "Ensure your website performs perfectly on all devices with responsive design fixes."
+      title: "Do the heavy lifting",
+      description: "conducting deep research, SME interviews, and data analysis to provide original insights."
     },
     {
       icon: Code,
-      title: "Schema Markup Implementation",
-      description: "Structured data implementation to help search engines understand your content better."
+      title: "Create long-term value",
+      description: "we deliver a single, powerful asset that can be repurposed into blogs, social posts, and webinars."
     },
     {
       icon: Settings,
-      title: "Technical Audits & Fixes",
-      description: "Identify and resolve crawl errors, broken links, and other technical issues affecting SEO."
+      title: "Excel at problem-solving",
+      description: "we frame a core industry problem and position your solution as the definitive answer."
+    },
+    {
+      icon: Settings,
+      title: "Guarantee authority",
+      description: "our white papers build credibility, support your sales teams, and move buyers through the funnel."
     }
   ];
 
   const benefits = [
-    "Improve site speed by 40-70%",
-    "Fix critical technical SEO issues",
-    "Better search engine crawling and indexing",
-    "Enhanced mobile user experience",
-    "Improved Core Web Vitals scores",
-    "Comprehensive technical SEO audit report"
+    "Qualified leads — a high-value content offer that attracts prospects who are actively researching solutions.",
+    "Market authority — content that positions your brand as a thought leader and expert in your field.",
+    "Sales enablement — a valuable resource that your sales team can use to move deals forward and stay top-of-mind with prospects.",
+    "Efficient content engine — a single piece of content that can be repurposed into dozens of other assets, from blog posts to email campaigns.",
+    "Better ROI — measurable engagement that proves your content is helping your business grow"
   ];
 
   const faqs = [
-    {
-      question: "What is Technical SEO and why is it important?",
-      answer: "Technical SEO involves optimizing the technical aspects of your website to help search engines crawl, index, and understand your content. It's the foundation that enables your content and other SEO efforts to be successful."
-    },
-    {
-      question: "How do you improve website loading speed?",
-      answer: "We optimize images, minify CSS/JavaScript, enable compression, leverage browser caching, optimize server response times, and implement CDN solutions. Each site gets a customized approach based on its specific issues."
-    },
-    {
-      question: "What are Core Web Vitals and how do you improve them?",
-      answer: "Core Web Vitals are Google's metrics for measuring user experience: loading performance, interactivity, and visual stability. We optimize these through code improvements, image optimization, and server configuration."
-    },
-    {
-      question: "Do you fix mobile responsiveness issues?",
-      answer: "Yes! We ensure your website is fully responsive and provides an excellent user experience across all devices. This includes fixing layout issues, improving touch interactions, and optimizing for mobile performance."
-    },
-    {
-      question: "How long does a technical SEO audit take?",
-      answer: "A comprehensive technical SEO audit typically takes 1-2 weeks depending on the size and complexity of your website. Implementation of fixes can take an additional 2-4 weeks based on the issues identified."
-    }
+            {
+          "question": "What makes a B2B white paper different from a blog post?",
+          "answer": "A white paper is a formal, research-driven, often gated asset designed to guide a buyer through a complex problem. A blog post is typically more conversational and focused on a single topic, often for SEO, and is never gated."
+        },
+        {
+          "question": "How do you ensure the content is unique?",
+          "answer": "We go beyond a simple search. Our white papers are built on original insights, proprietary data, and interviews with subject matter experts to ensure the content is fresh and valuable."
+        },
+        {
+          "question": "Do you offer discounts?",
+          "answer": "Yes. We provide a 5% discount when you prepay for 6 months of work. It can be any kind of service."
+        },
+        {
+          "question": "Are there other ways to get discounts?",
+          "answer": "Absolutely. If you refer a paying client to us, you’ll receive a 5% discount on your own package for the next 6 months."
+        },
+        {
+          "question": "Do you only write for SaaS?",
+          "answer": "Yes. SaaS and B2B tech are our specialties. We focus on white papers that demonstrate deep industry expertise, rather than generic content."
+        },
+        {
+          "question": "What if I need revisions?",
+          "answer": "Every white paper package includes several rounds of revisions to ensure the final document perfectly reflects your messaging and goals."
+        },
+        {
+          "question": "How does payment work?",
+          "answer": "We require payment for the first white paper upfront before starting any work. After that, we invoice you at the end of each month for all completed projects. We accept payments via Wire transfer, Wise (formerly TransferWise), PayPal, UPI (for India-based clients), Stripe (credit/debit card payments), Bank drafts or checks (where applicable). If you prefer another method, just let us know, and we’ll do our best to accommodate."
+        },
+        {
+          "question": "I don’t want to be on a retainer. Is that okay?",
+          "answer": "That’s totally fine. Share your white paper requirements, and we’ll send a quote based on exactly what you need."
+        },
+        {
+          "question": "Can I speak with someone to learn more or ask questions?",
+          "answer": "Absolutely! Schedule a discovery call with our team, and we’ll walk you through our white paper services and answer any questions you have."
+        }
+
   ];
 
   return (
@@ -138,11 +159,12 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Technical SEO
+                White paper services
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Fix the technical foundation of your website to ensure search engines can properly crawl, index, and rank your content. 
-                Improve site speed, mobile performance, and Core Web Vitals.
+                In the B2B SaaS space, decision-makers are drowning in generic content. They’re looking for genuine insights, not just another sales pitch. A well-crafted white paper cuts through the noise, establishing your brand as a true authority and generating high-quality leads that are ready to engage. <br />
+                But creating a standout white paper — one that’s data-driven, strategic, and visually compelling — requires a unique skillset. It's a blend of deep research, persuasive writing, and sophisticated design. That’s where we come in.
+
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -188,14 +210,14 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What's Included in Our Technical SEO Service
+              Why work with us?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive technical SEO fixes the foundation issues that prevent search engines from properly ranking your site
+              We don’t just write documents. We build strategic assets that work for your business. We:
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
@@ -228,7 +250,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Results You Can Expect
+              What you’ll gain from our white papers
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -362,11 +384,9 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Choose Your Technical SEO Package
+              White paper packages
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the right technical SEO solution to optimize your website's performance and search visibility
-            </p>
+            
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -378,32 +398,49 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Basic Audit</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$699</div>
-                <p className="text-gray-600">Essential technical review</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Research sparkt</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$700</div>
+                <p className="text-gray-600">Great for concise, high-impact white papers to generate leads or educate your audience.</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Comprehensive site crawl analysis</span>
+                  <span className="text-gray-700">strategy session to align goals and audience</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Core Web Vitals assessment</span>
+                  <span className="text-gray-700">Up to 2,000 words (approx. 5 – 7 pages)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Basic indexing issues report</span>
+                  <span className="text-gray-700">Senior SaaS writer</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Mobile-friendliness check</span>
+                  <span className="text-gray-700">Extensive research</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Priority fixes list</span>
+                  <span className="text-gray-700">Comprehensive outline</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">expert interviews for high-value perspectives</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Transcripts of all interviews</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">3 rounds of revisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Weekly email updates + bi-weekly status calls</span>
+                </li>
+                
               </ul>
               
               <Button 
@@ -427,35 +464,48 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Complete</h3>
-                <div className="text-4xl font-bold text-white mb-4">$1,399</div>
-                <p className="text-purple-100">Full technical optimization</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Insight engine</h3>
+                <div className="text-4xl font-bold text-white mb-4">$1,500</div>
+                <p className="text-purple-100">Ideal for more detailed white papers that build authority and attract leads.</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Everything in Basic Audit</span>
+                  <span className="text-purple-100">strategy session to align goals and audience</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Site speed optimization</span>
+                  <span className="text-purple-100">Up to 4,000 words (approx. 10–12 pages)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Schema markup implementation</span>
+                  <span className="text-purple-100">Senior SaaS writer</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">XML sitemap optimization</span>
+                  <span className="text-purple-100">Extensive research</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Internal linking structure fix</span>
+                  <span className="text-purple-100">Comprehensive outline</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Monthly monitoring</span>
+                  <span className="text-purple-100">expert interviews for high-value perspectives</span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">Transcripts of all interviews</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">3 rounds of revisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">Weekly email updates + bi-weekly status calls</span>
                 </li>
               </ul>
               
@@ -475,35 +525,47 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Advanced</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$2,499</div>
-                <p className="text-gray-600">Enterprise-grade solutions</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Thought authority</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$2,500</div>
+                <p className="text-gray-600">For authoritative, long-form white papers that establish thought leadership.</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Everything in Complete package</span>
+                  <span className="text-gray-700">strategy session to align goals and audience</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced server optimization</span>
+                  <span className="text-gray-700">Up to 6,000 words (15–20 pages)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">CDN setup and configuration</span>
+                  <span className="text-gray-700">Senior SaaS writer</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced security optimization</span>
+                  <span className="text-gray-700">Extensive research</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Custom technical solutions</span>
+                  <span className="text-gray-700">Comprehensive outline</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dedicated technical specialist</span>
+                  <span className="text-gray-700">expert interviews for high-value perspectives</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Transcripts of all interviews</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">3 rounds of revisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Weekly email updates + bi-weekly status calls</span>
                 </li>
               </ul>
               
@@ -528,16 +590,16 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Fix Your Website's Technical Issues?
+              Turn insights into authoritative white papers
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let's optimize your website's technical foundation to improve search engine performance and user experience.
+              We create research-driven white papers that generate qualified leads and position you a trusted industry expert.
             </p>
             <Button 
               onClick={scrollToContact}
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              Start Technical Optimization
+              Let’s write your white paper
               <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </motion.div>

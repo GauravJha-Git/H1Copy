@@ -31,56 +31,94 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
   const features = [
     {
       icon: MapPin,
-      title: "Google My Business Optimization",
-      description: "Complete optimization of your Google Business Profile to maximize local search visibility."
+      title: "Specialize in B2B SaaS + Tech",
+      description: "we know your ICP, buyer journey, and pain points."
     },
     {
       icon: Building,
-      title: "Local Citation Building",
-      description: "Build consistent business listings across local directories and platforms to improve local authority."
+      title: "Write in your voice",
+      description: "our ghostwriting feels natural, not “agency-polished."
     },
     {
       icon: Star,
-      title: "Review Management",
-      description: "Strategic review acquisition and management to build trust and improve local search rankings."
+      title: "Do the heavy lifting",
+      description: "from interviews and briefs to scheduling and posting"
     },
     {
       icon: Users,
-      title: "Local Keyword Optimization",
-      description: "Target location-specific keywords to capture customers searching in your area."
+      title: "Optimize your profile",
+      description: "so every visitor sees credibility and expertise."
+    },
+    {
+      icon: Users,
+      title: "Drive outcomes",
+      description: "our clients see lifts in engagement, followers, and inbound leads."
     }
   ];
 
   const benefits = [
-    "Increase local search visibility by 250-400%",
-    "Appear in Google's local map pack",
-    "Drive more foot traffic to your business",
-    "Improve online review ratings and quantity",
-    "Dominate local search results in your area",
-    "Monthly local SEO performance reports"
+    "A growing personal brand — more followers, visibility, and credibility.",
+      "High-quality engagement — prospects, VCs, partners, and talent interacting with your posts.",
+      "Inbound opportunities — messages and meeting requests from qualified leads.",
+      "Consistent visibility — stay top-of-mind without spending hours writing.",
+      "Better ROI — a compounding asset that lowers reliance on ads and cold outreach." 
+
   ];
 
   const faqs = [
-    {
-      question: "What is Local SEO and who needs it?",
-      answer: "Local SEO is the practice of optimizing your online presence to attract more business from relevant local searches. Any business that serves customers in a specific geographic area needs local SEO - restaurants, retail stores, service providers, healthcare practices, etc."
-    },
-    {
-      question: "How do you optimize Google My Business?",
-      answer: "We complete and optimize your profile with accurate business information, high-quality photos, service descriptions, regular posts, and respond to customer reviews. We also optimize for local keywords and ensure consistency across all platforms."
-    },
-    {
-      question: "What are local citations and why are they important?",
-      answer: "Local citations are mentions of your business name, address, and phone number (NAP) on other websites. They help establish trust with search engines and improve your local search rankings. We build citations on relevant local directories and platforms."
-    },
-    {
-      question: "How do you help with online reviews?",
-      answer: "We implement review generation strategies, help you respond professionally to all reviews, and provide systems to encourage satisfied customers to leave positive reviews. We also help address negative reviews appropriately."
-    },
-    {
-      question: "How long does it take to see local SEO results?",
-      answer: "Local SEO can show results faster than traditional SEO. You may see improvements in local search visibility within 2-8 weeks, with significant results typically appearing within 3-6 months of consistent optimization."
-    }
+            {
+          "question": "How much of my time will this take?",
+          "answer": "1 hour per month. We handle everything else."
+        },
+        {
+          "question": "Do you post directly on my LinkedIn?",
+          "answer": "Yes. With your permission, we schedule and publish posts so you stay consistent. If this makes you uncomfortable, we offer the content that you can post."
+        },
+        {
+          "question": "Can you guarantee leads?",
+          "answer": "We can’t guarantee leads, but our clients consistently see inbound opportunities, meeting requests, and pipeline growth."
+        },
+        {
+          "question": "How does payment work?",
+          "answer": "First month upfront, then monthly invoicing. We accept wire transfer, Wise, PayPal, Stripe, and bank transfers."
+        },
+        {
+          "question": "Can I test this for just a month?",
+          "answer": "Yes. No long-term retainers required. But we encourage at least 4 months of subscription to compound the content effect."
+        },
+        {
+          "question": "Do you only ghostwrite for SaaS and B2B tech?",
+          "answer": "Yes. Our ghostwriting is exclusively focused on SaaS and B2B tech leaders. That way, we can capture your expertise and voice without sacrificing depth or accuracy."
+        },
+        {
+          "question": "Can I see some samples before we get started?",
+          "answer": "Of course you can. Please reach out to request samples."
+        },
+        {
+          "question": "What if the draft doesn’t sound like me?",
+          "answer": "That’s where revisions come in. Every ghostwriting package includes revision so we can refine the draft until it truly reflects your voice and perspective."
+        },
+        {
+          "question": "Do you offer discounts?",
+          "answer": "Yes. If you prepay for 6 months of ghostwriting services, you’ll receive a 5% discount."
+        },
+        {
+          "question": "Are there any referral perks?",
+          "answer": "Definitely. If you refer a client who signs up with us, you’ll get 5% off your ghostwriting package for the next 6 months."
+        },
+        {
+          "question": "Can we talk before I commit?",
+          "answer": "Of course. You can book a discovery call with our team, and we’ll discuss your ghostwriting goals, process, and answer any questions you have."
+        },
+        {
+          "question": "Do you also offer ghostwriting for X (Twitter)?",
+          "answer": "Yes. Some of our clients prefer LinkedIn + X (Twitter) content strategy. Please reach out to get a quote."
+        },
+        {
+          "question": "How about some other writing services other than Ghostwriting?",
+          "answer": "Yes, we also offer blogs, ebooks, white papers, and more. Please reach out if you have a query."
+        }
+
   ];
 
   return (
@@ -138,11 +176,20 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                Local SEO
+                LinkedIn ghostwriting services
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Dominate local search results and attract more customers in your area. 
-                Optimize your Google My Business, build local citations, and become the go-to business in your location.
+                In B2B SaaS, people buy from people – not soulless company accounts. Your buyers trust executives, founders, and thought leaders who share insights, personal stories, and expertise on LinkedIn. The problem? Writing content that feels authentic, performs with the algorithm, and consistently attracts the right audience takes time (a lot of it).
+                <br /><br />
+                That’s where we come in. We ghostwrite, optimize, and publish LinkedIn content that:
+                <br /><br />
+                Grows your personal brand. <br />
+                Builds a community of prospects, peers, and partners. <br />
+                Turns likes and comments into qualified leads. <br />
+                Helps you become a celebrity in your niche. <br />
+
+
+
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -188,14 +235,12 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What's Included in Our Local SEO Service
+              Why work with us?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our comprehensive local SEO helps your business dominate local search results and attract nearby customers
-            </p>
+            
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
@@ -228,7 +273,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Results You Can Expect
+              What you’ll gain from our ghostwriting
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -370,7 +415,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Local Starter Package */}
+            {/* Local Starter Package
             <motion.div
               className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
               initial={{ opacity: 0, y: 30 }}
@@ -378,8 +423,8 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Local Starter</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$599</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Influence Package</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$1000 / month</div>
                 <p className="text-gray-600">Perfect for single locations</p>
               </div>
               
@@ -413,11 +458,11 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               >
                 Get Started
               </Button>
-            </motion.div>
+            </motion.div> */}
 
             {/* Local Pro Package */}
             <motion.div
-              className="bg-purple-600 rounded-3xl p-8 border-2 border-purple-600 relative overflow-hidden"
+              className="bg-purple-600 rounded-3xl p-8 border-2 border-purple-600 relative overflow-hidden "
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -427,35 +472,43 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Local Pro</h3>
-                <div className="text-4xl font-bold text-white mb-4">$1,199</div>
-                <p className="text-purple-100">Ideal for growing businesses</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Influence Package</h3>
+                <div className="text-4xl font-bold text-white mb-4">$1000 / month</div>
+              
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Everything in Local Starter</span>
+                  <span className="text-purple-100">16 LinkedIn posts</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Advanced citation building</span>
+                  <span className="text-purple-100">Ghostwritten LinkedIn posts in your voice</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Review management setup</span>
+                  <span className="text-purple-100">LinkedIn content calendar</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Local content optimization</span>
+                  <span className="text-purple-100">LinkedIn optimization</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Competitor analysis</span>
+                  <span className="text-purple-100">Monthly analytics + performance update</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                  <span className="text-purple-100">Bi-weekly progress reports</span>
+                  <span className="text-purple-100">Proven content ghostwriters</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">Email, chat, phone support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
+                  <span className="text-purple-100">Monthly remote recording session (1h)</span>
                 </li>
               </ul>
               
@@ -468,7 +521,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             </motion.div>
 
             {/* Local Enterprise Package */}
-            <motion.div
+            {/* <motion.div
               className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -514,7 +567,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               >
                 Get Started
               </Button>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>
@@ -528,16 +581,16 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Dominate Local Search?
+              Turn your LinkedIn into a lead engine?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Let's optimize your local presence and help customers in your area find and choose your business.
+              Your posts should sound like you. It should also bring all the recognition and leads you deserve. 
             </p>
             <Button 
               onClick={scrollToContact}
               className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group"
             >
-              Start Local Optimization
+              Help me with LinkedIn
               <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </motion.div>

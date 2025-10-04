@@ -111,7 +111,7 @@ export function Navigation() {
     { name: 'eBooks', path: '/services/seo-optimization' },
     { name: 'Blogs', path: '/services/content-marketing' },
     { name: 'White Papers', path: '/services/technical-seo' },
-    { name: 'Link Ghost', path: '/services/local-seo' },
+    { name: 'LinkedIN Ghostwriting', path: '/services/local-seo' },
   ];
 
   const companyPages = [
