@@ -352,7 +352,7 @@ export function AboutCompany({
             <div className="text-center">
               <div className="mb-8">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1723537742563-15c3d351dbf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzc21hbiUyMGhlYWRzaG90JTIwcG9ydHJhaXR8ZW58MXx8fHwxNzU5MzI2MzIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/Image.jpg"
                   alt="Masroor Ahmad - Founder & Lead Strategist"
                   className="w-64 h-80 object-cover object-center rounded-2xl mx-auto shadow-2xl"
                 />

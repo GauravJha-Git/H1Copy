@@ -24,21 +24,21 @@ export function Services({ onNavigate }: ServicesProps) {
     },
     {
       icon: Settings,
-      title: "White Papers",
+      title: "White papers",
       description: "Deep-dive guides that do more than educate — they generate leads. We create eBooks that combine research, design, and storytelling to position your brand as the go-to authority.",
       features: ["Lead generation eBooks", "Industry deep dives", "Educational resources", "Visual-rich guides"],
       page: "services/technical-seo"
     },
     {
       icon: MapPin,
-      title: "Link Ghost",
+      title: "Link ghost",
       description: "Serious problems require serious insights. Our white papers combine research, strategy, and clarity to give your audience actionable value while reinforcing your brand's authority.",
       features: ["Research-backed white papers", "Industry reports", "Data-driven analysis", "Solution-driven content"],
       page: "services/local-seo"
     }
   ];
 
-  const handleLearnMore = (servicePage: Page) => {
+  const handleLearnMore = (servicePage: string) => {
     if (onNavigate) {
       onNavigate(servicePage);
     } else {
@@ -111,7 +111,7 @@ export function Services({ onNavigate }: ServicesProps) {
                   className="w-full border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 transition-all duration-300 hover:scale-105"
                   onClick={() => handleLearnMore(service.page)}
                 >
-                  Learn More
+                  Learn more
                 </Button>
               </div>
             );

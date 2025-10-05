@@ -130,7 +130,7 @@ export function Navigation() {
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer"
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1753037366208-be3fba467e48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwbG9nbyUyMGRlc2lnbnxlbnwxfHx8fDE3NTkzNDg4Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/logo.png"
                 alt="h1copy logo"
                 className="h-10 w-10 rounded-lg object-cover"
               />
