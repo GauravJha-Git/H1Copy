@@ -43,37 +43,76 @@ export function CompaniesAndReviews() {
 
   const reviews = [
     {
-      name: "Sarah Johnson",
-      company: "TechCorp",
-      role: "Marketing Director",
+      name: "Chandan Kumar",
+      company: "Geekflare",
+      role: "Founder",
       content: "h1copy transformed our online presence completely. Our organic traffic increased significantly and we're now ranking well for our main keywords.",
-      rating: 5,
       avatar: "👩‍💼"
     },
-    {
-      name: "Michael Chen",
-      company: "GrowthLab", 
-      role: "CEO",
-      content: "The team's expertise in SEO is unmatched. They provided clear strategies, regular updates, and delivered results beyond our expectations. Highly recommended!",
-      rating: 5,
-      avatar: "👨‍💼"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Solutions",
-      role: "VP of Marketing",
-      content: "Working with h1copy was a game-changer. Their data-driven approach and transparent reporting helped us understand exactly how our SEO investment was paying off.",
-      rating: 5,
-      avatar: "👩‍🚀"
-    },
-    {
-      name: "David Park",
-      company: "InnovateCo",
-      role: "Founder",
-      content: "Professional, knowledgeable, and results-driven. h1copy helped us dominate our niche with strategic content and technical SEO improvements.",
-      rating: 5,
-      avatar: "👨‍🎯"
-    }
+          {
+        name: "Shamshad Ahmad",
+        company: "Triserv 360",
+        role: "Founder",
+        content: "What stood out to us about h1copy is their ability to combine strategy with storytelling. Instead of generic content, they deliver well-researched, in-depth writing that feels fresh and original. It’s rare to find a partner who can consistently deliver that balance of clarity and creativity. They are also great when it comes to product-led content that translates technical features and doesn't sound forceful.",
+        avatar: "🧑‍💼"
+      },
+      {
+        name: "Harshit Baluja",
+        company: "",
+        role: "Writer and Editor",
+        content: "Working with Masroor has been a wonderful experience for me. He has undeniably got an amazing knowledge of SEO and content writing. Masroor has the ability to explain even complex subjects in an easier way and there's a lot to learn from him. I would highly recommend working with Masroor.",
+        avatar: "👨‍🎓"
+      },
+      {
+        name: "Mecyll (Jamila) Gaspary",
+        company: "MG Publications",
+        role: "Founder",
+        content: "Masroor is undeniably one of the most knowledgeable people I know about digital marketing, especially in the field of content writing and SEO. His active outreach to other writers and proactive approach to teaching the foundation of digital marketing and content writing are admirable. He's sure the best ones in these departments and the man you need for business.",
+        avatar: "👩‍💼"
+      },
+      {
+        name: "Avhishek Gupta Choudhury",
+        company: "",
+        role: "Digital Marketing Professional",
+        content: "A company or organization would be well served by his expertise.",
+        avatar: "🧑‍💻"
+      },
+      {
+        name: "Shikha Sehrawat",
+        company: "Simplifying web3 for normies",
+        role: "",
+        content: "Masroor is the one for you if you want your content to be visible on the top of search results.",
+        avatar: "👩‍🎓"
+      },
+      {
+        name: "Mashhood Siddiqui",
+        company: "Y Combinator School",
+        role: "",
+        content: "Masroor helped us with some web content and social media content. Masroor also consulted us on content strategies for LinkedIn and BlogPost. Moreover, he possesses in-depth knowledge of blog posts and SEO content writing. We had a great time working with Masroor and would look forward to future content writing needs. I personally advocate for him on content creation such as WordPress blogs, SEO content, and articles.",
+        avatar: "🧑‍🎤"
+      },
+      {
+        name: "Mukund Bista",
+        company: "",
+        role: "Marketing Scholar",
+        content: "I've been following him for some time now. Throughout the time, I have been getting a lot of information on SEO from him via his LinkedIn posts.",
+        avatar: "👨‍🏫"
+      },
+      {
+        name: "Shubham Gupta",
+        company: "",
+        role: "Content Marketer",
+        content: "If you're someone who is still figuring out what makes your content rank on Google, look no further. Masroor is the perfect fit for you.",
+        avatar: "🧑‍🎨"
+      },
+      {
+        name: "Anugraha Venugopal",
+        company: "",
+        role: "",
+        content: "Those into Content Writing can follow his regular updates to hone their craft.",
+        avatar: "👩‍🏫"
+      }
+
   ];
 
   // Auto-rotate reviews
