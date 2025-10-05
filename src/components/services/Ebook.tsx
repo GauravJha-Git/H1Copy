@@ -264,66 +264,56 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             <div className="flex animate-scroll-left space-x-6 whitespace-nowrap">
               {[
                 {
-                  name: "Sarah Johnson",
-                  company: "TechStart Solutions",
-                  text: "h1copy's SEO optimization transformed our online presence. We went from page 3 to top 3 rankings for our main keywords within months. Their keyword research was incredibly thorough."
+                    name: "Chandan Kumar",
+                    company: "Geekflare",
+                    text: "I had the pleasure of working with Masroor on several SaaS topics, where he crafted engaging and actionable articles that truly resonated with Geekflare audience. Highly recommended for anyone seeking top-tier B2B coverage!"
+                  },
+                {
+                  name: "Shamshad Ahmad",
+                  company: "Triserv 360",
+                  text: "What stood out to us about h1copy is their ability to combine strategy with storytelling. Instead of generic content, they deliver well-researched, in-depth writing that feels fresh and original. It’s rare to find a partner who can consistently deliver that balance of clarity and creativity. They are also great when it comes to product-led content that translates technical features and doesn't sound forceful."
                 },
                 {
-                  name: "Michael Chen", 
-                  company: "GrowthLab",
-                  text: "The team's expertise in on-page optimization is unmatched. They didn't just improve our rankings - they improved our entire site structure and user experience."
+                  name: "Harshit Baluja",
+                  company: "",
+                  text: "Working with Masroor has been a wonderful experience for me. He has undeniably got an amazing knowledge of SEO and content writing. Masroor has the ability to explain even complex subjects in an easier way and there's a lot to learn from him. I would highly recommend working with Masroor."
                 },
                 {
-                  name: "Emily Rodriguez",
-                  company: "Digital Dynamics", 
-                  text: "What impressed me most was their systematic approach to SEO. Every recommendation was backed by data and their technical audits uncovered critical issues."
+                  name: "Mecyll (Jamila) Gaspary",
+                  company: "MG Publications",
+                  text: "Masroor is undeniably one of the most knowledgeable people I know about digital marketing, especially in the field of content writing and SEO. His active outreach to other writers and proactive approach to teaching the foundation of digital marketing and content writing are admirable. He's sure the best ones in these departments and the man you need for business."
                 },
                 {
-                  name: "David Thompson",
-                  company: "InnovateCorp",
-                  text: "h1copy's SEO team delivered exceptional results. Their comprehensive approach covered everything from technical SEO to content optimization."
+                  name: "Avhishek Gupta Choudhury",
+                  company: "",
+                  text: "A company or organization would be well served by his expertise."
                 },
-                {
-                  name: "Lisa Park",
-                  company: "ScaleUp Ventures",
-                  text: "The technical SEO audit was a game-changer. They identified and fixed crawling issues, improved our site speed, and optimized our schema markup."
-                },
-                {
-                  name: "James Wilson",
-                  company: "NextGen Digital",
-                  text: "Their on-page optimization expertise is outstanding. They transformed our content strategy and optimized every element for both users and search engines."
-                }
               ].concat([
                 {
-                  name: "Sarah Johnson",
-                  company: "TechStart Solutions",
-                  text: "h1copy's SEO optimization transformed our online presence. We went from page 3 to top 3 rankings for our main keywords within months. Their keyword research was incredibly thorough."
-                },
-                {
-                  name: "Michael Chen", 
-                  company: "GrowthLab",
-                  text: "The team's expertise in on-page optimization is unmatched. They didn't just improve our rankings - they improved our entire site structure and user experience."
-                },
-                {
-                  name: "Emily Rodriguez",
-                  company: "Digital Dynamics", 
-                  text: "What impressed me most was their systematic approach to SEO. Every recommendation was backed by data and their technical audits uncovered critical issues."
-                },
-                {
-                  name: "David Thompson",
-                  company: "InnovateCorp",
-                  text: "h1copy's SEO team delivered exceptional results. Their comprehensive approach covered everything from technical SEO to content optimization."
-                },
-                {
-                  name: "Lisa Park",
-                  company: "ScaleUp Ventures",
-                  text: "The technical SEO audit was a game-changer. They identified and fixed crawling issues, improved our site speed, and optimized our schema markup."
-                },
-                {
-                  name: "James Wilson",
-                  company: "NextGen Digital",
-                  text: "Their on-page optimization expertise is outstanding. They transformed our content strategy and optimized every element for both users and search engines."
-                }
+                    name: "Shikha Sehrawat",
+                    company: "Simplifying web3 for normies",
+                    text: "Masroor is the one for you if you want your content to be visible on the top of search results."
+                  },
+                  {
+                    name: "Mashhood Siddiqui",
+                    company: "Y Combinator School",
+                    text: "Masroor helped us with some web content and social media content. Masroor also consulted us on content strategies for LinkedIn and BlogPost. Moreover, he possesses in-depth knowledge of blog posts and SEO content writing. We had a great time working with Masroor and would look forward to future content writing needs. I personally advocate for him on content creation such as WordPress blogs, SEO content, and articles."
+                  },
+                  {
+                    name: "Mukund Bista",
+                    company: "",
+                    text: "I've been following him for some time now. Throughout the time, I have been getting a lot of information on SEO from him via his LinkedIn posts."
+                  },
+                  {
+                    name: "Shubham Gupta",
+                    company: "",
+                    text: "If you're someone who is still figuring out what makes your content rank on Google, look no further. Masroor is the perfect fit for you."
+                  },
+                  {
+                    name: "Anugraha Venugopal",
+                    company: "",
+                    text: "Those into Content Writing can follow his regular updates to hone their craft."
+                  }
               ]).map((testimonial, index) => (
                 <div
                   key={index}

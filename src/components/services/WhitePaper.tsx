@@ -270,95 +270,86 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
           </motion.div>
 
           {/* Testimonials Scrolling Animation */}
-          <div className="overflow-hidden">
-            <div className="flex animate-scroll-left space-x-6 whitespace-nowrap">
-              {[
-                {
-                  name: "Thomas Anderson",
-                  company: "E-commerce Elite",
-                  text: "h1copy's technical SEO audit uncovered critical issues that were killing our search performance. Their site speed optimization reduced our load time dramatically."
-                },
-                {
-                  name: "Sofia Patel",
-                  company: "DataDriven Corp",
-                  text: "The technical SEO team's expertise is exceptional. They implemented schema markup across our entire site and fixed crawl errors we didn't even know existed."
-                },
-                {
-                  name: "Carlos Rodriguez",
-                  company: "TechSolutions Pro",
-                  text: "Their mobile optimization work was game-changing. They transformed our site from mobile-unfriendly to lightning-fast on all devices."
-                },
-                {
-                  name: "Emma Thompson",
-                  company: "DigitalFirst",
-                  text: "The technical audit was incredibly thorough. They identified and resolved site speed issues, implemented proper schema markup, and optimized our entire technical infrastructure."
-                },
-                {
-                  name: "Ryan O'Connor",
-                  company: "InnovateTech",
-                  text: "Working with their technical SEO specialists was enlightening. They didn't just fix problems - they taught us best practices for ongoing technical optimization."
-                },
-                {
-                  name: "Maya Singh",
-                  company: "CloudScale",
-                  text: "The schema markup implementation was perfect. They structured our data in ways that significantly improved our search appearance."
-                }
-              ].concat([
-                {
-                  name: "Thomas Anderson",
-                  company: "E-commerce Elite",
-                  text: "h1copy's technical SEO audit uncovered critical issues that were killing our search performance. Their site speed optimization reduced our load time dramatically."
-                },
-                {
-                  name: "Sofia Patel",
-                  company: "DataDriven Corp",
-                  text: "The technical SEO team's expertise is exceptional. They implemented schema markup across our entire site and fixed crawl errors we didn't even know existed."
-                },
-                {
-                  name: "Carlos Rodriguez",
-                  company: "TechSolutions Pro",
-                  text: "Their mobile optimization work was game-changing. They transformed our site from mobile-unfriendly to lightning-fast on all devices."
-                },
-                {
-                  name: "Emma Thompson",
-                  company: "DigitalFirst",
-                  text: "The technical audit was incredibly thorough. They identified and resolved site speed issues, implemented proper schema markup, and optimized our entire technical infrastructure."
-                },
-                {
-                  name: "Ryan O'Connor",
-                  company: "InnovateTech",
-                  text: "Working with their technical SEO specialists was enlightening. They didn't just fix problems - they taught us best practices for ongoing technical optimization."
-                },
-                {
-                  name: "Maya Singh",
-                  company: "CloudScale",
-                  text: "The schema markup implementation was perfect. They structured our data in ways that significantly improved our search appearance."
-                }
-              ]).map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-80"
-                >
-                  <div className="bg-white rounded-2xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300 hover:border-green-300 h-full">
-                    <div className="flex items-start">
-                      <Quote className="h-6 w-6 text-green-300 mr-3 flex-shrink-0 mt-1" />
-                      
-                      <div className="whitespace-normal">
-                        <p className="text-gray-700 mb-4 italic leading-relaxed text-sm">
-                          "{testimonial.text}"
-                        </p>
-                        
-                        <div className="text-right">
-                          <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
-                          <div className="text-green-600 text-xs">{testimonial.company}</div>
-                        </div>
+          {/* Testimonials Scrolling Animation */}
+                    <div className="overflow-hidden">
+                      <div className="flex animate-scroll-left space-x-6 whitespace-nowrap">
+                        {[
+                          {
+                              name: "Chandan Kumar",
+                              company: "Geekflare",
+                              text: "I had the pleasure of working with Masroor on several SaaS topics, where he crafted engaging and actionable articles that truly resonated with Geekflare audience. Highly recommended for anyone seeking top-tier B2B coverage!"
+                            },
+                          {
+                            name: "Shamshad Ahmad",
+                            company: "Triserv 360",
+                            text: "What stood out to us about h1copy is their ability to combine strategy with storytelling. Instead of generic content, they deliver well-researched, in-depth writing that feels fresh and original. It’s rare to find a partner who can consistently deliver that balance of clarity and creativity. They are also great when it comes to product-led content that translates technical features and doesn't sound forceful."
+                          },
+                          {
+                            name: "Harshit Baluja",
+                            company: "",
+                            text: "Working with Masroor has been a wonderful experience for me. He has undeniably got an amazing knowledge of SEO and content writing. Masroor has the ability to explain even complex subjects in an easier way and there's a lot to learn from him. I would highly recommend working with Masroor."
+                          },
+                          {
+                            name: "Mecyll (Jamila) Gaspary",
+                            company: "MG Publications",
+                            text: "Masroor is undeniably one of the most knowledgeable people I know about digital marketing, especially in the field of content writing and SEO. His active outreach to other writers and proactive approach to teaching the foundation of digital marketing and content writing are admirable. He's sure the best ones in these departments and the man you need for business."
+                          },
+                          {
+                            name: "Avhishek Gupta Choudhury",
+                            company: "",
+                            text: "A company or organization would be well served by his expertise."
+                          },
+                        ].concat([
+                          {
+                              name: "Shikha Sehrawat",
+                              company: "Simplifying web3 for normies",
+                              text: "Masroor is the one for you if you want your content to be visible on the top of search results."
+                            },
+                            {
+                              name: "Mashhood Siddiqui",
+                              company: "Y Combinator School",
+                              text: "Masroor helped us with some web content and social media content. Masroor also consulted us on content strategies for LinkedIn and BlogPost. Moreover, he possesses in-depth knowledge of blog posts and SEO content writing. We had a great time working with Masroor and would look forward to future content writing needs. I personally advocate for him on content creation such as WordPress blogs, SEO content, and articles."
+                            },
+                            {
+                              name: "Mukund Bista",
+                              company: "",
+                              text: "I've been following him for some time now. Throughout the time, I have been getting a lot of information on SEO from him via his LinkedIn posts."
+                            },
+                            {
+                              name: "Shubham Gupta",
+                              company: "",
+                              text: "If you're someone who is still figuring out what makes your content rank on Google, look no further. Masroor is the perfect fit for you."
+                            },
+                            {
+                              name: "Anugraha Venugopal",
+                              company: "",
+                              text: "Those into Content Writing can follow his regular updates to hone their craft."
+                            }
+                        ]).map((testimonial, index) => (
+                          <div
+                            key={index}
+                            className="flex-shrink-0 w-80"
+                          >
+                            <div className="bg-white rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300 h-full">
+                              <div className="flex items-start">
+                                <Quote className="h-6 w-6 text-purple-300 mr-3 flex-shrink-0 mt-1" />
+                                
+                                <div className="whitespace-normal">
+                                  <p className="text-gray-700 mb-4 italic leading-relaxed text-sm">
+                                    "{testimonial.text}"
+                                  </p>
+                                  
+                                  <div className="text-right">
+                                    <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
+                                    <div className="text-purple-600 text-xs">{testimonial.company}</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
