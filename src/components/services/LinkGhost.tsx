@@ -185,7 +185,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
                   onClick={scrollToContact}
                   className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
-                  Get Started Today
+                  Get started today
                   <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </Button>
                 
@@ -386,7 +386,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Choose Your Local SEO Package
+              Choose your local SEO package
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Select the ideal local SEO solution to dominate search results in your area
@@ -435,7 +435,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
                 variant="outline"
                 className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white py-3 text-lg font-semibold transition-all duration-300"
               >
-                Get Started
+                Get started
               </Button>
             </motion.div> */}
 
@@ -447,7 +447,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <div className="absolute top-4 right-4 bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-bold">
-                POPULAR
+                Popular
               </div>
               
               <div className="text-center mb-8">
@@ -495,7 +495,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
                 onClick={scrollToContact}
                 className="w-full bg-white text-purple-600 hover:bg-gray-100 py-3 text-lg font-semibold transition-all duration-300"
               >
-                Get Started
+                Get started
               </Button>
             </motion.div>
 
@@ -544,7 +544,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
                 variant="outline"
                 className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white py-3 text-lg font-semibold transition-all duration-300"
               >
-                Get Started
+                Get started
               </Button>
             </motion.div> */}
           </div>

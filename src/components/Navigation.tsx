@@ -110,13 +110,13 @@ export function Navigation() {
   const services = [
     { name: 'eBooks', path: '/services/seo-optimization' },
     { name: 'Blogs', path: '/services/content-marketing' },
-    { name: 'White Papers', path: '/services/technical-seo' },
-    { name: 'LinkedIN Ghostwriting', path: '/services/local-seo' },
+    { name: 'White papers', path: '/services/technical-seo' },
+    { name: 'LinkedIn ghostwriting', path: '/services/local-seo' },
   ];
 
   const companyPages = [
-    { name: 'About Company', path: '/company/about' },
-    { name: 'Freelancers Network', path: '/company/writer-network' },
+    { name: 'About company', path: '/company/about' },
+    { name: 'Freelancers network', path: '/company/writer-network' },
   ];
 
   return (

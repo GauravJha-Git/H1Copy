@@ -533,7 +533,7 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
               }}
               className="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 inline-flex items-center gap-2 hover:scale-105 hover:shadow-lg group cursor-pointer"
             >
-              Get Started Today
+              Get started today
               <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
             </button>
           </motion.div>

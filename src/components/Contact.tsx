@@ -123,7 +123,7 @@ export function Contact() {
                 className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
                 <span className="flex items-center justify-center">
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Sending...' : 'Send message'}
                   <Send className={`ml-3 h-5 w-5 transition-transform duration-200 ${isSubmitting ? '' : 'group-hover:translate-x-1'}`} />
                 </span>
               </Button>
@@ -133,7 +133,7 @@ export function Contact() {
           {/* Contact Information & Social Media Combined */}
           <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Get in Touch
+              Get in touch
             </h3>
             
             {/* Email Contact */}

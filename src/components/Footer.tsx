@@ -63,7 +63,7 @@ export function Footer() {
               {[
                 { name: "eBooks", path: "/services/seo-optimization" },
                 { name: "Blogs", path: "/services/content-marketing" },
-                { name: "White Papers", path: "/services/technical-seo" },
+                { name: "White papers", path: "/services/technical-seo" },
                 { name: "LinkedIn ghostwriting", path: "/services/local-seo" },
               ].map((service) => (
                 <li key={service.name}>
@@ -84,8 +84,8 @@ export function Footer() {
             <ul className="space-y-3">
               {[
                 { name: "Methodology", path: "/methodology" },
-                { name: "About Company", path: "/company/about" },
-                { name: "Writer Network", path: "/company/writer-network" },
+                { name: "About company", path: "/company/about" },
+                { name: "Writer network", path: "/company/writer-network" },
                 { name: "Blog", path: "/blog" },
               ].map((link) => (
                 <li key={link.name}>
@@ -121,7 +121,7 @@ export function Footer() {
               to="/terms"
               className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors"
             >
-              Terms & Condition
+              Terms & condition
             </Link>
           </div>
 
