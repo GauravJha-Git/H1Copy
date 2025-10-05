@@ -110,7 +110,7 @@ export function AboutCompany({
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
                 <span className="text-sm font-bold text-purple-600 uppercase tracking-wider">
-                  The Journey
+                  The journey
                 </span>
               </div>
 
@@ -184,7 +184,7 @@ export function AboutCompany({
                 <div className="text-center">
                   <div className="text-6xl mb-4">🎯</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Our Promise
+                    Our promise
                   </h3>
                   <p className="text-gray-600">
                     Every deliverable is crafted with precision,
@@ -375,7 +375,7 @@ export function AboutCompany({
             <div className="flex items-center justify-center gap-2 mb-6">
               <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
               <span className="text-sm font-bold text-purple-600 uppercase tracking-wider">
-                Our Purpose
+                Our purpose
               </span>
               <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
             </div>
@@ -402,7 +402,7 @@ export function AboutCompany({
                 <TrendingUp className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Scale Beyond Limits
+                Scale beyond limits
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 Great content shouldn't be limited by a single
@@ -421,7 +421,7 @@ export function AboutCompany({
                 <Target className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Strategic Excellence
+                Strategic excellence
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 SaaS companies deserve content that converts —
@@ -440,7 +440,7 @@ export function AboutCompany({
                 <Heart className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Built with Pride
+                Built with pride
               </h3>
               <p className="text-gray-600 leading-relaxed">
                 An agency I'd be proud of, that clients trust,
@@ -542,7 +542,7 @@ export function AboutCompany({
               onClick={onNavigateToContact}
               className="bg-white text-purple-600 hover:bg-gray-100 font-bold px-8 py-4 text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
             >
-              Let's Talk
+              Let's talk
             </Button>
           </motion.div>
         </div>

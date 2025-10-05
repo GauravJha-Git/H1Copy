@@ -11,34 +11,34 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
   const benefits = [
     {
       icon: DollarSign,
-      title: 'Competitive Rates',
+      title: 'Competitive rates',
       description: 'Earn $0.10-$0.50 per word based on your experience and specialization.',
     },
     {
       icon: Clock,
-      title: 'Flexible Schedule',
+      title: 'Flexible schedule',
       description: 'Work on your own schedule with deadlines that respect your work-life balance.',
     },
     {
       icon: Users,
-      title: 'Supportive Community',
+      title: 'Supportive community',
       description: 'Join a network of professional writers and get support when you need it.',
     },
     {
       icon: Zap,
-      title: 'Skill Development',
+      title: 'Skill development',
       description: 'Access to training resources and workshops to enhance your writing skills.',
     },
     {
       icon: Globe,
-      title: 'Diverse Projects',
+      title: 'Diverse projects',
       description: 'Work on content for various industries and expand your expertise.',
     },
     
   ];
 
   const requirements = [
-    'Native or near-native English proficiency',
+    'Native or near-native english proficiency',
     '2+ years of content writing experience',
     'Strong understanding of SEO principles',
     'Ability to research and write on various topics',
@@ -49,19 +49,19 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
   const testimonials = [
     {
       name: 'Jessica Williams',
-      role: 'Content Writer',
+      role: 'Content writer',
       content: 'Working with h1copy has been amazing. The projects are interesting, the pay is fair, and the team is incredibly supportive.',
       avatar: '👩‍💻',
     },
     {
       name: 'Marcus Thompson',
-      role: 'SEO Content Specialist',
+      role: 'SEO content specialist',
       content: 'I have been part of the freelancer network for 2 years now. The flexibility and quality of projects is unmatched.',
       avatar: '👨‍✍️',
     },
     {
       name: 'Sarah Chen',
-      role: 'Technical Writer',
+      role: 'Technical writer',
       content: 'h1copy values quality writing and provides excellent feedback. It has helped me grow as a professional writer.',
       avatar: '👩‍🔬',
     },
@@ -100,7 +100,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
               onClick={handleApplyClick}
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer inline-flex items-center gap-3"
             >
-              Apply Now
+              Apply now
               <ExternalLink className="h-5 w-5" />
             </Button>
           </motion.div>
@@ -258,7 +258,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
                   onClick={handleApplyClick}
                   className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer inline-flex items-center gap-3"
                 >
-                  Apply Now
+                  Apply now
                   <ExternalLink className="h-5 w-5" />
                 </Button>
               </div>
@@ -286,7 +286,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
               onClick={handleApplyClick}
               className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg cursor-pointer inline-flex items-center gap-2"
             >
-              Apply Now
+              Apply now
               <ExternalLink className="h-5 w-5" />
             </Button>
           </motion.div>
