@@ -69,7 +69,7 @@ const FloatingLogosSection: React.FC = () => {
                   <ImageWithFallback
                     src={company.logo}
                     alt={`${company.name} logo`}
-                    className="w-18 h-16 object-contain transition-all duration-300"
+                    className="w-15 h-10 object-contain transition-all duration-300"
                   />
                 </div>
               </div>
