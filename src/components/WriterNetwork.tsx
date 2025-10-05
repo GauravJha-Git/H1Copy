@@ -76,17 +76,6 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
 
   return (
     <div className="min-h-screen bg-white pt-16">
-      {/* Back to Home Button */}
-      <div className="fixed top-20 left-4 z-40">
-        <Button
-          onClick={onNavigateHome}
-          variant="outline"
-          className="flex items-center space-x-2 bg-white hover:bg-gray-50 border-gray-300 cursor-pointer"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          <span>Back to Home</span>
-        </Button>
-      </div>
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">

@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Target, Search, TrendingUp, BarChart3, Users, Lightbulb, Rocket, CheckCircle, ArrowLeft, FileText, Zap, Shield, Star, Brain, BookOpen, Code } from 'lucide-react';
 import { Footer } from './Footer';
+import FloatingLogosSection from './ui/FloatingCompanies';
 
 interface MethodologyProps {
   onNavigateHome: () => void;
@@ -66,18 +67,6 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Fixed Back Button */}
-      <div className="fixed top-20 left-4 z-50">
-        <button
-          onClick={onNavigateHome}
-          className="flex items-center gap-2 bg-white shadow-md rounded-xl px-4 py-3 border border-gray-200 transition-all duration-300 hover:shadow-lg cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4 text-gray-600" />
-          <span className="text-sm font-semibold text-gray-700">
-            Back to Home
-          </span>
-        </button>
-      </div>
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-[70vh]">
@@ -509,6 +498,8 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
           </div>
         </div>
       </section>
+
+                    <FloatingLogosSection />
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">

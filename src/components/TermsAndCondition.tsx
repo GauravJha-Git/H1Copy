@@ -10,13 +10,6 @@ const TermsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <button
-            onClick={() => navigate('/')}
-            className="fixed top-20 left-4 z-50 flex items-center gap-2 bg-white shadow-md rounded-xl px-4 py-3 border border-gray-200 transition-all duration-300 hover:shadow-lg cursor-pointer"
-          >
-            <ArrowLeft className="w-4 h-4 text-gray-600" />
-            <span className="text-sm font-semibold text-gray-700">Back to Home</span>
-          </button>
 
       <section className=" px-4 sm:px-6 lg:px-8 pt-8 pb-16">
         <div className="max-w-4xl mx-auto">

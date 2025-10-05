@@ -48,18 +48,6 @@ export function AboutCompany({
 
   return (
     <div className="min-h-screen bg-white pt-16">
-      {/* Back to Home Button */}
-      <div className="fixed top-20 left-4 z-40">
-        <button
-          onClick={onNavigateHome}
-          className="flex items-center space-x-2 bg-white/90 backdrop-blur-sm hover:bg-gray-50 border border-gray-300 px-4 py-2 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4 text-gray-600" />
-          <span className="text-sm font-semibold text-gray-700">
-            Back to Home
-          </span>
-        </button>
-      </div>
 
       {/* Hero Section - Centered but Compact */}
       <section className="relative pt-32 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">

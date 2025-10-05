@@ -9,17 +9,6 @@ interface BlogProps {
 export function Blog({ onNavigateHome }: BlogProps) {
   return (
     <div className="min-h-screen bg-white">
-      {/* Back to Home Button */}
-      <div className="absolute top-6 left-6 z-10">
-        <Button
-          onClick={onNavigateHome}
-          variant="outline"
-          className="flex items-center gap-2 border-2 border-purple-200 hover:border-purple-500 hover:bg-purple-50 cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Home
-        </Button>
-      </div>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 to-white">

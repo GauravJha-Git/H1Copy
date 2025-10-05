@@ -123,18 +123,6 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Fixed Back Button */}
-      <div className="fixed top-20 left-4 z-50">
-        <button
-          onClick={onNavigateHome}
-          className="flex items-center gap-2 bg-white shadow-md rounded-xl px-4 py-3 border border-gray-200 transition-all duration-300 hover:shadow-lg"
-        >
-          <ArrowLeft className="w-4 h-4 text-gray-600" />
-          <span className="text-sm font-semibold text-gray-700">
-            Back to Home
-          </span>
-        </button>
-      </div>
       
       {/* Hero Section */}
       <section className="relative pt-16 overflow-hidden min-h-[80vh]">
