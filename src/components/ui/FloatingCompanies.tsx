@@ -1,65 +1,83 @@
 import React, { useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { ImageWithFallback } from '../figma/ImageWithFallback';
+
+
+
+const companies = [
+  { 
+    name: "GleekFlare", 
+    logo: "https://geekflare.com/wp-content/themes/gf/src/CustomOrganization/Organization/Assets/Logo.png"
+  },
+  { 
+    name: "FlowAce", 
+    logo: "https://flowace.ai/wp-content/themes/Flowacetheme/assets/images/logo.svg"
+  },
+  { 
+    name: "FreshWorks", 
+    logo: "https://dam.freshworks.com/m/1d230ee78c07681a/original/headerLogoLight.webp"
+  },
+  { 
+    name: "TeamSlide", 
+    logo: "https://www.teamsli.de/wp-content/uploads/2020/09/Logo-60.png"
+  },
+  { 
+    name: "Zeda", 
+    logo: "https://cdn.prod.website-files.com/643e791fbfa5086aedae6e0f/643e79c6df0e5476b5c56b36_Logo.svg"
+  },
+  { 
+    name: "Finessedirect", 
+    logo: "https://finessedirect.com/wp-content/uploads/2023/08/finesse-logo.webp"
+  },
+  { 
+    name: "Tetranoodle", 
+    logo: "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/9FDfp4LPb51L9VV8Ikn8/media/6687c49ea3b05e75a0a15077.svg"
+  },
+  { 
+    name: "Triserv", 
+    logo: "https://triserv360.com/wp-content/uploads/2023/04/logo.png"
+  },
+];
 
 const FloatingLogosSection: React.FC = () => {
-  const logoData = useMemo(() => [
-    { id: 1, name: 'TechCorp', url: 'https://via.placeholder.com/120x60/6366f1/ffffff?text=TechCorp' },
-    { id: 2, name: 'DataFlow', url: 'https://via.placeholder.com/120x60/10b981/ffffff?text=DataFlow' },
-    { id: 3, name: 'CloudSync', url: 'https://via.placeholder.com/120x60/f59e0b/ffffff?text=CloudSync' },
-    { id: 4, name: 'InnovateLab', url: 'https://via.placeholder.com/120x60/ef4444/ffffff?text=InnovateLab' },
-    { id: 5, name: 'ScaleUp', url: 'https://via.placeholder.com/120x60/8b5cf6/ffffff?text=ScaleUp' },
-    { id: 6, name: 'GrowthPro', url: 'https://via.placeholder.com/120x60/06b6d4/ffffff?text=GrowthPro' }
-  ], []);
-
-  const duplicatedLogos = useMemo(() => [...logoData, ...logoData], [logoData]);
+  const duplicatedLogos = useMemo(() => [...companies, ...companies], []);
 
   return (
-    <div className="bg-white py-16">
-      <style>{`
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .scroll-container {
-          animation: scroll 25s linear infinite;
-          will-change: transform;
-        }
-        .scroll-container:hover {
-          animation-play-state: paused;
-        }
-        .logo-item {
-          transition: all 0.3s ease;
-        }
-        .logo-item:hover {
-          transform: scale(1.05);
-        }
-      `}</style>
+    <section>
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-3xl font-normal text-gray-900 mb-4">
+          Trusted by Industry Leaders
+        </h2>
+        <p className="text-lg text-gray-500 mb-10 font-light">
+          We've helped companies across various industries achieve their SEO goals
+        </p>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            We've helped companies across various industries achieve their SEO goals
-          </p>
-        </div>
-
-        <div className="overflow-hidden relative">
-          <div className="flex scroll-container">
-            {duplicatedLogos.map((logo, idx) => (
-              <div key={`${logo.id}-${idx}`} className="flex-shrink-0 mx-6 sm:mx-8 logo-item">
-                <img
-                  src={logo.url}
-                  alt={logo.name}
-                  loading="lazy"
-                  className="h-14 sm:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 filter drop-shadow-sm"
-                />
+        {/* Companies Marquee */}
+        <div className="overflow-hidden">
+          <div className="flex animate-scroll-left space-x-12 whitespace-nowrap">
+            {duplicatedLogos.map((company, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center min-w-fit hover:opacity-80 transition-opacity duration-300"
+              >
+                <div className="w-20 h-20 flex-shrink-0">
+                  <ImageWithFallback
+                    src={company.logo}
+                    alt={`${company.name} logo`}
+                    className="w-18 h-16 object-contain transition-all duration-300"
+                  />
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 };
 

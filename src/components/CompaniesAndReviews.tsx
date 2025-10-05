@@ -112,23 +112,24 @@ export function CompaniesAndReviews() {
           
           {/* Companies Marquee */}
           <div className="overflow-hidden">
-            <div className="flex animate-scroll-left space-x-12 whitespace-nowrap">
-              {[...companies, ...companies].map((company, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center justify-center min-w-fit hover:opacity-80 transition-opacity duration-300"
-                >
-                  <div className="w-16 h-16 flex-shrink-0">
-                    <ImageWithFallback
-                      src={company.logo}
-                      alt={`${company.name} logo`}
-                      className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                    />
+              <div className="flex animate-scroll-left space-x-12 whitespace-nowrap">
+                {[...companies, ...companies].map((company, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center justify-center min-w-fit hover:opacity-80 transition-opacity duration-300"
+                  >
+                    <div className="w-20 h-20 flex-shrink-20">
+                      <ImageWithFallback
+                        src={company.logo}
+                        alt={`${company.name} logo`}
+                        className="w-18 h-16 object-contain transition-all duration-300"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+
         </motion.div>
 
         {/* Reviews Section Header */}
