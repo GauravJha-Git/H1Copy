@@ -140,8 +140,8 @@ export function Contact() {
             <div className="space-y-6 mb-8">
               <div className="space-y-2">
                 <h4 className="text-lg font-bold text-gray-900">Email</h4>
-                <p className="text-gray-600">hello@h1copy.com</p>
-                <p className="text-gray-600">support@h1copy.com</p>
+                <p className="text-gray-600">masroor@h1copy.com</p>
+                {/* <p className="text-gray-600">support@h1copy.com</p> */}
               </div>
             </div>
 
@@ -162,14 +162,17 @@ export function Contact() {
                     label: "Connect on LinkedIn"
                   }
                 ].map((social, index) => (
-                  <a 
-                    key={social.label}
-                    href="#" 
-                    className={`${social.color} text-white p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer`}
-                    aria-label={social.label}
-                  >
-                    <social.icon className="h-6 w-6" />
-                  </a>
+                      <a 
+                          key={social.label}
+                          href="https://www.linkedin.com/in/-masroorahmad/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`${social.color} text-white p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer`}
+                          aria-label={social.label}
+                        >
+                          <social.icon className="h-6 w-6" />
+                      </a>
+
                 ))}
               </div>
             </div>
