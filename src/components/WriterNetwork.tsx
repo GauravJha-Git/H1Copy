@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, PenTool, DollarSign, Clock, Users, Star, CheckCircle, Globe, Zap, ExternalLink } from 'lucide-react';
+import { ArrowLeft, PenTool, DollarSign, Clock, Users, Star, CheckCircle, Globe, Zap, ExternalLink,FileText, CalendarClock, Home, Target, BookOpen, BadgeDollarSign, TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
 
@@ -10,61 +10,71 @@ interface WriterNetworkProps {
 export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
   const benefits = [
     {
-      icon: DollarSign,
-      title: 'Competitive rates',
-      description: 'Earn $0.10-$0.50 per word based on your experience and specialization.',
-    },
-    {
-      icon: Clock,
-      title: 'Flexible schedule',
-      description: 'Work on your own schedule with deadlines that respect your work-life balance.',
-    },
-    {
-      icon: Users,
-      title: 'Supportive community',
-      description: 'Join a network of professional writers and get support when you need it.',
-    },
-    {
-      icon: Zap,
-      title: 'Skill development',
-      description: 'Access to training resources and workshops to enhance your writing skills.',
-    },
-    {
-      icon: Globe,
-      title: 'Diverse projects',
-      description: 'Work on content for various industries and expand your expertise.',
-    },
+    icon: FileText, // 📄 Clear briefs/resources
+    title: 'Clarity and support',
+    description: 'Every project comes with clear briefs, client guidelines, outlines, and resources. Our editors and content leads are available to provide feedback and help you deliver your best work.',
+  },
+  {
+    icon: CalendarClock, // ⏳ Flexible schedule
+    title: 'Consistent, flexible work',
+    description: 'Enjoy a steady flow of assignments while keeping control of your time. Whether you want to take on a few projects or a full workload, we’ll match opportunities to your bandwidth and goals.',
+  },
+  {
+    icon: Home, // 🏡 Remote-friendly
+    title: 'Fully remote, fully supported',
+    description: 'Work from anywhere and create your ideal schedule. Our remote-first setup is designed for independence and work life balance.',
+  },
+  {
+    icon: Target, // 🎯 Meaningful impact
+    title: 'Do meaningful work',
+    description: 'We focus on content that helps our clients attract leads, grow revenue, and build brand authority. You’ll see the impact of your writing and take pride in measurable outcomes.',
+  },
+  {
+    icon: BookOpen, // 📚 Learning + B2B strategy
+    title: 'B2B writing and strategy',
+    description: 'Go beyond basic blog writing. Learn how to write thought leadership, product-led content, and SEO-driven pieces for leading SaaS and tech brands.',
+  },
+  {
+    icon: Users, // 👥 Community of professionals
+    title: 'Join a community of pros',
+    description: 'Collaborate with experienced writers, editors, and strategists who value learning, feedback, and professional growth. You’ll be part of a team that genuinely cares about quality and creativity.',
+  },
+  {
+    icon: BadgeDollarSign, // 💲 Fair pay
+    title: 'Fair pay, transparent process',
+    description: 'We value your time and expertise. Our rates are competitive, payments are timely, and expectations are clearly communicated.',
+  },
+  {
+    icon: TrendingUp, // 📈 Growth opportunities
+    title: 'Room to grow',
+    description: 'Writers who excel can move into editing or strategy roles, take on leadership responsibilities, or focus on specific industries they’re passionate about.',
+  },
+
     
   ];
 
   const requirements = [
-    'Native or near-native english proficiency',
-    '2+ years of content writing experience',
-    'Strong understanding of SEO principles',
-    'Ability to research and write on various topics',
-    'Excellent grammar and proofreading skills',
-    'Reliable internet connection and availability',
+    "1. Submit your application: click the “fill out the form” button and complete our application form. Share your background, samples, and areas of expertise so we can get to know you.",
+    "2. Application review: our team will carefully review your samples to understand your strengths, experience, and style.",
+    "3. Approval & onboarding: if selected, we’ll reach out to onboard you and match you with clients and projects that fit your skills and interests.",
+    "4. Start as a freelancer: once matched, you’ll work with our team to define a workflow that suits your schedule."
+
   ];
 
   const testimonials = [
     {
-      name: 'Jessica Williams',
-      role: 'Content writer',
-      content: 'Working with h1copy has been amazing. The projects are interesting, the pay is fair, and the team is incredibly supportive.',
+      name: 'Harshit Baluja',
+      role: 'Writer and Editor',
+      content: "Working with Masroor has been a wonderful experience for me. He has undeniably got an amazing knowledge of SEO and content writing. Masroor has the ability to explain even complex subjects in an easier way and there's a lot to learn from him. I would highly recommend working with Masroor.",
       avatar: '👩‍💻',
     },
     {
-      name: 'Marcus Thompson',
-      role: 'SEO content specialist',
-      content: 'I have been part of the freelancer network for 2 years now. The flexibility and quality of projects is unmatched.',
+      name: 'Asir Muntasir',
+      role: 'SaaS Writer',
+      content: 'Working with h1copy was a positive experience. Great projects, communication was smooth, and the overall work environment was professional and collaborative.',
       avatar: '👨‍✍️',
     },
-    {
-      name: 'Sarah Chen',
-      role: 'Technical writer',
-      content: 'h1copy values quality writing and provides excellent feedback. It has helped me grow as a professional writer.',
-      avatar: '👩‍🔬',
-    },
+    
   ];
 
   // Placeholder for Google Form URL - to be updated later
@@ -93,14 +103,13 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
               Join the h1copy freelancers network
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Are you a talented freelance writer? Join our exclusive network of content creators and work on 
-              exciting SEO and content marketing projects for leading brands.
+              Are you a freelance writer or editor looking to work with leading B2B SaaS & tech companies worldwide?
             </p>
             <Button
               onClick={handleApplyClick}
               className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer inline-flex items-center gap-3"
             >
-              Apply now
+              Fill out the form
               <ExternalLink className="h-5 w-5" />
             </Button>
           </motion.div>
@@ -119,9 +128,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Why join our network?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We believe in supporting our writers with competitive compensation, flexible work, and growth opportunities.
-            </p>
+            
           </motion.div>
 
           <motion.div
@@ -154,11 +161,9 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              What we're looking for
+              How to join?
             </h2>
-            <p className="text-xl text-gray-600">
-              We're seeking experienced writers who are passionate about creating high-quality content.
-            </p>
+            
           </motion.div>
 
           <motion.div
@@ -167,7 +172,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Requirements</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">The process:</h3>
             <div className="space-y-4">
               {requirements.map((requirement, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -224,7 +229,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
       </section>
 
       {/* Application Button Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -265,7 +270,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-purple-600">
@@ -277,16 +282,16 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             transition={{ duration: 0.8, delay: 2.2 }}
           >
             <h2 className="text-4xl font-bold mb-6">
-              Ready to get started?
+              Excited to join us?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto text-purple-100">
-              Join our network of talented freelance writers and start working on exciting projects with leading brands.
+              Ready to start your journey with h1copy? Click below to fill out our application form.
             </p>
             <Button
               onClick={handleApplyClick}
               className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg cursor-pointer inline-flex items-center gap-2"
             >
-              Apply now
+              Fill out the form
               <ExternalLink className="h-5 w-5" />
             </Button>
           </motion.div>
