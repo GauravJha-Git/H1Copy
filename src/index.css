@@ -4298,7 +4298,7 @@ button:hover {
 .marquee-track {
   display: inline-flex;
   white-space: nowrap;
-  animation: marquee-scroll 120s linear infinite;
+  animation: marquee-scroll 240s linear infinite;
 }
 
 .marquee:hover .marquee-track {

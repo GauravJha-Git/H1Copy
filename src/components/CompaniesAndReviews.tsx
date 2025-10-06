@@ -57,7 +57,7 @@ export function CompaniesAndReviews() {
       },
       {
         name: "Harshit Baluja",
-        company: "",
+        company: "Writer and Editor",
         role: "Writer and Editor",
         content: "Working with Masroor has been a wonderful experience for me. He has undeniably got an amazing knowledge of SEO and content writing. Masroor has the ability to explain even complex subjects in an easier way and there's a lot to learn from him. I would highly recommend working with Masroor.",
         avatar: "👨‍🎓"
@@ -71,7 +71,7 @@ export function CompaniesAndReviews() {
       },
       {
         name: "Avhishek Gupta Choudhury",
-        company: "",
+        company: "Digital Marketing Professional",
         role: "Digital Marketing Professional",
         content: "A company or organization would be well served by his expertise.",
         avatar: "🧑‍💻"
@@ -79,7 +79,7 @@ export function CompaniesAndReviews() {
       {
         name: "Shikha Sehrawat",
         company: "Simplifying web3 for normies",
-        role: "",
+        role: "Simplifying web3 for normies",
         content: "Masroor is the one for you if you want your content to be visible on the top of search results.",
         avatar: "👩‍🎓"
       },

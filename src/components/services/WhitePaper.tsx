@@ -275,7 +275,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
                       <div className="marquee-track space-x-6">
                         {(() => {
                           const items = [
-                          {
+                           {
                               name: "Chandan Kumar",
                               company: "Geekflare",
                               text: "I had the pleasure of working with Masroor on several SaaS topics, where he crafted engaging and actionable articles that truly resonated with Geekflare audience. Highly recommended for anyone seeking top-tier B2B coverage!"
@@ -287,7 +287,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
                           },
                           {
                             name: "Harshit Baluja",
-                            company: "",
+                            company: "Writer and Editor",
                             text: "Working with Masroor has been a wonderful experience for me. He has undeniably got an amazing knowledge of SEO and content writing. Masroor has the ability to explain even complex subjects in an easier way and there's a lot to learn from him. I would highly recommend working with Masroor."
                           },
                           {
@@ -297,7 +297,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
                           },
                           {
                             name: "Avhishek Gupta Choudhury",
-                            company: "",
+                            company: "Digital Marketing Professional",
                             text: "A company or organization would be well served by his expertise."
                           },
                         ].concat([
@@ -313,12 +313,12 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
                             },
                             {
                               name: "Mukund Bista",
-                              company: "",
+                              company: "Marketing Scholar",
                               text: "I've been following him for some time now. Throughout the time, I have been getting a lot of information on SEO from him via his LinkedIn posts."
                             },
                             {
                               name: "Shubham Gupta",
-                              company: "",
+                              company: "Content Marketer",
                               text: "If you're someone who is still figuring out what makes your content rank on Google, look no further. Masroor is the perfect fit for you."
                             },
                             {
