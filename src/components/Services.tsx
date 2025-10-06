@@ -146,12 +146,12 @@ export function Services({ onNavigate }: ServicesProps) {
               },
               {
                 number: "3",
-                title: "Brief & Build",
+                title: "Brief & build",
                 description: "Whether you provide the brief or we create one, we map content to your strategy, funnel stage, and goals. Outlines, CTAs, internal links — every detail is aligned so you know exactly how each piece moves the needle."
               },
               {
                 number: "4",
-                title: "Deliver & Scale",
+                title: "Deliver & scale",
                 description: "From first draft to final polish, we deliver on time and on brand. With repeatable systems, transparent packages, and proven workflows, scaling high-quality content becomes effortless."
               }
             ].map((step, index) => (
