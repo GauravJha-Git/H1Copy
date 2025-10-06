@@ -168,13 +168,9 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 In B2B SaaS, people buy from people – not soulless company accounts. Your buyers trust executives, founders, and thought leaders who share insights, personal stories, and expertise on LinkedIn. The problem? Writing content that feels authentic, performs with the algorithm, and consistently attracts the right audience takes time (a lot of it).
-                <br /><br />
-                That’s where we come in. We ghostwrite, optimize, and publish LinkedIn content that:
-                <br /><br />
-                Grows your personal brand. <br />
-                Builds a community of prospects, peers, and partners. <br />
-                Turns likes and comments into qualified leads. <br />
-                Helps you become a celebrity in your niche. <br />
+                <br />
+                That’s where we come in. We ghostwrite, optimize, and publish LinkedIn content that grows your personal brand, builds a community of prospects, turns likes and comments into qualified leads, and helps you become a celebrity in your niche. Done-for-you. Authentic. Strategic.
+
 
 
 
@@ -285,7 +281,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our Local SEO Clients Say
+              Proof in their words
             </h2>
             <p className="text-lg text-gray-600">
               Real feedback from local businesses we've helped dominate their markets
@@ -452,7 +448,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-white mb-2">Influence Package</h3>
-                <div className="text-4xl font-bold text-white mb-4">$1000 / month</div>
+                <div className="text-4xl font-bold text-white mb-4">$1500 / month</div>
               
               </div>
               
@@ -586,7 +582,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+              Frequently Asked Questions (FAQs)
             </h2>
           </motion.div>
 

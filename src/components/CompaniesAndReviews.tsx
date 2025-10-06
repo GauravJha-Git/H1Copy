@@ -143,10 +143,10 @@ export function CompaniesAndReviews() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-normal text-gray-900 mb-4">
-            Trusted by Industry Leaders
+            Trusted by industry leaders
           </h2>
           <p className="text-lg text-gray-500 mb-10 font-light">
-            We've helped companies across various industries achieve their SEO goals
+          {/* just for space */}
           </p>
           
           {/* Companies Marquee */}
@@ -179,11 +179,11 @@ export function CompaniesAndReviews() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <h2 className="text-3xl font-normal text-gray-900 mb-3">
-            What Our Clients Say
+            Proof in their words
           </h2>
-          <p className="text-lg text-gray-500 font-light">
+          {/* <p className="text-lg text-gray-500 font-light">
             Don't just take our word for it
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Main Review Display - Simplified */}

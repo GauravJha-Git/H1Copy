@@ -156,7 +156,7 @@ export function AboutCompany({
                 <div className="text-center">
                   <div className="text-6xl mb-4">📈</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Years of Experience
+                    Years of experience
                   </h3>
                   <p className="text-gray-600">
                     From solo freelancer to agency founder,

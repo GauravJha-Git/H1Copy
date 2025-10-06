@@ -44,7 +44,7 @@ export function WhyChooseUs() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Why Choose h1copy?
+            Why choose h1copy?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We combine technical expertise, creative content strategies, and data-driven insights 

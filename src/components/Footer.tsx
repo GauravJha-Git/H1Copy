@@ -39,7 +39,7 @@ export function Footer() {
                   icon: Linkedin,
                   color: "bg-blue-700",
                   label: "Connect on LinkedIn",
-                  link: "https://www.linkedin.com",
+                  link: "https://www.linkedin.com/in/-masroorahmad/",
                 },
               ].map((social) => (
                 <a
@@ -61,8 +61,9 @@ export function Footer() {
             <h3 className="text-xl font-bold mb-6 text-white">Services</h3>
             <ul className="space-y-3">
               {[
-                { name: "eBooks", path: "/services/seo-optimization" },
                 { name: "Blogs", path: "/services/content-marketing" },
+                { name: "eBooks", path: "/services/seo-optimization" },
+                
                 { name: "White papers", path: "/services/technical-seo" },
                 { name: "LinkedIn ghostwriting", path: "/services/local-seo" },
               ].map((service) => (
@@ -80,7 +81,7 @@ export function Footer() {
 
           {/* Company & Resources */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-white">Company & Resources</h3>
+            <h3 className="text-xl font-bold mb-6 text-white">Company & resources</h3>
             <ul className="space-y-3">
               {[
                 { name: "Methodology", path: "/methodology" },
@@ -109,14 +110,14 @@ export function Footer() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 h1copy. All rights reserved. |
+            © 2026 h1copy. All rights reserved.&nbsp; |
             <Link
               to="/privacy"
               className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors"
             >
-              Privacy Policy
+               &nbsp;Privacy Policy
             </Link>{" "}
-            |
+            |&nbsp;
             <Link
               to="/terms"
               className="text-gray-500 hover:text-blue-500 hover:underline mx-2 transition-colors"

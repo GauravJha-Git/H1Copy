@@ -54,11 +54,10 @@ export function Contact() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Let's Grow Your Business Together
+             Stop tolerating generic fluff 
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to dominate search results? Get in touch with our SEO experts for a free consultation 
-            and discover how we can boost your online presence.
+            We do content your audience, AI, and search engines can’t ignore
           </p>
         </motion.div>
 
@@ -71,7 +70,7 @@ export function Contact() {
           {/* Contact Form */}
           <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Send Us a Message
+              Send us a message
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">

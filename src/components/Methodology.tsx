@@ -172,11 +172,11 @@ export function Methodology({ onNavigateHome }: MethodologyProps) {
           >
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-bold text-purple-600 mb-8 border border-purple-200/50 shadow-sm">
               <Rocket className="w-4 h-4" />
-              Proven SaaS Content Methodology
+              Proven SaaS content methodology
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-              A proven playbook for SaaS content that converts
+              On a mission to make organic growth easier for your B2B SaaS brand
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">

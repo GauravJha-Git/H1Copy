@@ -51,10 +51,10 @@ const FloatingLogosSection: React.FC = () => {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-3xl font-normal text-gray-900 mb-4">
-          Trusted by Industry Leaders
+          Trusted by industry leaders
         </h2>
         <p className="text-lg text-gray-500 mb-10 font-light">
-          We've helped companies across various industries achieve their SEO goals
+          
         </p>
 
         {/* Companies Marquee */}

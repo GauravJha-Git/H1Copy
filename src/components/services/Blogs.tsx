@@ -167,7 +167,6 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
                 Blog writing services 
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                B2B Blog writing that drives traffic,leads & conversions- <br />
                 B2B SaaS blog pieces shouldn't be generic fluff that just has to be done for the sake of it. It's one of the most powerful parts of the content marketing story that should expand your brand awareness, position you as a thought leader, and bring in qualified leads that convert. 
                 But writing high-quality SaaS blogs week after week — that takes course and serious work. You need strategic, product-led, bottom-of-funnel (BoFu) content that balances SEO with storytelling to make it work. That's where we come in.
 
@@ -283,7 +282,7 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our Content Marketing Clients Say
+              Proof in their words
             </h2>
             <p className="text-lg text-gray-600">
               Real feedback from businesses we've helped with content marketing
@@ -384,11 +383,9 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Choose your content marketing package
+              Blogs packages
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select the ideal content marketing solution that fits your business goals and budget
-            </p>
+            
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -461,7 +458,7 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Scale package <br /> (most popular)</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Scale package </h3>
                 <div className="text-4xl font-bold text-white mb-4">$8,500 / month</div>
                 <p className="text-white">⭐ Recommended for SaaS companies scaling traffic + conversions</p>
               </div>
@@ -607,7 +604,7 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+              Frequently Asked Questions (FAQs)
             </h2>
           </motion.div>
 

@@ -252,7 +252,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our SEO Clients Say
+              Proof in their words
             </h2>
             <p className="text-lg text-gray-600">
               Real feedback from businesses we've helped with SEO optimization
@@ -483,35 +483,43 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Custom Package</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">Pricing depends on scope</div>
-                <p className="text-gray-600">For specialized projects</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Insight Builder</h3>
+                <div className="text-4xl font-bold text-purple-600 mb-4">$1,700</div>
+                <p className="text-gray-600">Ideal for in-depth eBooks that establish authority and attract leads.</p>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Complex topics</span>
+                  <span className="text-gray-700">Strategy session</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Proprietary data integration</span>
+                  <span className="text-gray-700">Up to 6,000 words (approx. 15–18 pages)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced product tie-ins</span>
+                  <span className="text-gray-700">Dedicated senior SaaS writer</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">All deliverables tailored to your needs</span>
+                  <span className="text-gray-700">Research on your topic and industry trends</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">💡 Perfect for brands with unique, complex project requirements</span>
+                  <span className="text-gray-700">Structured outline to organize content</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Contact Us for a Quote</span>
+                  <span className="text-gray-700">Up to 2 expert interviews for credibility</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">2 rounds of revisions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">Weekly email progress updates</span>
                 </li>
               </ul>
               
@@ -562,7 +570,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+              Frequently Asked Questions (FAQs)
             </h2>
           </motion.div>
 

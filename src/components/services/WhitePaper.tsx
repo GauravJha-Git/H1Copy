@@ -150,7 +150,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
                 White paper services
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                In the B2B SaaS space, decision-makers are drowning in generic content. They’re looking for genuine insights, not just another sales pitch. A well-crafted white paper cuts through the noise, establishing your brand as a true authority and generating high-quality leads that are ready to engage. <br />
+                In the B2B SaaS space, decision-makers are drowning in generic content. They’re looking for genuine insights, not just another sales pitch. A well-crafted white paper cuts through the noise, establishing your brand as a true authority and generating high-quality leads that are ready to engage.
                 But creating a standout white paper — one that’s data-driven, strategic, and visually compelling — requires a unique skillset. It's a blend of deep research, persuasive writing, and sophisticated design. That’s where we come in.
 
               </p>
@@ -262,7 +262,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Our Technical SEO Clients Say
+              Proof in their words
             </h2>
             <p className="text-lg text-gray-600">
               Real feedback from businesses we've helped with technical SEO
@@ -377,7 +377,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Research sparkt</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Research spark</h3>
                 <div className="text-4xl font-bold text-purple-600 mb-4">$700</div>
                 <p className="text-gray-600">Great for concise, high-impact white papers to generate leads or educate your audience.</p>
               </div>
@@ -595,7 +595,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+              Frequently Asked Questions (FAQs)
             </h2>
           </motion.div>
 
