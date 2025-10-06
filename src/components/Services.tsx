@@ -80,21 +80,21 @@ export function Services({ onNavigate }: ServicesProps) {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group"
+                className="bg-white rounded-2xl p-8 border border-purple-200/40 hover:border-purple-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group flex flex-col justify-between min-h-[26rem]"
               >
-                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-purple-200 group-hover:scale-110">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-purple-200 group-hover:scale-110 mx-auto">
                   <IconComponent className="h-8 w-8 text-purple-600 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm text-center">
                   {service.description}
                 </p>
                 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li 
                       key={featureIndex} 
@@ -108,7 +108,7 @@ export function Services({ onNavigate }: ServicesProps) {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full border-purple-200 text-purple-600 hover:bg-purple-50 hover:border-purple-300 transition-all duration-300 hover:scale-105"
+                  className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white transition-all duration-300"
                   onClick={() => handleLearnMore(service.page)}
                 >
                   Learn more

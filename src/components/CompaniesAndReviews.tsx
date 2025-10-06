@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
+import { Quote } from 'lucide-react';
+import { useEffect } from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function CompaniesAndReviews() {
-  const [currentReview, setCurrentReview] = useState(0);
 
   const companies = [
     { 
@@ -115,22 +114,8 @@ export function CompaniesAndReviews() {
 
   ];
 
-  // Auto-rotate reviews
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentReview((prev) => (prev + 1) % reviews.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [reviews.length]);
-
-  const nextReview = () => {
-    setCurrentReview((prev) => (prev + 1) % reviews.length);
-  };
-
-  const prevReview = () => {
-    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
-  };
+  // keep marquee-only behavior; no manual rotation needed
+  useEffect(() => {}, []);
 
   return (
     <section data-section="reviews" id="reviews" className="py-16 bg-white">
@@ -142,7 +127,7 @@ export function CompaniesAndReviews() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-normal text-gray-900 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Trusted by industry leaders
           </h2>
           <p className="text-lg text-gray-500 mb-10 font-light">
@@ -178,7 +163,7 @@ export function CompaniesAndReviews() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <h2 className="text-3xl font-normal text-gray-900 mb-3">
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">
             Proof in their words
           </h2>
           {/* <p className="text-lg text-gray-500 font-light">
@@ -186,70 +171,54 @@ export function CompaniesAndReviews() {
           </p> */}
         </motion.div>
 
-        {/* Main Review Display - Simplified */}
-        <motion.div 
-          className="max-w-4xl mx-auto mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={currentReview}
-              className="bg-gray-50 rounded-2xl p-8 lg:p-12 border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-            >
-              <div className="text-center">
-                <div className="text-4xl mb-6">
-                  {reviews[currentReview].avatar}
-                </div>
-                
-                <blockquote className="text-xl text-gray-600 mb-8 leading-relaxed font-light italic">
-                  "{reviews[currentReview].content}"
-                </blockquote>
-                
-                <div className="border-t border-gray-200 pt-6">
-                  <div className="text-lg font-normal text-gray-900">{reviews[currentReview].name}</div>
-                  <div className="text-gray-500 font-light">{reviews[currentReview].role} at {reviews[currentReview].company}</div>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
-
-        {/* Minimal Navigation */}
-        <div className="flex justify-center items-center space-x-6">
-          <button
-            onClick={prevReview}
-            className="text-gray-400 hover:text-purple-600 transition-colors duration-200 cursor-pointer"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          
-          {/* Simple Dots */}
-          <div className="flex space-x-2">
-            {reviews.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentReview(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-200 cursor-pointer ${
-                  index === currentReview 
-                    ? 'bg-purple-600' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
+        {/* Marquee-style testimonials (same feel as services pages) */}
+        <div className="overflow-hidden marquee">
+          <div className="marquee-track space-x-6">
+            {(() => {
+              const items = reviews.map(r => ({
+                name: r.name,
+                company: r.company,
+                text: r.content
+              }));
+              const track = items.concat(items);
+              return (
+                <>
+                  {track.map((t, idx) => (
+                    <div key={`a-${idx}`} className="inline-block">
+                      <div className="flex-shrink-0 w-80">
+                        <div className="bg-white rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300 h-96 overflow-hidden">
+                          <div className="flex flex-col items-center justify-center h-full text-left">
+                            <Quote className="h-6 w-6 text-purple-300 mb-3 flex-shrink-0" />
+                            <p className="text-gray-700 mb-3 italic leading-relaxed text-sm whitespace-normal">"{t.text}"</p>
+                            <div className="w-full text-right">
+                              <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
+                              <div className="text-purple-600 text-xs">{t.company}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  {track.map((t, idx) => (
+                    <div key={`b-${idx}`} className="inline-block">
+                      <div className="flex-shrink-0 w-80">
+                        <div className="bg-white rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300 h-96 overflow-hidden">
+                          <div className="flex flex-col items-center justify-center h-full text-left">
+                            <Quote className="h-6 w-6 text-purple-300 mb-3 flex-shrink-0" />
+                            <p className="text-gray-700 mb-3 italic leading-relaxed text-sm whitespace-normal">"{t.text}"</p>
+                            <div className="w-full text-right">
+                              <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
+                              <div className="text-purple-600 text-xs">{t.company}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </>
+              );
+            })()}
           </div>
-          
-          <button
-            onClick={nextReview}
-            className="text-gray-400 hover:text-purple-600 transition-colors duration-200 cursor-pointer"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
         </div>
       </div>
     </section>
