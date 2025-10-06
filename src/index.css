@@ -3193,6 +3193,15 @@ html {
   }
 }
 
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .group:hover .group-hover\:scale-110 {
   transform: scale(1.1);
 }
@@ -4278,4 +4287,20 @@ html {
 /* Global: show hand cursor when hovering any button */
 button:hover {
   cursor: pointer;
+}
+
+/* Pause testimonials marquee on hover */
+.marquee:hover .animate-scroll-left {
+  animation-play-state: paused;
+}
+
+/* Two-track marquee utilities */
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-scroll 120s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
 }

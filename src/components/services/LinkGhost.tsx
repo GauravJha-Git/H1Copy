@@ -290,9 +290,10 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
 
           {/* Testimonials Scrolling Animation */}
           {/* Testimonials Scrolling Animation */}
-                    <div className="overflow-hidden">
-                      <div className="flex animate-scroll-left space-x-6 whitespace-nowrap">
-                        {[
+                    <div className="overflow-hidden marquee">
+                      <div className="marquee-track space-x-6">
+                        {(() => {
+                          const items = [
                           {
                               name: "Chandan Kumar",
                               company: "Geekflare",
@@ -344,29 +345,53 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
                               company: "",
                               text: "Those into Content Writing can follow his regular updates to hone their craft."
                             }
-                        ]).map((testimonial, index) => (
-                          <div
-                            key={index}
-                            className="flex-shrink-0 w-80"
-                          >
-                            <div className="bg-white rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300 h-full">
-                              <div className="flex items-start">
-                                <Quote className="h-6 w-6 text-purple-300 mr-3 flex-shrink-0 mt-1" />
-                                
-                                <div className="whitespace-normal">
-                                  <p className="text-gray-700 mb-4 italic leading-relaxed text-sm">
-                                    "{testimonial.text}"
-                                  </p>
-                                  
-                                  <div className="text-right">
-                                    <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
-                                    <div className="text-purple-600 text-xs">{testimonial.company}</div>
+                        ]);
+                          const track = items.concat(items);
+                          return (
+                            <>
+                              {track.map((testimonial, index) => (
+                                <div key={`a-${index}`} className="inline-block">
+                                  <div className="flex-shrink-0 w-80">
+                                    <div className="bg-white rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300 h-auto">
+                                      <div className="flex items-start">
+                                        <Quote className="h-6 w-6 text-purple-300 mr-3 flex-shrink-0 mt-1" />
+                                        
+                                        <div className="whitespace-normal">
+                                          <p className="text-gray-700 mb-4 italic leading-relaxed text-sm">"{testimonial.text}"</p>
+                                          
+                                          <div className="text-right">
+                                            <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
+                                            <div className="text-purple-600 text-xs">{testimonial.company}</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
+                              ))}
+                              {track.map((testimonial, index) => (
+                                <div key={`b-${index}`} className="inline-block">
+                                  <div className="flex-shrink-0 w-80">
+                                    <div className="bg-white rounded-2xl p-6 border border-purple-200 hover:shadow-lg transition-all duration-300 hover:border-purple-300 h-auto">
+                                      <div className="flex items-start">
+                                        <Quote className="h-6 w-6 text-purple-300 mr-3 flex-shrink-0 mt-1" />
+                                        
+                                        <div className="whitespace-normal">
+                                          <p className="text-gray-700 mb-4 italic leading-relaxed text-sm">"{testimonial.text}"</p>
+                                          
+                                          <div className="text-right">
+                                            <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
+                                            <div className="text-purple-600 text-xs">{testimonial.company}</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </>
+                          );
+                        })()}
                       </div>
                     </div>
         </div>
