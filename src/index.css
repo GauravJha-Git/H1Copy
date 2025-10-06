@@ -4274,3 +4274,8 @@ html {
     transform: scale(2);
   }
 }
+
+/* Global: show hand cursor when hovering any button */
+button:hover {
+  cursor: pointer;
+}
