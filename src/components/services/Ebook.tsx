@@ -385,7 +385,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Knowledge Kickstart</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Knowledge kickstart</h3>
                 <div className="text-4xl font-bold text-purple-600 mb-4">$900</div>
                 <p className="text-gray-600">Perfect for concise eBooks to generate leads or educate your audience.</p>
               </div>
@@ -446,7 +446,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               </div>
               
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-white mb-2">Thought Leader</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Thought leader</h3>
                 <div className="text-4xl font-bold text-white mb-4">$2,800</div>
                 <p className="text-purple-100">For authoritative, long-form eBooks that showcase thought leadership.</p>
               </div>
@@ -502,7 +502,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Insight Builder</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Insight builder</h3>
                 <div className="text-4xl font-bold text-purple-600 mb-4">$1,700</div>
                 <p className="text-gray-600">Ideal for in-depth eBooks that establish authority and attract leads.</p>
               </div>

@@ -168,7 +168,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 In B2B SaaS, people buy from people – not soulless company accounts. Your buyers trust executives, founders, and thought leaders who share insights, personal stories, and expertise on LinkedIn. The problem? Writing content that feels authentic, performs with the algorithm, and consistently attracts the right audience takes time (a lot of it).
-                <br />
+                <br /><br />
                 That’s where we come in. We ghostwrite, optimize, and publish LinkedIn content that grows your personal brand, builds a community of prospects, turns likes and comments into qualified leads, and helps you become a celebrity in your niche. Done-for-you. Authentic. Strategic.
 
 
@@ -405,11 +405,11 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Choose your local SEO package
+              Pricing
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Select the ideal local SEO solution to dominate search results in your area
-            </p>
+            </p> */}
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 place-items-center">

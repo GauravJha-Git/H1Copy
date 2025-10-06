@@ -13,28 +13,28 @@ export function Services({ onNavigate }: ServicesProps) {
       title: "Blogs",
       description: "We specialize in B2B SaaS blogs that are product-led, long-form, and built to rank. From top-of-funnel visibility to bottom-of-funnel conversions, our blogs deliver traffic, leads, and thought leadership that compound over time.",
       features: ["Long-form product-led blogs","BOFU conversion piece","Thought leadership content","SEO-driven traffic blogs",],
-      page: "services/Blogs"
+      page: "services/content-marketing"
     },
     {
       icon: FileText,
       title: "LinkedIn ghostwriting",
       description: "We help executives and founders become voices worth following. Our ghostwriting turns your expertise into engaging narratives that build authority, grow followers, and spark conversations that matter.",
       features: ["Executive LinkedIn posts", "Personal brand storytelling", "Audience growth strategy", "Engagement-focused content"],
-      page: "services/LinkGhost"
+      page: "services/local-seo"
     },
     {
       icon: Settings,
       title: "eBooks",
       description: "Deep-dive guides that do more than educate — they generate leads. We create eBooks that combine research, design, and storytelling to position your brand as the go-to authority.",
       features: ["Lead generation eBooks", "Industry deep dives", "Educational resources", "Visual-rich guides"],
-      page: "services/Ebook"
+      page: "services/seo-optimization"
     },
     {
       icon: MapPin,
       title: "White papers",
       description: "Serious problems require serious insights. Our white papers combine research, strategy, and clarity to give your audience actionable value while reinforcing your brand's authority.",
       features: ["Research-backed white papers", "Industry reports", "Data-driven analysis", "Solution-driven content"],
-      page: "services/WhitePaper"
+      page: "services/technical-seo"
     }
   ];
 

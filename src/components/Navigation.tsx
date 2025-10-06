@@ -108,8 +108,9 @@ export function Navigation() {
   const isCompanyActive = () => location.pathname.startsWith('/company/');
 
   const services = [
-    { name: 'eBooks', path: '/services/seo-optimization' },
     { name: 'Blogs', path: '/services/content-marketing' },
+    { name: 'eBooks', path: '/services/seo-optimization' },
+    
     { name: 'White papers', path: '/services/technical-seo' },
     { name: 'LinkedIn ghostwriting', path: '/services/local-seo' },
   ];

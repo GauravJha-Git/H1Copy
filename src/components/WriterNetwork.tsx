@@ -66,13 +66,13 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
       name: 'Harshit Baluja',
       role: 'Writer and Editor',
       content: "Working with Masroor has been a wonderful experience for me. He has undeniably got an amazing knowledge of SEO and content writing. Masroor has the ability to explain even complex subjects in an easier way and there's a lot to learn from him. I would highly recommend working with Masroor.",
-      avatar: '👩‍💻',
+      avatar: '👨‍💻',
     },
     {
       name: 'Asir Muntasir',
       role: 'SaaS Writer',
       content: 'Working with h1copy was a positive experience. Great projects, communication was smooth, and the overall work environment was professional and collaborative.',
-      avatar: '👨‍✍️',
+      avatar: '🦊',
     },
     
   ];
@@ -197,9 +197,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               What our freelancers say
             </h2>
-            <p className="text-xl text-gray-600">
-              Hear from successful writers in our network.
-            </p>
+            
           </motion.div>
 
           <motion.div
