@@ -31,7 +31,7 @@ export function Services({ onNavigate }: ServicesProps) {
     },
     {
       icon: MapPin,
-      title: "White Papers",
+      title: "White papers",
       description: "Serious problems require serious insights. Our white papers combine research, strategy, and clarity to give your audience actionable value while reinforcing your brand's authority.",
       features: ["Research-backed white papers", "Industry reports", "Data-driven analysis", "Solution-driven content"],
       page: "services/WhitePaper"

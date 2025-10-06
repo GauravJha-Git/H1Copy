@@ -589,7 +589,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions (FAQs)
+              Frequently asked questions (FAQs)
             </h2>
           </motion.div>
 
