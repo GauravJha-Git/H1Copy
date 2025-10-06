@@ -412,55 +412,18 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Local Starter Package
+          <div className="grid md:grid-cols-3 gap-8 place-items-center">
+            {/* Local Starter Package */}
             <motion.div
-              className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white"
+              
             >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Influence Package</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$1000 / month</div>
-                <p className="text-gray-600">Perfect for single locations</p>
-              </div>
               
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Google Business Profile optimization</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Local keyword research</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">NAP consistency audit</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Basic citation building</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Monthly ranking report</span>
-                </li>
-              </ul>
-              
-              <Button 
-                onClick={scrollToContact}
-                variant="outline"
-                className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white py-3 text-lg font-semibold transition-all duration-300"
-              >
-                Get started
-              </Button>
-            </motion.div> */}
+            </motion.div>
 
             {/* Local Pro Package */}
             <motion.div
-              className="bg-purple-600 rounded-3xl p-8 border-2 border-purple-600 relative overflow-hidden "
+              className="md:col-start-2 bg-purple-600 rounded-3xl p-8 border-2 border-purple-600 relative overflow-hidden "
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -519,53 +482,12 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             </motion.div>
 
             {/* Local Enterprise Package */}
-            {/* <motion.div
-              className="bg-white rounded-3xl p-8 border-2 border-gray-200 hover:border-purple-200 transition-all duration-300 hover:shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+            <motion.div
+              className="bg-white"
+             
             >
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Local Enterprise</h3>
-                <div className="text-4xl font-bold text-purple-600 mb-4">$2,199</div>
-                <p className="text-gray-600">For multi-location businesses</p>
-              </div>
               
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Everything in Local Pro</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Multi-location optimization</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Advanced schema markup</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Local link building campaign</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Dedicated account manager</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">Weekly strategy calls</span>
-                </li>
-              </ul>
-              
-              <Button 
-                onClick={scrollToContact}
-                variant="outline"
-                className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white py-3 text-lg font-semibold transition-all duration-300"
-              >
-                Get started
-              </Button>
-            </motion.div> */}
+            </motion.div>
           </div>
         </div>
       </section>

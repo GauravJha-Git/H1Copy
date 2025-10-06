@@ -63,7 +63,6 @@ export function Footer() {
               {[
                 { name: "Blogs", path: "/services/content-marketing" },
                 { name: "eBooks", path: "/services/seo-optimization" },
-                
                 { name: "White papers", path: "/services/technical-seo" },
                 { name: "LinkedIn ghostwriting", path: "/services/local-seo" },
               ].map((service) => (
@@ -100,6 +99,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
+
         </motion.div>
 
         {/* Bottom Bar */}
