@@ -117,7 +117,7 @@ export function Navigation() {
 
   const companyPages = [
     { name: 'About', path: '/company/about' },
-    { name: 'Freelancers network', path: '/company/freelancers-network' },
+    { name: 'Freelancers network', path: '/company/writer-network' },
   ];
 
   return (

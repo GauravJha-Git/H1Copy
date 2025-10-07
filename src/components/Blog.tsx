@@ -1,8 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from './ui/button';
-import { Navigation } from './Navigation';
-import { Footer } from './Footer';
 
 interface BlogProps {
   onNavigateHome: () => void;
@@ -11,7 +9,6 @@ interface BlogProps {
 export function Blog({ onNavigateHome }: BlogProps) {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-purple-50 to-white">
@@ -56,8 +53,6 @@ export function Blog({ onNavigateHome }: BlogProps) {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
