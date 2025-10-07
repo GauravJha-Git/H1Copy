@@ -2,9 +2,22 @@
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
+  import { copyFileSync } from 'fs';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'copy-htaccess',
+      writeBundle() {
+        try {
+          copyFileSync('public/.htaccess', 'build/.htaccess');
+        } catch (err) {
+          // File might not exist, that's okay
+        }
+      }
+    }
+  ],
   base: './',
   resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -55,6 +68,7 @@ export default defineConfig({
       outDir: 'build',
       sourcemap: false,
       minify: 'esbuild',
+      copyPublicDir: true,
     },
     server: {
       port: 3000,

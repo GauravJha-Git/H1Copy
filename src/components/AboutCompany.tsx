@@ -81,7 +81,7 @@ export function AboutCompany({
           >
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-bold text-purple-600 mb-6 border border-purple-200/50 shadow-sm">
               <User className="w-4 h-4" />
-              From Freelancer to Founder
+              From freelancer to founder
             </div>
 
             <h1 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-tight mb-6 mt-1">

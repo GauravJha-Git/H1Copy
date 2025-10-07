@@ -1,59 +1,62 @@
-# Deployment Guide for H1Copy Website
+# Deployment Guide - Universal SPA Routing Configuration
 
-## Vercel Deployment
+This guide ensures your React SPA works correctly across different hosting platforms without 404 errors on page reload.
 
-This project is now configured for easy deployment on Vercel.
+## Platform-Specific Configuration
 
-### Prerequisites
-- A Vercel account (free at [vercel.com](https://vercel.com))
-- Your project pushed to a Git repository (GitHub, GitLab, or Bitbucket)
+### 1. Vercel
+- Uses `vercel.json` (already configured)
+- Automatically handles SPA routing with the rewrites configuration
 
-### Deployment Steps
+### 2. Netlify
+- Uses `public/_redirects` file (already created)
+- Deploy the `build` folder contents to Netlify
 
-1. **Connect to Vercel:**
-   - Go to [vercel.com](https://vercel.com) and sign in
-   - Click "New Project"
-   - Import your Git repository
+### 3. Firebase Hosting
+- Uses `firebase.json` (already created)
+- Run: `firebase deploy`
 
-2. **Configure Build Settings:**
-   - Vercel will automatically detect this as a Vite project
-   - Build Command: `npm run build`
-   - Output Directory: `build`
-   - Install Command: `npm install`
+### 4. Apache Servers
+- Uses `public/.htaccess` file (already created)
+- Upload `build` folder contents to your Apache server
 
-3. **Deploy:**
-   - Click "Deploy"
-   - Vercel will build and deploy your project automatically
+### 5. Nginx Servers
+- Use the provided `nginx.conf` configuration
+- Copy the configuration to your Nginx server config
 
-### Local Development
+### 6. GitHub Pages
+- Add `public/404.html` file with the same content as `index.html`
+- Or use HashRouter instead of BrowserRouter for better compatibility
+
+## Build and Deploy Commands
 
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
+# Build the project
 npm run build
 
-# Preview production build locally
-npm run preview
+# The build output will be in the 'build' folder
+# Upload the contents of the 'build' folder to your hosting platform
 ```
 
-### Project Structure
+## Testing Routes
 
-- **Source files:** `src/` directory
-- **Build output:** `build/` directory (created after running `npm run build`)
-- **Configuration:** `vite.config.ts` for Vite settings
-- **Deployment:** `vercel.json` for Vercel configuration
+After deployment, test these routes to ensure they work:
+- `/` (home)
+- `/services/blogs`
+- `/services/ebooks`
+- `/services/white-papers`
+- `/services/linkedin-ghostwriting`
+- `/company/about`
+- `/company/writer-network`
+- `/methodology`
+- `/blog`
 
-### Environment Variables
+All routes should work on direct access and page reload.
 
-If you need environment variables:
-1. Add them in your Vercel dashboard under Project Settings > Environment Variables
-2. For local development, create a `.env.local` file (already in .gitignore)
+## Troubleshooting
 
-### Custom Domain
-
-After deployment, you can add a custom domain in your Vercel project settings.
+If you still get 404 errors:
+1. Ensure your hosting platform supports URL rewriting
+2. Check that the configuration files are in the correct locations
+3. Verify that the build output is deployed correctly
+4. Clear browser cache and test in incognito mode

@@ -88,7 +88,11 @@ function MethodologyPage() {
 
 function BlogPage() {
   const navigate = useNavigate();
-  return <Blog onNavigateHome={() => navigate('/')} />;
+  return (
+    <PageLayout>
+      <Blog onNavigateHome={() => navigate('/')} />
+    </PageLayout>
+  );
 }
 
 function EbookPage() {
