@@ -61,10 +61,10 @@ export function Footer() {
             <h3 className="text-xl font-bold mb-6 text-white">Services</h3>
             <ul className="space-y-3">
               {[
-                { name: "Blogs", path: "/services/content-marketing" },
-                { name: "eBooks", path: "/services/seo-optimization" },
-                { name: "White papers", path: "/services/technical-seo" },
-                { name: "LinkedIn ghostwriting", path: "/services/local-seo" },
+                { name: "Blogs", path: "/services/blogs" },
+                { name: "eBooks", path: "/services/ebooks" },
+                { name: "White papers", path: "/services/white-papers" },
+                { name: "LinkedIn ghostwriting", path: "/services/linkedin-ghostwriting" },
               ].map((service) => (
                 <li key={service.name}>
                   <Link
@@ -85,7 +85,7 @@ export function Footer() {
               {[
                 { name: "Methodology", path: "/methodology" },
                 { name: "About company", path: "/company/about" },
-                { name: "Writer network", path: "/company/writer-network" },
+                { name: "Freelancers network", path: "/company/freelancers-network" },
                 { name: "Blog", path: "/blog" },
               ].map((link) => (
                 <li key={link.name}>

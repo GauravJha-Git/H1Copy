@@ -1,12 +1,11 @@
 {
-  "outputDirectory": "build",
   "rewrites": [
     {
       "source": "/assets/(.*)",
       "destination": "/assets/$1"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]

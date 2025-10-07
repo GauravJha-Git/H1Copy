@@ -108,16 +108,16 @@ export function Navigation() {
   const isCompanyActive = () => location.pathname.startsWith('/company/');
 
   const services = [
-    { name: 'Blogs', path: '/services/content-marketing' },
-    { name: 'eBooks', path: '/services/seo-optimization' },
+    { name: 'Blogs', path: '/services/blogs' },
+    { name: 'eBooks', path: '/services/ebooks' },
     
-    { name: 'White papers', path: '/services/technical-seo' },
-    { name: 'LinkedIn ghostwriting', path: '/services/local-seo' },
+    { name: 'White papers', path: '/services/white-papers' },
+    { name: 'LinkedIn ghostwriting', path: '/services/linkedin-ghostwriting' },
   ];
 
   const companyPages = [
     { name: 'About', path: '/company/about' },
-    { name: 'Freelancers network', path: '/company/writer-network' },
+    { name: 'Freelancers network', path: '/company/freelancers-network' },
   ];
 
   return (

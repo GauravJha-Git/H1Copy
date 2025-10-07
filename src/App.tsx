@@ -171,12 +171,18 @@ export default function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/methodology" element={<MethodologyPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/services/seo-optimization" element={<EbookPage />} />
-        <Route path="/services/content-marketing" element={<BlogsPage />} />
-        <Route path="/services/technical-seo" element={<WhitePaperPage />} />
-        <Route path="/services/local-seo" element={<LinkGhostPage />} />
+        <Route path="/services/ebooks" element={<EbookPage />} />
+        <Route path="/services/blogs" element={<BlogsPage />} />
+        <Route path="/services/white-papers" element={<WhitePaperPage />} />
+        <Route path="/services/linkedin-ghostwriting" element={<LinkGhostPage />} />
         <Route path="/company/about" element={<AboutCompanyPage />} />
-        <Route path="/company/writer-network" element={<WriterNetworkPage />} />
+        <Route path="/company/freelancers-network" element={<WriterNetworkPage />} />
+        {/* Redirect old routes to new ones for backward compatibility */}
+        <Route path="/services/seo-optimization" element={<Navigate to="/services/ebooks" replace />} />
+        <Route path="/services/content-marketing" element={<Navigate to="/services/blogs" replace />} />
+        <Route path="/services/technical-seo" element={<Navigate to="/services/white-papers" replace />} />
+        <Route path="/services/local-seo" element={<Navigate to="/services/linkedin-ghostwriting" replace />} />
+        <Route path="/company/writer-network" element={<Navigate to="/company/freelancers-network" replace />} />
         {/* Handle preview_page.html and other unmatched paths */}
         <Route path="/preview_page.html" element={<Navigate to="/" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
