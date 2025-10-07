@@ -80,6 +80,15 @@ Test URLs:
 
 All routes should work on both direct access and page refresh.
 
+### SPA fallback note
+Make sure your static host returns `index.html` for unknown routes so React Router can handle client-side routing. For Netlify use a `_redirects` file with:
+
+```
+/*    /index.html   200
+```
+
+For Vercel, `vercel.json` already contains a rewrite to `index.html`. For S3/CloudFront, configure the error document to `index.html` and return a 200 when possible.
+
 ## How It Works
 
 ### Vercel:

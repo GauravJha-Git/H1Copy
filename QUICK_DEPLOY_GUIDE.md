@@ -47,6 +47,15 @@ Test these URLs (both direct access AND refresh):
 
 **All should work without 404 errors!**
 
+### SPA fallback note
+If you deploy to Netlify or similar static hosts, include a `_redirects` file with:
+
+```
+/*    /index.html   200
+```
+
+This ensures direct reloads for client-side routes return `index.html` so React Router can handle them.
+
 ## 🔧 Troubleshooting
 
 ### Vercel - White Page?
