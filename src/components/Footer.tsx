@@ -85,7 +85,7 @@ export function Footer() {
               {[
                 { name: "Methodology", path: "/methodology" },
                 { name: "About company", path: "/company/about" },
-                { name: "Writer network", path: "/company/writer-network" },
+                { name: "Freelancers network", path: "/company/freelancers-network" },
                 { name: "Blog", path: "/blog" },
               ].map((link) => (
                 <li key={link.name}>

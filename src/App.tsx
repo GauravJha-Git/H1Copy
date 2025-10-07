@@ -180,7 +180,9 @@ export default function App() {
         <Route path="/services/white-papers" element={<WhitePaperPage />} />
         <Route path="/services/linkedin-ghostwriting" element={<LinkGhostPage />} />
         <Route path="/company/about" element={<AboutCompanyPage />} />
-        <Route path="/company/writer-network" element={<WriterNetworkPage />} />
+        <Route path="/company/freelancers-network" element={<WriterNetworkPage />} />
+        {/* Redirect old URL to new one */}
+        <Route path="/company/writer-network" element={<Navigate to="/company/freelancers-network" replace />} />
         {/* Redirect old routes to new ones for backward compatibility */}
         <Route path="/services/seo-optimization" element={<Navigate to="/services/ebooks" replace />} />
         <Route path="/services/content-marketing" element={<Navigate to="/services/blogs" replace />} />
