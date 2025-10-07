@@ -2,19 +2,30 @@
   import { defineConfig } from 'vite';
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
-  import { copyFileSync } from 'fs';
+  import { copyFileSync, existsSync } from 'fs';
 
 export default defineConfig({
   plugins: [
     react(),
     {
-      name: 'copy-htaccess',
+      name: 'copy-config-files',
       writeBundle() {
-        try {
-          copyFileSync('public/.htaccess', 'build/.htaccess');
-        } catch (err) {
-          // File might not exist, that's okay
-        }
+        const filesToCopy = [
+          { src: 'public/.htaccess', dest: 'build/.htaccess' },
+          { src: 'public/_redirects', dest: 'build/_redirects' },
+          { src: 'public/404.html', dest: 'build/404.html' }
+        ];
+        
+        filesToCopy.forEach(({ src, dest }) => {
+          try {
+            if (existsSync(src)) {
+              copyFileSync(src, dest);
+              console.log(`✅ Copied ${src} to ${dest}`);
+            }
+          } catch (err) {
+            console.warn(`⚠️ Could not copy ${src}`);
+          }
+        });
       }
     }
   ],
