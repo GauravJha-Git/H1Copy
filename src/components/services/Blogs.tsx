@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import FloatingLogosSection from '../ui/FloatingCompanies';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { ArrowRight, FileText, Users, Target, TrendingUp, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
