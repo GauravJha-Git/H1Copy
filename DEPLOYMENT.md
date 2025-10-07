@@ -34,7 +34,8 @@ vercel
 5. Deploy
 
 **Configuration:**
-- ✅ `vercel.json` is already configured
+- ✅ `vercel.json` is already configured with correct output directory
+- ✅ Output directory set to `build` (not `dist`)
 - ✅ Handles SPA routing automatically
 - ✅ Rewrites all routes to `/index.html`
 
