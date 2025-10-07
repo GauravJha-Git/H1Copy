@@ -29,7 +29,7 @@ export default defineConfig({
       }
     }
   ],
-  base: './',
+  base: '/',
   resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
