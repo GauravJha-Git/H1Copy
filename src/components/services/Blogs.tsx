@@ -192,7 +192,7 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="/public/h1copy-blogs-services-pages.png"
+                  src="/h1copy-blogs-services-pages.png"
                   alt="Content Marketing Strategy"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />

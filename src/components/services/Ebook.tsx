@@ -165,7 +165,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="/public/h1copy-ebook-services-pages.png"
+                  src="/h1copy-ebook-services-pages.png"
                   alt="SEO Analytics Dashboard"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />

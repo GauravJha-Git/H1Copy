@@ -175,7 +175,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="/public/h1copy-white-papers-services.png"
+                  src="/h1copy-white-papers-services.png"
                   alt="Technical SEO Website Optimization"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />

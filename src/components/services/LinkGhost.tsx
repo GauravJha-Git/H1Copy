@@ -196,7 +196,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="/public/h1copy-ghostwriting-services.png"
+                  src="/h1copy-ghostwriting-services.png"
                   alt="Local SEO Business Location"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
