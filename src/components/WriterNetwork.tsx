@@ -100,7 +100,7 @@ export function WriterNetwork({ onNavigateHome }: WriterNetworkProps) {
               <PenTool className="h-16 w-16 text-purple-600" />
             </div>
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Join the h1copy freelancers network
+              On a mission to make organic growth easier for your B2B SaaS brand
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Are you a freelance writer or editor looking to work with leading B2B SaaS & tech companies worldwide?

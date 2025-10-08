@@ -45,7 +45,7 @@ export function CompaniesAndReviews() {
       name: "Chandan Kumar",
       company: "Geekflare",
       role: "Founder",
-      content: "h1copy transformed our online presence completely. Our organic traffic increased significantly and we're now ranking well for our main keywords.",
+      content: "I had the pleasure of working with Masroor on several SaaS topics, where he crafted engaging and actionable articles that truly resonated with Geekflare audience. Highly recommended for anyone seeking top-tier B2B coverage!",
       avatar: "👩‍💼"
     },
           {
@@ -109,6 +109,13 @@ export function CompaniesAndReviews() {
         company: "",
         role: "",
         content: "Those into Content Writing can follow his regular updates to hone their craft.",
+        avatar: "👩‍🏫"
+      },
+      {
+        name: "Yuvraj Anand",
+        company: "Cultured Media",
+        role: "Founder",
+        content: "Working with h1copy was like having a creative partner who speaks our language.",
         avatar: "👩‍🏫"
       }
 

@@ -7,6 +7,7 @@ import { About } from './components/About';
 import { Services } from './components/Services';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { CompaniesAndReviews } from './components/CompaniesAndReviews';
+import { ProblemsSolved } from './components/ProblemsSolved';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Methodology } from './components/Methodology';
@@ -38,10 +39,12 @@ function HomePage() {
       <div className="min-h-screen bg-white">
         <Navigation />
         <Hero />
-        <About />
-        <Services onNavigate={navigateToPage} />
-        <WhyChooseUs />
         <CompaniesAndReviews />
+        <ProblemsSolved />
+        <WhyChooseUs />
+        
+        {/* <About /> */}
+        <Services onNavigate={navigateToPage} />
         <Contact />
         <Footer />
       </div>

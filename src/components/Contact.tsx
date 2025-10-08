@@ -72,19 +72,19 @@ export function Contact() {
         </motion.div>
 
         <motion.div 
-          className="grid lg:grid-cols-2 gap-12"
+          className="flex justify-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 max-w-4xl w-full">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               Send us a message
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="gap-4 items-center">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
                   <Input
@@ -136,47 +136,6 @@ export function Contact() {
                 </span>
               </Button>
             </form>
-          </div>
-
-          {/* Contact Information & Social Media */}
-          <div className="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Get in touch
-            </h3>
-            
-            <div className="space-y-6 mb-8">
-              <div className="space-y-2">
-                <h4 className="text-lg font-bold text-gray-900">Email</h4>
-                <p className="text-gray-600">masroor@h1copy.com</p>
-              </div>
-            </div>
-
-            <div className="border-t border-gray-200 pt-8">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">
-                Follow us for smarter content marketing
-              </h4>
-              
-              <div className="flex space-x-4">
-                {[
-                  { 
-                    icon: Linkedin, 
-                    color: "bg-blue-700",
-                    label: "Connect on LinkedIn"
-                  }
-                ].map((social, index) => (
-                  <a 
-                    key={social.label}
-                    href="https://www.linkedin.com/in/-masroorahmad/" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${social.color} text-white p-3 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer`}
-                    aria-label={social.label}
-                  >
-                    <social.icon className="h-6 w-6" />
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
