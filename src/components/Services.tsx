@@ -46,6 +46,13 @@ export function Services({ onNavigate }: ServicesProps) {
     }
   ];
 
+   const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleLearnMore = (servicePage: string) => {
     if (onNavigate) {
       onNavigate(servicePage);
@@ -126,8 +133,36 @@ export function Services({ onNavigate }: ServicesProps) {
           })}
         </motion.div>
 
-        {/* Process Section */}
+         {/* Bottom CTA */}
         <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="bg-purple-600 rounded-3xl p-8 lg:p-12 text-white ">
+            <h3 className="text-3xl font-bold mb-4 ">
+              Content should drive growth, not just fill pages
+            </h3>
+            <p className="text-purple-100 mb-8 max-w-2xl mx-auto text-lg">
+              We help B2B SaaS companies turn content into a growth channel that educates, converts, and builds trust
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button 
+                className="bg-white text-purple-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg"
+                onClick={scrollToContact}
+              >
+                Work with us
+              </button>
+              
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Process Section */}
+
+
+        <motion.div
           className="bg-white rounded-3xl p-8 lg:p-12 border border-gray-200"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -139,6 +174,8 @@ export function Services({ onNavigate }: ServicesProps) {
             </h3>
             
           </div>
+
+          
           
           <div className="grid md:grid-cols-4 gap-8">
             {[
@@ -182,32 +219,9 @@ export function Services({ onNavigate }: ServicesProps) {
             ))}
           </div>
         </motion.div>
+       
 
-        {/* Bottom CTA */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <div className="bg-purple-600 rounded-3xl p-8 lg:p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Content should drive growth, not just fill pages
-            </h3>
-            <p className="text-purple-100 mb-8 max-w-2xl mx-auto text-lg">
-              We help B2B SaaS companies turn content into a growth channel that educates, converts, and builds trust
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-white text-purple-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold hover:scale-105 hover:shadow-lg"
-                onClick={scrollToContact}
-              >
-                Work with us
-              </button>
-              
-            </div>
-          </div>
-        </motion.div>
+       
       </div>
     </section>
   );

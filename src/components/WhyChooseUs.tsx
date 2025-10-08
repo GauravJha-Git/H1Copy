@@ -26,12 +26,7 @@ export function WhyChooseUs() {
     
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+ 
 
   return (
     <section id="why-choose-us" className="py-20 bg-white">
