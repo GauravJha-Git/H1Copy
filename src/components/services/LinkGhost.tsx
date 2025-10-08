@@ -196,7 +196,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1548345680-f5475ea5df84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsb2NhbCUyMFNFTyUyMGJ1c2luZXNzJTIwbG9jYXRpb258ZW58MXx8fHwxNzU5MzQ0MTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/public/h1copy-ghostwriting-services.png"
                   alt="Local SEO Business Location"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />

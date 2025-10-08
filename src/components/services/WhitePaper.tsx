@@ -175,7 +175,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1668903678359-e810dd966016?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobmljYWwlMjBTRU8lMjB3ZWJzaXRlJTIwb3B0aW1pemF0aW9ufGVufDF8fHx8MTc1OTM0NDA3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/public/h1copy-white-papers-services.png"
                   alt="Technical SEO Website Optimization"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />

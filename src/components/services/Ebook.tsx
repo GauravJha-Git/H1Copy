@@ -165,7 +165,7 @@ export function Ebook({ onNavigateHome }: EbookProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1686061592689-312bbfb5c055?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTRU8lMjBvcHRpbWl6YXRpb24lMjBhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU5MzQzOTgxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/public/h1copy-ebook-services-pages.png"
                   alt="SEO Analytics Dashboard"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />

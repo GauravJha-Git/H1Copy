@@ -192,7 +192,7 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1661286178487-b8b6d0217427?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb250ZW50JTIwbWFya2V0aW5nJTIwc3RyYXRlZ3klMjB3cml0aW5nfGVufDF8fHx8MTc1OTM0NDAyOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/public/h1copy-blogs-services-pages.png"
                   alt="Content Marketing Strategy"
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
