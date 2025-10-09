@@ -101,11 +101,11 @@ export function Services({ onNavigate }: ServicesProps) {
                   <IconComponent className="h-8 w-8 text-purple-600 transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-left">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm text-center">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm text-left">
                   {service.description}
                 </p>
                 
@@ -170,7 +170,7 @@ export function Services({ onNavigate }: ServicesProps) {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Our predictable content workflow
+              Get product-led content
             </h3>
             
           </div>
@@ -200,7 +200,7 @@ export function Services({ onNavigate }: ServicesProps) {
                 description: "From first draft to final polish, we deliver on time and on brand. With repeatable systems, transparent packages, and proven workflows, scaling high-quality content becomes effortless."
               }
             ].map((step, index) => (
-              <div key={step.number} className="text-center group">
+              <div key={step.number} className="text-left group">
                 <div className="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-lg transition-all duration-300 group-hover:bg-purple-200 group-hover:scale-110">
                   <span className="text-3xl font-bold text-purple-600">
                     {step.number}

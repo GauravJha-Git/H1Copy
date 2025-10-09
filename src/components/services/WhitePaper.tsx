@@ -323,6 +323,11 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
                               name: "Anugraha Venugopal",
                               company: "",
                               text: "Those into Content Writing can follow his regular updates to hone their craft."
+                            },
+                            {
+                              name: "Yuvraj Anand",
+                              company: "Founder at Cultured Media",
+                              text: "Working with h1copy was like having a creative partner who speaks our language."
                             }
                         ]);
                           const track = items.concat(items);

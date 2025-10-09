@@ -1,4 +1,4 @@
-import { CheckCircle, TrendingUp, Shield, Clock, Users, Lightbulb } from 'lucide-react';
+import { CheckCircle,BadgeDollarSign, TrendingUp, Shield, Clock, Users, Lightbulb } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function WhyChooseUs() {
@@ -14,7 +14,7 @@ export function WhyChooseUs() {
       description: "Deadlines aren’t just dates on a calendar. We’ve built our workflows to deliver content on time. If we say it’s EOD, it’s EOD. No last-minute scrambles, no excuses. We want you to focus on your business goals, rather than worrying about follow-ups. "
     },
     {
-      icon: Shield,
+      icon: BadgeDollarSign,
       title: "Value for money",
       description: "We are lean and resourceful, which makes us keep our costs very competitive. You don’t have to stay in the same loop — paying more money for less value. Plus, our pricing is transparent and designed to maximize your ROI. "
     },
