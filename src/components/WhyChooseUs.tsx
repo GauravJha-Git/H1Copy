@@ -1,4 +1,4 @@
-import { CheckCircle,BadgeDollarSign, TrendingUp, Shield, Clock, Users, Lightbulb } from 'lucide-react';
+import { CheckCircle,BadgeDollarSign, TrendingUp, Shield, Clock, Users, Lightbulb, Handshake } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function WhyChooseUs() {
@@ -19,7 +19,7 @@ export function WhyChooseUs() {
       description: "We are lean and resourceful, which makes us keep our costs very competitive. You don’t have to stay in the same loop — paying more money for less value. Plus, our pricing is transparent and designed to maximize your ROI. "
     },
     {
-      icon: Users,
+      icon: Handshake,
       title: "We offer all 3",
       description: "Most businesses face a tough choice. You can get great quality and fast delivery, but at a high cost. Or, a low price often means a lack of quality or missed deadlines. We believe you deserve all three. We're built to deliver consistent quality, on-time delivery, and unmatched value"
     },
