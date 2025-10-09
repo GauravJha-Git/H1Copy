@@ -85,8 +85,7 @@ export function AboutCompany({
             </div>
 
             <h1 className="text-4xl md:text-5xl font-black text-slate-800 tracking-tight leading-tight mb-6 mt-1">
-              From freelancer to founder: building an agency
-              that delivers more
+              on a mission to make organic growth easier for your B2B SaaS brand
             </h1>
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
