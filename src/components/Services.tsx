@@ -170,7 +170,7 @@ export function Services({ onNavigate }: ServicesProps) {
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Get product-led content
+              Our predictable content workflow
             </h3>
             
           </div>
