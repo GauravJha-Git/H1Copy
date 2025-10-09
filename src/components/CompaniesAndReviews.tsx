@@ -134,7 +134,7 @@ export function CompaniesAndReviews() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl  text-gray-900 mb-4">
             Trusted by industry leaders
           </h2>
           <p className="text-lg text-gray-500 mb-10 font-light">
@@ -170,7 +170,7 @@ export function CompaniesAndReviews() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl text-gray-900 mb-3">
             Proof in their words
           </h2>
           {/* <p className="text-lg text-gray-500 font-light">
