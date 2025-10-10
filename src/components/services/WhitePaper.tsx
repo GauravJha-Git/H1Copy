@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import { motion } from 'motion/react';
-import { ArrowRight, Settings, Zap, Smartphone, Code, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
+import { ArrowRight, Settings, Zap,Users,Dumbbell,Target, Smartphone, Code, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 import { Card } from '../ui/card';
@@ -30,17 +30,17 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
 
   const features = [
     {
-      icon: Zap,
+      icon: Target,
       title: "Specialize in B2B & SaaS white papers",
       description: "focusing on thought leadership and lead generation."
     },
     {
-      icon: Smartphone,
+      icon: Dumbbell,
       title: "Do the heavy lifting",
       description: "conducting deep research, SME interviews, and data analysis to provide original insights."
     },
     {
-      icon: Code,
+      icon: Users,
       title: "Create long-term value",
       description: "we deliver a single, powerful asset that can be repurposed into blogs, social posts, and webinars."
     },
@@ -50,7 +50,7 @@ export function WhitePaper({ onNavigateHome }: WhitePaperProps) {
       description: "we frame a core industry problem and position your solution as the definitive answer."
     },
     {
-      icon: Settings,
+      icon: Zap,
       title: "Guarantee authority",
       description: "our white papers build credibility, support your sales teams, and move buyers through the funnel."
     }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../ui/button';
 import FloatingLogosSection from '../ui/FloatingCompanies';
 import { motion } from 'framer-motion';
-import { ArrowRight, FileText, Users, Target, TrendingUp, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
+import { ArrowRight, FileText, Users,Dumbbell,ChevronsDown, Target, TrendingUp, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 import { Card } from '../ui/card';
@@ -30,12 +30,12 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
 
   const features = [
     {
-      icon: FileText,
+      icon:Target,
       title: "Specialize in SaaS & B2B blogging ",
       description: "product-led and conversion-focused."
     },
     {
-      icon: Users,
+      icon: Dumbbell,
       title: "Do the heavy lifting",
       description: "research, briefs, SME interviews, data, and examples."
     },
@@ -45,7 +45,7 @@ export function Blogs({ onNavigateHome }: BlogsProps) {
       description: "our 2,500–7,000 word blogs get traffic + backlinks"
     },
     {
-      icon: TrendingUp,
+      icon: ChevronsDown,
       title: "Excel at BoFu content",
       description: "ying your product features to customer pain points, outcomes, and conversions."
     },

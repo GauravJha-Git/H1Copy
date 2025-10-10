@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import { motion } from 'motion/react';
-import { ArrowRight, MapPin, Star, Users, Building, CheckCircle, Plus, Minus, ArrowLeft, Quote } from 'lucide-react';
+import { ArrowRight, MapPin, Star,BarChart, Users,Target,Mic,Dumbbell, Building, CheckCircle, Plus, Minus, ArrowLeft, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 import { Card } from '../ui/card';
@@ -30,17 +30,17 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
 
   const features = [
     {
-      icon: MapPin,
+      icon: Target,
       title: "Specialize in B2B SaaS + Tech",
       description: "we know your ICP, buyer journey, and pain points."
     },
     {
-      icon: Building,
+      icon: Mic,
       title: "Write in your voice",
       description: "our ghostwriting feels natural, not “agency-polished."
     },
     {
-      icon: Star,
+      icon: Dumbbell,
       title: "Do the heavy lifting",
       description: "from interviews and briefs to scheduling and posting"
     },
@@ -50,7 +50,7 @@ export function LinkGhost({ onNavigateHome }: LinkGhostProps) {
       description: "so every visitor sees credibility and expertise."
     },
     {
-      icon: Users,
+      icon: BarChart,
       title: "Drive outcomes",
       description: "our clients see lifts in engagement, followers, and inbound leads."
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import { motion } from 'motion/react';
-import { ArrowRight, Search, TrendingUp, Target, BarChart3, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
+import { ArrowRight, Search,Layers, TrendingUp,DollarSign,Dumbbell,Eye, Target, BarChart3, CheckCircle, Plus, Minus, ArrowLeft, Star, Quote } from 'lucide-react';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 import { useState } from 'react';
 import { Card } from '../ui/card';
@@ -30,22 +30,22 @@ export function Ebook({ onNavigateHome }: EbookProps) {
 
   const features = [
     {
-      icon: Search,
+      icon: Eye,
       title: "Specialize in SaaS & B2B ebooks",
       description: "focusing on educational content that nurtures leads and builds trust."
     },
     {
-      icon: TrendingUp,
+      icon: Dumbbell,
       title: "Do the heavy lifting",
       description: "from topic ideation and outlining to research and expert interviews, we handle the entire process."
     },
     {
-      icon: Target,
+      icon: DollarSign,
       title: "Create high-value assets",
       description: "we deliver a polished, ready-to-publish ebook that provides immediate value to your target audience."
     },
     {
-      icon: BarChart3,
+      icon: Layers,
       title: "Excel at funnel strategy",
       description: "our ebooks are designed to move prospects from awareness to consideration, seamlessly guiding them toward your solution."
     },
