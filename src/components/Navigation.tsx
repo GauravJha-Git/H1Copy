@@ -25,7 +25,6 @@ export function Navigation() {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
     setIsServicesDropdownOpen(true);
   };
-
   const handleServicesMouseLeave = () => {
     servicesTimeoutRef.current = setTimeout(() => {
       setIsServicesDropdownOpen(false);
@@ -37,7 +36,6 @@ export function Navigation() {
     if (companyTimeoutRef.current) clearTimeout(companyTimeoutRef.current);
     setIsCompanyDropdownOpen(true);
   };
-
   const handleCompanyMouseLeave = () => {
     companyTimeoutRef.current = setTimeout(() => {
       setIsCompanyDropdownOpen(false);
@@ -110,7 +108,6 @@ export function Navigation() {
   const services = [
     { name: 'Blogs', path: '/services/blogs' },
     { name: 'eBooks', path: '/services/ebooks' },
-    
     { name: 'White papers', path: '/services/white-papers' },
     { name: 'LinkedIn ghostwriting', path: '/services/linkedin-ghostwriting' },
   ];
@@ -215,17 +212,13 @@ export function Navigation() {
                 Methodology
               </Link>
 
-              {/* Blog */}
-              <Link
-                to="/blog"
-                className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                  isActive('/blog')
-                    ? 'text-purple-600'
-                    : 'text-gray-600 hover:text-purple-600'
-                }`}
+              {/* Blog - SAME TAB */}
+              <button
+                onClick={() => (window.location.href = 'https://h1copy.com/blog/')}
+                className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
               >
                 Blog
-              </Link>
+              </button>
 
               {/* Company */}
               <div
@@ -366,14 +359,16 @@ export function Navigation() {
                 Methodology
               </Link>
 
-              {/* Blog */}
-              <Link
-                to="/blog"
+              {/* Blog - SAME TAB */}
+              <button
+                onClick={() => {
+                  window.location.href = 'https://h1copy.com/blog/';
+                  setIsMenuOpen(false);
+                }}
                 className="block px-3 py-2 text-base font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Blog
-              </Link>
+              </button>
 
               {/* Company */}
               <div>
@@ -425,7 +420,6 @@ export function Navigation() {
                   className="mt-4 w-full inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-medium px-3 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
                   Contact
-                  {/* <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" /> */}
                 </Link>
               )}
             </div>

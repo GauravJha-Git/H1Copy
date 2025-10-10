@@ -11,7 +11,7 @@ import { ProblemsSolved } from './components/ProblemsSolved';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Methodology } from './components/Methodology';
-import { Blog } from './components/Blog';
+// import { Blog } from './components/Blog';
 import { Ebook } from './components/services/Ebook';
 import { Blogs } from './components/services/Blogs';
 import { WhitePaper } from './components/services/WhitePaper';
@@ -20,6 +20,14 @@ import { AboutCompany } from './components/AboutCompany';
 import { WriterNetwork } from './components/WriterNetwork';
 import Privacy from './components/Privacy';
 import TermsPage from './components/TermsAndCondition';
+
+// External redirect component to open in same tab
+function ExternalRedirect({ url }: { url: string }) {
+  useEffect(() => {
+    window.location.href = url;
+  }, [url]);
+  return null;
+}
 
 // Home Page Component
 function HomePage() {
@@ -34,7 +42,10 @@ function HomePage() {
     <>
       <Helmet>
         <title>H1copy | Product-led content for B2B SaaS</title>
-        <meta name="description" content="h1copy helps B2B SaaS brands with product-led content that’s loved by humans, LLM and AI." />
+        <meta
+          name="description"
+          content="h1copy helps B2B SaaS brands with product-led content that’s loved by humans, LLM and AI."
+        />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Navigation />
@@ -42,8 +53,6 @@ function HomePage() {
         <CompaniesAndReviews />
         <ProblemsSolved />
         <WhyChooseUs />
-        
-        {/* <About /> */}
         <Services onNavigate={navigateToPage} />
         <Contact />
         <Footer />
@@ -52,7 +61,7 @@ function HomePage() {
   );
 }
 
-// Component to handle scroll to top on route change
+// Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -63,7 +72,7 @@ function ScrollToTop() {
   return null;
 }
 
-// Layout wrapper for pages with navigation and footer
+// Page layout with navigation and footer
 function PageLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-white">
@@ -74,7 +83,7 @@ function PageLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Page wrapper for service pages that include contact form
+// Service page layout with contact
 function ServicePageLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-white">
@@ -86,32 +95,20 @@ function ServicePageLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Individual page components with navigation
+// Individual page components
 function MethodologyPage() {
   const navigate = useNavigate();
   return (
     <>
       <Helmet>
         <title>SaaS content methodology | h1copy</title>
-        <meta name="description" content="Research-driven, product-led, and optimized for SEO & AI. Scale your B2B content, boost pipeline, and drive revenue." />
+        <meta
+          name="description"
+          content="Research-driven, product-led, and optimized for SEO & AI. Scale your B2B content, boost pipeline, and drive revenue."
+        />
       </Helmet>
       <PageLayout>
         <Methodology onNavigateHome={() => navigate('/')} />
-      </PageLayout>
-    </>
-  );
-}
-
-function BlogPage() {
-  const navigate = useNavigate();
-  return (
-    <>
-      <Helmet>
-        <title>The h1copy blog</title>
-        <meta name="description" content="SaaS marketing tips, thought-leadership articles, product-led content strategies, and LLM & SEO insights." />
-      </Helmet>
-      <PageLayout>
-        <Blog onNavigateHome={() => navigate('/')} />
       </PageLayout>
     </>
   );
@@ -123,7 +120,10 @@ function EbookPage() {
     <>
       <Helmet>
         <title>B2B SaaS eBook writing services</title>
-        <meta name="description" content="h1copy creates product-led B2B SaaS eBooks that capture leads, nurture prospects, and build brand authority." />
+        <meta
+          name="description"
+          content="h1copy creates product-led B2B SaaS eBooks that capture leads, nurture prospects, and build brand authority."
+        />
       </Helmet>
       <ServicePageLayout>
         <Ebook onNavigateHome={() => navigate('/')} />
@@ -138,7 +138,10 @@ function BlogsPage() {
     <>
       <Helmet>
         <title>B2B SaaS blog writing services</title>
-        <meta name="description" content="h1copy creates product-led B2B SaaS blogs full of SME insights and conversion-focused content." />
+        <meta
+          name="description"
+          content="h1copy creates product-led B2B SaaS blogs full of SME insights and conversion-focused content."
+        />
       </Helmet>
       <ServicePageLayout>
         <Blogs onNavigateHome={() => navigate('/')} />
@@ -153,7 +156,10 @@ function WhitePaperPage() {
     <>
       <Helmet>
         <title>B2B SaaS white paper writing services</title>
-        <meta name="description" content="h1copy crafts research-driven B2B SaaS white papers that position your brand as an industry authority and generate qualified leads." />
+        <meta
+          name="description"
+          content="h1copy crafts research-driven B2B SaaS white papers that position your brand as an industry authority and generate qualified leads."
+        />
       </Helmet>
       <ServicePageLayout>
         <WhitePaper onNavigateHome={() => navigate('/')} />
@@ -168,7 +174,10 @@ function LinkGhostPage() {
     <>
       <Helmet>
         <title>Ghostwriting services for B2B SaaS leaders</title>
-        <meta name="description" content="Grow your LinkedIn, boost engagement, build authority, and generate leads with ghostwritten posts in your voice." />
+        <meta
+          name="description"
+          content="Grow your LinkedIn, boost engagement, build authority, and generate leads with ghostwritten posts in your voice."
+        />
       </Helmet>
       <ServicePageLayout>
         <LinkGhost onNavigateHome={() => navigate('/')} />
@@ -179,7 +188,7 @@ function LinkGhostPage() {
 
 function AboutCompanyPage() {
   const navigate = useNavigate();
-  
+
   const navigateToContact = () => {
     navigate('/');
     setTimeout(() => {
@@ -194,13 +203,13 @@ function AboutCompanyPage() {
     <>
       <Helmet>
         <title>About h1copy | B2B SaaS content agency</title>
-        <meta name="description" content="h1copy helps B2B SaaS brands grow with product-led high-impact content that’s optimized for LLMs and search engines." />
+        <meta
+          name="description"
+          content="h1copy helps B2B SaaS brands grow with product-led high-impact content that’s optimized for LLMs and search engines."
+        />
       </Helmet>
       <PageLayout>
-        <AboutCompany 
-          onNavigateHome={() => navigate('/')} 
-          onNavigateToContact={navigateToContact}
-        />
+        <AboutCompany onNavigateHome={() => navigate('/')} onNavigateToContact={navigateToContact} />
       </PageLayout>
     </>
   );
@@ -212,7 +221,10 @@ function WriterNetworkPage() {
     <>
       <Helmet>
         <title>Join h1copy freelancers network</title>
-        <meta name="description" content="Join h1copy's network of expert writers specializing in B2B SaaS content. Collaborate on high-impact projects and grow your freelance career." />
+        <meta
+          name="description"
+          content="Join h1copy's network of expert writers specializing in B2B SaaS content. Collaborate on high-impact projects and grow your freelance career."
+        />
       </Helmet>
       <PageLayout>
         <WriterNetwork onNavigateHome={() => navigate('/')} />
@@ -220,8 +232,6 @@ function WriterNetworkPage() {
     </>
   );
 }
-
-
 
 export default function App() {
   return (
@@ -232,21 +242,24 @@ export default function App() {
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/methodology" element={<MethodologyPage />} />
-        <Route path="/blog" element={<BlogPage />} />
+        {/* Open Blog in same tab */}
+        <Route path="/blog/*" element={<ExternalRedirect url="https://h1copy.com/blog/" />} />
+
         <Route path="/services/ebooks" element={<EbookPage />} />
         <Route path="/services/blogs" element={<BlogsPage />} />
         <Route path="/services/white-papers" element={<WhitePaperPage />} />
         <Route path="/services/linkedin-ghostwriting" element={<LinkGhostPage />} />
         <Route path="/company/about" element={<AboutCompanyPage />} />
         <Route path="/company/freelancers-network" element={<WriterNetworkPage />} />
-        {/* Redirect old URL to new one */}
+
+        {/* Redirect old URLs */}
         <Route path="/company/writer-network" element={<Navigate to="/company/freelancers-network" replace />} />
-        {/* Redirect old routes to new ones for backward compatibility */}
         <Route path="/services/seo-optimization" element={<Navigate to="/services/ebooks" replace />} />
         <Route path="/services/content-marketing" element={<Navigate to="/services/blogs" replace />} />
         <Route path="/services/technical-seo" element={<Navigate to="/services/white-papers" replace />} />
         <Route path="/services/local-seo" element={<Navigate to="/services/linkedin-ghostwriting" replace />} />
-        {/* Handle preview_page.html and other unmatched paths */}
+
+        {/* Handle preview_page.html and unmatched paths */}
         <Route path="/preview_page.html" element={<Navigate to="/" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
