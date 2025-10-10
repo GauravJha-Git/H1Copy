@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import { ArrowRight, Menu, X, ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -19,8 +19,9 @@ export function Navigation() {
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const companyTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // Hover handlers for Services dropdown
+  // Hover handlers for dropdowns
   const handleServicesMouseEnter = () => {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
     setIsServicesDropdownOpen(true);
@@ -30,8 +31,6 @@ export function Navigation() {
       setIsServicesDropdownOpen(false);
     }, 200);
   };
-
-  // Hover handlers for Company dropdown
   const handleCompanyMouseEnter = () => {
     if (companyTimeoutRef.current) clearTimeout(companyTimeoutRef.current);
     setIsCompanyDropdownOpen(true);
@@ -62,7 +61,6 @@ export function Navigation() {
         setIsCompanyDropdownOpen(false);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -71,14 +69,24 @@ export function Navigation() {
     };
   }, []);
 
-  // Handle scroll for home page sections
+  // Scroll to section logic
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      const hash = location.hash.replace('#', '');
+      const element = document.getElementById(hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   useEffect(() => {
     if (location.pathname !== '/') return;
-
     const handleScroll = () => {
       const sections = ['home', 'about', 'services', 'why-choose-us', 'companies-reviews', 'contact'];
       const scrollPosition = window.scrollY + 100;
-
       for (let i = sections.length - 1; i >= 0; i--) {
         const element = document.getElementById(sections[i]);
         if (element && scrollPosition >= element.offsetTop) {
@@ -87,7 +95,6 @@ export function Navigation() {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [location.pathname]);
@@ -111,7 +118,6 @@ export function Navigation() {
     { name: 'White papers', path: '/services/white-papers' },
     { name: 'LinkedIn ghostwriting', path: '/services/linkedin-ghostwriting' },
   ];
-
   const companyPages = [
     { name: 'About', path: '/company/about' },
     { name: 'Freelancers network', path: '/company/freelancers-network' },
@@ -123,15 +129,8 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link
-              to="/"
-              className="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer"
-            >
-              <ImageWithFallback
-                src="/logo.png"
-                alt="h1copy logo"
-                className="h-10 w-10 rounded-lg object-cover"
-              />
+            <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer">
+              <ImageWithFallback src="/logo.png" alt="h1copy logo" className="h-10 w-10 rounded-lg object-cover" />
               <span className="text-2xl font-bold text-purple-600">h1copy</span>
             </Link>
           </div>
@@ -144,47 +143,31 @@ export function Navigation() {
                 <button
                   onClick={() => scrollToSection('home')}
                   className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                    activeSection === 'home'
-                      ? 'text-purple-600'
-                      : 'text-gray-600 hover:text-purple-600'
+                    activeSection === 'home' ? 'text-purple-600' : 'text-gray-600 hover:text-purple-600'
                   }`}
                 >
                   Home
                 </button>
               ) : (
-                <Link
-                  to="/"
-                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
-                >
+                <Link to="/" className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer">
                   Home
                 </Link>
               )}
 
-              {/* Services */}
-              <div
-                className="relative"
-                ref={dropdownRef}
-                onMouseEnter={handleServicesMouseEnter}
-                onMouseLeave={handleServicesMouseLeave}
-              >
+              {/* Services Dropdown */}
+              <div className="relative" ref={dropdownRef} onMouseEnter={handleServicesMouseEnter} onMouseLeave={handleServicesMouseLeave}>
                 <button
                   ref={buttonRef}
                   className={`px-3 py-2 text-sm font-medium transition-colors flex items-center gap-1 cursor-pointer ${
-                    isServiceActive() || isServicesDropdownOpen
-                      ? 'text-purple-600'
-                      : 'text-gray-600 hover:text-purple-600'
+                    isServiceActive() || isServicesDropdownOpen ? 'text-purple-600' : 'text-gray-600 hover:text-purple-600'
                   }`}
                 >
                   Services
-                  <ChevronDown
-                    className={`w-4 h-4 transition-all duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`}
-                  />
+                  <ChevronDown className={`w-4 h-4 transition-all duration-200 ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 <div
                   className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50 transition-all duration-200 origin-top ${
-                    isServicesDropdownOpen
-                      ? 'opacity-100 scale-100 translate-y-0'
-                      : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                    isServicesDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                   }`}
                 >
                   {services.map((service) => (
@@ -204,15 +187,13 @@ export function Navigation() {
               <Link
                 to="/methodology"
                 className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
-                  isActive('/methodology')
-                    ? 'text-purple-600'
-                    : 'text-gray-600 hover:text-purple-600'
+                  isActive('/methodology') ? 'text-purple-600' : 'text-gray-600 hover:text-purple-600'
                 }`}
               >
                 Methodology
               </Link>
 
-              {/* Blog - SAME TAB */}
+              {/* Blog */}
               <button
                 onClick={() => (window.location.href = 'https://h1copy.com/blog/')}
                 className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors cursor-pointer"
@@ -220,31 +201,20 @@ export function Navigation() {
                 Blog
               </button>
 
-              {/* Company */}
-              <div
-                className="relative"
-                ref={companyDropdownRef}
-                onMouseEnter={handleCompanyMouseEnter}
-                onMouseLeave={handleCompanyMouseLeave}
-              >
+              {/* Company Dropdown */}
+              <div className="relative" ref={companyDropdownRef} onMouseEnter={handleCompanyMouseEnter} onMouseLeave={handleCompanyMouseLeave}>
                 <button
                   ref={companyButtonRef}
                   className={`px-3 py-2 text-sm font-medium transition-colors flex items-center gap-1 cursor-pointer ${
-                    isCompanyActive() || isCompanyDropdownOpen
-                      ? 'text-purple-600'
-                      : 'text-gray-600 hover:text-purple-600'
+                    isCompanyActive() || isCompanyDropdownOpen ? 'text-purple-600' : 'text-gray-600 hover:text-purple-600'
                   }`}
                 >
                   Company
-                  <ChevronDown
-                    className={`w-4 h-4 transition-all duration-200 ${isCompanyDropdownOpen ? 'rotate-180' : ''}`}
-                  />
+                  <ChevronDown className={`w-4 h-4 transition-all duration-200 ${isCompanyDropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 <div
                   className={`absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50 transition-all duration-200 origin-top ${
-                    isCompanyDropdownOpen
-                      ? 'opacity-100 scale-100 translate-y-0'
-                      : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+                    isCompanyDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
                   }`}
                 >
                   {companyPages.map((page) => (
@@ -260,7 +230,7 @@ export function Navigation() {
                 </div>
               </div>
 
-              {/* Work with us button */}
+              {/* Work with us / Contact */}
               {location.pathname === '/' ? (
                 <button
                   onClick={() => scrollToSection('contact')}
@@ -271,13 +241,7 @@ export function Navigation() {
                 </button>
               ) : (
                 <Link
-                  to="/"
-                  onClick={() => {
-                    setTimeout(() => {
-                      const contactElement = document.getElementById('contact');
-                      if (contactElement) contactElement.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                  }}
+                  to="/#contact"
                   className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
                   Work with us
@@ -289,12 +253,7 @@ export function Navigation() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="cursor-pointer"
-            >
+            <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)} className="cursor-pointer">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
@@ -359,7 +318,7 @@ export function Navigation() {
                 Methodology
               </Link>
 
-              {/* Blog - SAME TAB */}
+              {/* Blog */}
               <button
                 onClick={() => {
                   window.location.href = 'https://h1copy.com/blog/';
@@ -398,7 +357,7 @@ export function Navigation() {
                 )}
               </div>
 
-              {/* Work with us button */}
+              {/* Work with us / Contact */}
               {location.pathname === '/' ? (
                 <button
                   onClick={() => scrollToSection('contact')}
@@ -409,17 +368,12 @@ export function Navigation() {
                 </button>
               ) : (
                 <Link
-                  to="/"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    setTimeout(() => {
-                      const contactElement = document.getElementById('contact');
-                      if (contactElement) contactElement.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
-                  }}
+                  to="/#contact"
                   className="mt-4 w-full inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white font-medium px-3 py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                 </Link>
               )}
             </div>
